@@ -899,6 +899,39 @@ function setupScrollReveals() {
   }
 }
 
+// Eased Number Counter Animation for Hero Metrics Ribbon
+let heroMetricsAnimated = false;
+
+function animateHeroCounters() {
+  const counters = document.querySelectorAll('.hero-counter');
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'), 10);
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const prefix = counter.getAttribute('data-prefix') || '';
+    if (isNaN(target)) return;
+
+    let start = 0;
+    const duration = 1800;
+    const startTime = performance.now();
+
+    function updateCounter(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Cubic ease-out
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(start + (target - start) * easeOut);
+      counter.textContent = `${prefix}${currentVal}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = `${prefix}${target}${suffix}`;
+      }
+    }
+    requestAnimationFrame(updateCounter);
+  });
+}
+
 // Eased Number Counter Animation for Clients Trust Strip
 function animateTrustNumbers() {
   const items = document.querySelectorAll('.clients-trust-strip .trust-metric-box .trust-num');
@@ -1085,12 +1118,13 @@ document.addEventListener('DOMContentLoaded', () => {
   setupBlueprintMode();
   setupArchiveModal();
 
-  // Initial Hero Laser Scan Wow Moment
+  // Initial Hero Laser Scan Wow Moment & Number Counting
   const scanner = document.querySelector('.laser-scanner');
   if (scanner) {
     scanner.classList.add('scanning');
     setTimeout(() => scanner.classList.remove('scanning'), 2000);
   }
+  animateHeroCounters();
 
   document.getElementById('langToggle').addEventListener('click', () => {
     updateLanguage(currentLang === 'ar' ? 'en' : 'ar');

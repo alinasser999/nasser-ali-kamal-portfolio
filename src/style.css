@@ -946,62 +946,57 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
-   Hero Section - Mobile-First Magazine Layout & Editorial Spread
+   Hero Section - Executive Architectural Monograph (Option 1 Redesign)
    ========================================================================== */
 
 .hero-section {
-  padding-block: 1.75rem 2.5rem;
+  padding-block: 1.5rem 2.5rem;
   position: relative;
 }
 
 @media (min-width: 768px) {
   .hero-section {
-    padding-block: 3.5rem 3rem;
+    padding-block: 3rem 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-section {
-    padding-block: 5rem 3.5rem;
+    padding-block: 4.5rem 3.5rem;
   }
 }
 
-.hero-grid {
+.hero-monograph-layout {
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
-}
-
-@media (min-width: 1024px) {
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4.5rem;
-    align-items: center;
-  }
-}
-
-/* On Mobile/Tablet: Photo comes FIRST */
-.hero-visual {
-  order: 1;
-  width: 100%;
-  max-width: 440px;
+  gap: 1.75rem;
+  max-width: 580px;
   margin-inline: auto;
 }
 
-.hero-content {
-  order: 2;
-  width: 100%;
+@media (min-width: 1024px) {
+  .hero-monograph-layout {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-areas:
+      "head portrait"
+      "persona portrait"
+      "persona ribbon";
+    gap: 2.5rem 4rem;
+    align-items: start;
+  }
+}
+
+/* Monograph Editorial Header */
+.hero-editorial-head {
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .hero-content {
-    order: 1;
-  }
-  .hero-visual {
-    order: 2;
-    max-width: 100%;
-    margin-inline: 0;
+  .hero-editorial-head {
+    grid-area: head;
+    text-align: start;
   }
 }
 
@@ -1012,34 +1007,26 @@ button, input, select, textarea {
   padding: 0.35rem 0.85rem;
   background: var(--bg-surface);
   border: var(--border-hairline);
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--ink-muted);
-  margin-bottom: 1.25rem;
+  color: var(--accent-ochre);
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-subtle);
 }
 
 .hero-title {
   font-family: var(--font-heading);
-  line-height: 1.18;
-  margin-bottom: 1.25rem;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
   color: var(--ink-primary);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
 
-.greeting {
-  font-size: clamp(0.85rem, 2.5vw, 1rem);
-  font-weight: 700;
-  color: var(--accent-ochre);
-  font-family: var(--font-body);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .hero-name-primary {
-  font-size: clamp(2.2rem, 6.5vw, 3.8rem);
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
   font-weight: 800;
   color: var(--ink-primary);
   letter-spacing: -0.02em;
@@ -1053,11 +1040,179 @@ button, input, select, textarea {
 }
 
 .hero-subtitle {
-  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  font-size: clamp(0.92rem, 2.5vw, 1.05rem);
   color: var(--ink-muted);
   line-height: 1.8;
-  margin-bottom: 1.75rem;
-  max-width: 660px;
+  margin-inline: auto;
+  max-width: 620px;
+}
+
+@media (min-width: 1024px) {
+  .hero-subtitle {
+    margin-inline: 0;
+  }
+}
+
+/* Executive Natural 4:5 Portrait Frame (Enhanced Museum-Grade Architecture) */
+.hero-portrait-wrap {
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .hero-portrait-wrap {
+    grid-area: portrait;
+    max-width: 420px;
+    margin-inline: 0;
+  }
+}
+
+.executive-portrait-card {
+  position: relative;
+  background: linear-gradient(145deg, #FFFFFF 0%, #F6F3EC 100%);
+  border: 1.5px solid var(--accent-ochre);
+  border-radius: 22px;
+  padding: 10px;
+  box-shadow: 0 20px 50px rgba(18, 20, 23, 0.1), 0 0 0 1px rgba(217, 130, 0, 0.15);
+  transition: all var(--transition-normal);
+}
+
+.executive-portrait-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ink-primary);
+  box-shadow: 0 24px 60px rgba(18, 20, 23, 0.16), 0 0 25px rgba(217, 130, 0, 0.25);
+}
+
+.frame-corner {
+  position: absolute;
+  font-size: 1rem;
+  color: var(--accent-ochre);
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.frame-corner.top-start { top: 4px; inset-inline-start: 6px; }
+.frame-corner.top-end { top: 4px; inset-inline-end: 6px; }
+.frame-corner.bottom-start { bottom: 4px; inset-inline-start: 6px; }
+.frame-corner.bottom-end { bottom: 4px; inset-inline-end: 6px; }
+
+.portrait-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #E8E5DF;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.executive-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  display: block;
+  transition: transform var(--transition-smooth), opacity var(--transition-fast);
+}
+
+.executive-portrait-card:hover .executive-portrait-img {
+  transform: scale(1.03);
+}
+
+.portrait-floating-badge {
+  position: absolute;
+  bottom: 12px;
+  inset-inline-start: 12px;
+  inset-inline-end: 12px;
+  background: rgba(18, 20, 23, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(217, 130, 0, 0.4);
+  border-radius: 8px;
+  padding: 0.5rem 0.85rem;
+  color: #FFFFFF;
+  font-size: 0.74rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 3-Stat Executive Metric Ribbon */
+.hero-metrics-ribbon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+  width: 100%;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1024px) {
+  .hero-metrics-ribbon {
+    grid-area: ribbon;
+    max-width: 420px;
+    margin-inline: 0;
+  }
+}
+
+.metric-ribbon-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 0.95rem 0.6rem;
+  text-align: center;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.metric-ribbon-item:hover {
+  border-color: var(--accent-ochre);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-editorial);
+}
+
+.ribbon-num {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--ink-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .ribbon-num {
+    font-size: 2rem;
+  }
+}
+
+.ribbon-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  line-height: 1.35;
+}
+
+/* Hero Persona Wrapper & Fast Actions */
+.hero-persona-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .hero-persona-wrapper {
+    grid-area: persona;
+  }
 }
 
 /* Sleek Floating Segmented Control (Pill Switcher) */
@@ -1068,10 +1223,16 @@ button, input, select, textarea {
   border-radius: var(--radius-full);
   padding: 4px;
   gap: 4px;
-  margin-bottom: 1.25rem;
   width: 100%;
   max-width: 480px;
+  margin-inline: auto;
   box-shadow: var(--shadow-subtle);
+}
+
+@media (min-width: 1024px) {
+  .persona-segmented-control {
+    margin-inline: 0;
+  }
 }
 
 .persona-pill-btn {
@@ -1135,7 +1296,7 @@ body.cad-blueprint-mode .persona-pill-btn.active i {
   animation: fadeIn 0.3s var(--ease-spring);
 }
 
-.focus-title {
+.persona-focus-title {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 800;
@@ -1143,10 +1304,31 @@ body.cad-blueprint-mode .persona-pill-btn.active i {
   margin-bottom: 0.35rem;
 }
 
-.focus-desc {
+.persona-focus-desc {
   font-size: 0.88rem;
   color: var(--ink-secondary);
   line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .hero-actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-actions {
+    justify-content: flex-start;
+  }
 }
 
 .hero-tags {
@@ -1178,188 +1360,6 @@ body.cad-blueprint-mode .persona-pill-btn.active i {
   width: 14px;
   height: 14px;
   color: var(--accent-ochre);
-}
-
-.hero-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-@media (min-width: 480px) {
-  .hero-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-}
-
-/* Portrait Matte Frame on Mobile */
-.portrait-matte-frame {
-  position: relative;
-  background: var(--bg-surface);
-  border: 1px solid var(--ink-primary);
-  padding: 1.25rem;
-  box-shadow: var(--shadow-editorial);
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
-}
-
-@media (min-width: 768px) {
-  .portrait-matte-frame {
-    padding: 1.5rem;
-  }
-}
-
-.laser-scanner {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-ochre), #FFFFFF, var(--accent-ochre), transparent);
-  box-shadow: 0 0 10px var(--accent-ochre);
-  z-index: 10;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.portrait-matte-frame:hover .laser-scanner {
-  animation: laserSweep 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes laserSweep {
-  0% { top: 0; opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-.corner-crosshair {
-  position: absolute;
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  color: var(--ink-primary);
-  line-height: 1;
-}
-
-.corner-crosshair.top-left { top: 6px; left: 6px; }
-.corner-crosshair.top-right { top: 6px; right: 6px; }
-.corner-crosshair.bottom-left { bottom: 6px; left: 6px; }
-.corner-crosshair.bottom-right { bottom: 6px; right: 6px; }
-
-.matte-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.72rem;
-  color: var(--ink-muted);
-  border-bottom: var(--border-hairline);
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.85rem;
-  letter-spacing: 0.05em;
-}
-
-.portrait-photo-box {
-  position: relative;
-  width: 100%;
-  height: 380px;
-  overflow: hidden;
-  background: var(--bg-secondary);
-  border: var(--border-hairline);
-}
-
-@media (min-width: 480px) {
-  .portrait-photo-box {
-    height: 420px;
-  }
-}
-
-@media (min-width: 768px) {
-  .portrait-photo-box {
-    height: 480px;
-  }
-}
-
-.portrait-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform var(--transition-smooth), opacity var(--transition-fast);
-}
-
-.portrait-curtain {
-  position: absolute;
-  inset-inline: 0;
-  bottom: 0;
-  background: linear-gradient(to top, rgba(18, 20, 23, 0.95) 0%, rgba(18, 20, 23, 0.5) 60%, transparent 100%);
-  padding: 1.25rem;
-}
-
-.legend-badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: #FDE047;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.15rem;
-}
-
-.portrait-legend h4 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: #FFFFFF;
-}
-
-.portrait-legend p {
-  font-size: 0.82rem;
-  color: #E2E8F0;
-}
-
-.matte-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: var(--border-hairline);
-  padding-top: 0.75rem;
-  margin-top: 0.85rem;
-}
-
-.scale-bar-visual {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.scale-ticks {
-  width: 110px;
-  height: 3px;
-  background: repeating-linear-gradient(to right, var(--ink-primary) 0, var(--ink-primary) 2px, transparent 2px, transparent 15px);
-  border-top: 1px solid var(--ink-primary);
-}
-
-@media (min-width: 768px) {
-  .scale-ticks {
-    width: 140px;
-  }
-}
-
-.scale-label {
-  font-size: 0.62rem;
-  color: var(--ink-muted);
-}
-
-.seal-badge {
-  border: 1px solid var(--ink-primary);
-  padding: 0.15rem 0.5rem;
-  border-radius: var(--radius-xs);
-}
-
-.seal-text {
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--ink-primary);
 }
 
 /* Stats Bar */

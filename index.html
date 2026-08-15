@@ -147,58 +147,13 @@
   </div>
 
   <main>
-    <!-- Hero Section - Architectural Monograph Cover (Redesigned & Spacious) -->
+    <!-- Hero Section - Executive Architectural Monograph (Option 1 Redesign) -->
     <section class="hero-section" id="hero">
       <div class="container">
-        <div class="hero-grid">
+        <div class="hero-monograph-layout">
           
-          <!-- Visual Architectural Matte Frame (At top on Mobile, side on Desktop) -->
-          <div class="hero-visual">
-            <div class="portrait-matte-frame" id="portraitMatteFrame">
-              <!-- Laser Scanner Line on Hover/Switch -->
-              <div class="laser-scanner" aria-hidden="true"></div>
-
-              <!-- Technical Corner Crosshairs -->
-              <span class="corner-crosshair top-left font-mono">┌</span>
-              <span class="corner-crosshair top-right font-mono">┐</span>
-              <span class="corner-crosshair bottom-left font-mono">└</span>
-              <span class="corner-crosshair bottom-right font-mono">┘</span>
-
-              <div class="matte-header font-mono">
-                <span id="portraitDwgCode">DWG-DIR-001</span>
-                <span>SCALE: 1:1 FIELD LEAD</span>
-              </div>
-
-              <div class="portrait-photo-box">
-                <img 
-                  src="/assets/portraits/dad_formal.png" 
-                  alt="م. ناصر علي كمال - مدير تطوير عقاري ومعماري رئيسي" 
-                  class="portrait-photo"
-                  id="heroPortraitImg"
-                >
-                <div class="portrait-curtain">
-                  <span class="legend-badge font-mono" data-i18n="legend_title">المعماري ومدير التطوير</span>
-                  <div class="portrait-legend">
-                    <h4 data-i18n="caption_name">م. ناصر علي كمال</h4>
-                    <p id="portraitSubText" data-i18n="caption_role">مدير تطوير عقاري ومهندس معماري</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="matte-footer font-mono">
-                <div class="scale-bar-visual">
-                  <div class="scale-ticks"></div>
-                  <span class="scale-label">YEARS TRACK RECORD +38 ── 0</span>
-                </div>
-                <div class="seal-badge">
-                  <span class="seal-text">CERTIFIED KSA</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Hero Content & Authority Column -->
-          <div class="hero-content">
+          <!-- Monograph Editorial Header -->
+          <div class="hero-editorial-head">
             <div class="hero-meta-badge font-mono">
               <span>ARCHITECTURAL FOLIO / 1986 — 2024</span>
               <span>•</span>
@@ -206,16 +161,60 @@
             </div>
 
             <h1 class="hero-title">
-              <span class="greeting" data-i18n="hero_greeting">المعماري ومدير التطوير</span>
               <span class="hero-name-primary" data-i18n="hero_name_full">م. ناصر علي كمال</span>
-              <span class="hero-title-sub" data-i18n="brand_sub">مدير تطوير عقاري ومعماري رئيسي</span>
+              <span class="hero-title-sub" data-i18n="brand_sub">مدير تطوير عقاري ومهندس معماري رئيسي</span>
             </h1>
 
             <p class="hero-subtitle" data-i18n="hero_subtitle">
               دمج الرؤية المعمارية الإبداعية مع حوكمة المشاريع الكبرى، البنية التحتية، ومشاريع تسليم المفتاح EPC بالمملكة العربية السعودية.
             </p>
+          </div>
 
-            <!-- Sleek Segmented Persona Switcher -->
+          <!-- Executive Natural 4:5 Portrait Frame (Enhanced Museum-Grade Architectural Border) -->
+          <div class="hero-portrait-wrap">
+            <div class="executive-portrait-card" id="portraitMatteFrame">
+              <!-- Laser Scanner Line on Persona Switch -->
+              <div class="laser-scanner" aria-hidden="true"></div>
+
+              <!-- Elegant Subtle Corner Accents -->
+              <div class="frame-corner top-start font-mono">┌</div>
+              <div class="frame-corner top-end font-mono">┐</div>
+              <div class="frame-corner bottom-start font-mono">└</div>
+              <div class="frame-corner bottom-end font-mono">┘</div>
+
+              <div class="portrait-image-container">
+                <img 
+                  src="/assets/portraits/dad_formal.png" 
+                  alt="م. ناصر علي كمال - مدير تطوير عقاري ومعماري رئيسي" 
+                  class="executive-portrait-img"
+                  id="heroPortraitImg"
+                >
+                <div class="portrait-floating-badge font-mono">
+                  <i data-lucide="shield-check" style="width: 15px; height: 15px; color: var(--accent-ochre);"></i>
+                  <span data-i18n="hero_trust_badge">خبرة معتمدة +38 عاماً بالمملكة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3-Stat Executive Metric Ribbon with Live Counting Physics -->
+          <div class="hero-metrics-ribbon" id="heroMetricsRibbon">
+            <div class="metric-ribbon-item">
+              <span class="ribbon-num font-mono hero-counter" data-target="38" data-suffix="+">0+</span>
+              <span class="ribbon-label" data-i18n="stat_exp">سنة خبرة مهنية بالمملكة</span>
+            </div>
+            <div class="metric-ribbon-item">
+              <span class="ribbon-num font-mono hero-counter" data-target="50" data-suffix="+">0+</span>
+              <span class="ribbon-label" data-i18n="stat_projects">مشروع منجز ومسلم</span>
+            </div>
+            <div class="metric-ribbon-item">
+              <span class="ribbon-num font-mono hero-counter" data-target="500" data-prefix="+" data-suffix="M">0M</span>
+              <span class="ribbon-label" data-i18n="stat_infra">ريال حجم المشاريع المشرف عليها</span>
+            </div>
+          </div>
+
+          <!-- Sleek Segmented Persona Switcher & Fast Actions -->
+          <div class="hero-persona-wrapper">
             <div class="persona-segmented-control" role="tablist">
               <button class="persona-pill-btn active" id="tabArchitect" role="tab" aria-selected="true">
                 <i data-lucide="compass"></i>
@@ -228,33 +227,26 @@
             </div>
 
             <!-- Dynamic Persona Focus Card -->
-            <div class="persona-focus-card" id="personaFocusCard">
-              <h3 class="focus-title" id="personaTitle">الرؤية المعمارية وتخطيط الفراغات</h3>
-              <p class="focus-desc" id="personaDesc">
-                صياغة الهوية المعمارية، تصميم الواجهات المستدامة والمعاصرة، التنسيق الفراغي، والديكورات الترفيهية والتجارية الفاخرة ومطابقة كود البناء السعودي.
+            <div class="persona-focus-card" id="personaCard">
+              <h3 class="persona-focus-title" id="personaTitle" data-i18n="architect_title">الرؤية المعمارية وتخطيط الفراغات</h3>
+              <p class="persona-focus-desc" id="personaDesc" data-i18n="architect_desc">
+                صياغة الهوية المعمارية، تصميم الواجهات المستدامة والمعاصرة، التنسيق الفراغي، والديكورات الترفيهية والتجارية الفاخرة ومطابقة كود البناء السعودي SBC.
               </p>
             </div>
 
             <!-- Action Buttons -->
             <div class="hero-actions">
-              <a href="#contact" class="btn-primary">
-                <i data-lucide="message-circle"></i>
-                <span data-i18n="hero_btn_contact">طلب استشارة أو اجتماع</span>
-              </a>
-              <a href="#projects" class="btn-secondary">
+              <a href="#projects" class="btn-primary">
                 <i data-lucide="layers"></i>
                 <span data-i18n="hero_btn_projects">استعراض سجل المشاريع</span>
+              </a>
+              <a href="https://wa.me/966545000073" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                <i data-lucide="message-circle"></i>
+                <span data-i18n="hero_btn_contact">طلب استشارة أو اجتماع</span>
               </a>
             </div>
           </div>
 
-        </div>
-
-        <!-- 4-Column Key Figures Matrix -->
-        <div class="stats-bar-container">
-          <div class="stats-matrix" id="statsMatrix">
-            <!-- Rendered dynamically -->
-          </div>
         </div>
       </div>
     </section>
