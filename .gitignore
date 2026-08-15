@@ -19,3 +19,5 @@ build/
 # Editor directories
 .vscode/
 .idea/
+
+.vercel

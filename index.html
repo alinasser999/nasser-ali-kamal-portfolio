@@ -128,12 +128,22 @@
     </nav>
   </div>
 
-  <!-- Mobile Quick Section Sticky Bar -->
+  <!-- Global Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Mobile Quick Section Sticky Bar with Live Elevation Tracker -->
   <div class="mobile-sticky-quicknav hide-on-desktop" id="mobileStickyNav">
-    <a href="#about" class="quicknav-pill" data-i18n="quick_about">الرؤية</a>
-    <a href="#projects" class="quicknav-pill" data-i18n="quick_projects">المشاريع</a>
-    <a href="#gallery" class="quicknav-pill" data-i18n="quick_gallery">التوثيق</a>
-    <a href="#contact" class="quicknav-pill pill-accent" data-i18n="quick_contact">استشارة</a>
+    <div class="quicknav-elevation font-mono" id="quicknavElevation">
+      <span class="elevation-pulse"></span>
+      <span id="elevationText">DWG LVL 01</span>
+    </div>
+    <div class="quicknav-pills-row">
+      <a href="#about" class="quicknav-pill active" data-nav="about" data-i18n="quick_about">الرؤية</a>
+      <a href="#projects" class="quicknav-pill" data-nav="projects" data-i18n="quick_projects">المشاريع</a>
+      <a href="#gallery" class="quicknav-pill" data-nav="gallery" data-i18n="quick_gallery">التوثيق</a>
+      <a href="#clients" class="quicknav-pill" data-nav="clients" data-i18n="quick_clients">الشركاء</a>
+      <a href="#contact" class="quicknav-pill pill-accent" data-nav="contact" data-i18n="quick_contact">استشارة</a>
+    </div>
   </div>
 
   <main>

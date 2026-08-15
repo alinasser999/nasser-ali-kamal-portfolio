@@ -810,9 +810,58 @@ function renderClients() {
   refreshIcons();
 }
 
-// Setup Scroll Reveals
+// Setup Scroll Progress Bar, Elevation Tracker, and Active QuickNav
+function setupScrollTracker() {
+  const progressBar = document.getElementById('scrollProgressBar');
+  const elevationText = document.getElementById('elevationText');
+  const quickNavPills = document.querySelectorAll('.quicknav-pill[data-nav]');
+
+  const sectionLevels = {
+    hero: { code: 'LVL 00 • DATUM', nav: 'about' },
+    about: { code: 'LVL 01 • VISION', nav: 'about' },
+    competencies: { code: 'LVL 02 • DISCIPLINE', nav: 'about' },
+    projects: { code: 'LVL 03 • MEGA EPC', nav: 'projects' },
+    gallery: { code: 'LVL 04 • FIELD LOG', nav: 'gallery' },
+    clients: { code: 'LVL 05 • PARTNERS', nav: 'clients' },
+    credentials: { code: 'LVL 06 • ACCREDITED', nav: 'clients' },
+    contact: { code: 'LVL 07 • CONSULT', nav: 'contact' }
+  };
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    if (progressBar) {
+      progressBar.style.width = `${Math.min(100, Math.max(0, scrollPercent))}%`;
+    }
+
+    // Determine current visible section
+    const sections = ['contact', 'credentials', 'clients', 'gallery', 'projects', 'competencies', 'about', 'hero'];
+    for (const secId of sections) {
+      const el = document.getElementById(secId);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.4) {
+          const info = sectionLevels[secId];
+          if (info) {
+            if (elevationText) elevationText.textContent = info.code;
+            quickNavPills.forEach(pill => {
+              pill.classList.toggle('active', pill.getAttribute('data-nav') === info.nav);
+            });
+          }
+          break;
+        }
+      }
+    }
+  }, { passive: true });
+}
+
+// Setup Scroll Reveals and Number Counter Rollers
+let clientsStatsAnimated = false;
+
 function setupScrollReveals() {
-  const revealTargets = document.querySelectorAll('.editorial-header, .about-editorial-grid, .competencies-grid, .projects-grid, .gallery-masonry, .credentials-grid, .clients-grid, .contact-card');
+  const revealTargets = document.querySelectorAll('.editorial-header, .about-editorial-grid, .competencies-grid, .projects-grid, .gallery-masonry, .credentials-grid, .clients-proof-grid, .contact-card, .clients-trust-strip');
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -822,6 +871,11 @@ function setupScrollReveals() {
         if (entry.target.id === 'statsMatrix' && !statsAnimated) {
           statsAnimated = true;
           animateStatNumbers();
+        }
+
+        if (entry.target.classList.contains('clients-trust-strip') && !clientsStatsAnimated) {
+          clientsStatsAnimated = true;
+          animateTrustNumbers();
         }
       }
     });
@@ -843,6 +897,42 @@ function setupScrollReveals() {
   if (statsMatrix) {
     observer.observe(statsMatrix);
   }
+}
+
+// Eased Number Counter Animation for Clients Trust Strip
+function animateTrustNumbers() {
+  const items = document.querySelectorAll('.clients-trust-strip .trust-metric-box .trust-num');
+  if (!items.length) return;
+
+  const targets = [
+    { target: 12, suffix: '+' },
+    { target: 25, suffix: '+' },
+    { target: 100, suffix: '%' },
+    { target: 500, prefix: '+', suffix: 'M' }
+  ];
+
+  items.forEach((el, idx) => {
+    const config = targets[idx];
+    if (!config) return;
+
+    const duration = 1800;
+    const startTime = performance.now();
+
+    function update(time) {
+      const elapsed = time - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const val = Math.floor(ease * config.target);
+      el.textContent = `${config.prefix || ''}${val}${config.suffix || ''}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = `${config.prefix || ''}${config.target}${config.suffix || ''}`;
+      }
+    }
+    requestAnimationFrame(update);
+  });
 }
 
 // Setup 3D Mouse Parallax Tilt on Portrait Matte Frame
@@ -988,11 +1078,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateLanguage('ar');
   setupScrollReveals();
+  setupScrollTracker();
   setupPortraitTilt();
   setupCustomCursor();
   setupScrollProgress();
   setupBlueprintMode();
   setupArchiveModal();
+
+  // Initial Hero Laser Scan Wow Moment
+  const scanner = document.querySelector('.laser-scanner');
+  if (scanner) {
+    scanner.classList.add('scanning');
+    setTimeout(() => scanner.classList.remove('scanning'), 2000);
+  }
 
   document.getElementById('langToggle').addEventListener('click', () => {
     updateLanguage(currentLang === 'ar' ? 'en' : 'ar');
@@ -1003,16 +1101,25 @@ document.addEventListener('DOMContentLoaded', () => {
   if (printBtn) printBtn.addEventListener('click', () => window.print());
   if (mobilePrintBtn) mobilePrintBtn.addEventListener('click', () => window.print());
 
-  // Hero Drafting Console Switcher
+  // Hero Drafting Console Switcher with Laser Scan Trigger
   const tabArchitect = document.getElementById('tabArchitect');
   const tabDevManager = document.getElementById('tabDevManager');
   const heroPortraitImg = document.getElementById('heroPortraitImg');
+
+  function triggerLaserScan() {
+    if (!scanner) return;
+    scanner.classList.remove('scanning');
+    void scanner.offsetWidth; // trigger reflow
+    scanner.classList.add('scanning');
+    setTimeout(() => scanner.classList.remove('scanning'), 1800);
+  }
 
   tabArchitect.addEventListener('click', () => {
     tabArchitect.classList.add('active');
     tabDevManager.classList.remove('active');
     currentPersona = 'architect';
     renderPersona();
+    triggerLaserScan();
     heroPortraitImg.style.opacity = '0.2';
     setTimeout(() => {
       heroPortraitImg.src = portfolioData.profile.images.formal;
@@ -1026,6 +1133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabArchitect.classList.remove('active');
     currentPersona = 'devManager';
     renderPersona();
+    triggerLaserScan();
     heroPortraitImg.style.opacity = '0.2';
     setTimeout(() => {
       heroPortraitImg.src = portfolioData.profile.images.site;
