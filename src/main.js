@@ -31,27 +31,39 @@ import {
   FileText,
   Search,
   Grid,
-  LayoutGrid
+  LayoutGrid,
+  Download,
+  Filter,
+  Sun,
+  Moon,
+  Clock,
+  Home,
+  Waves,
+  ChevronsLeftRight,
+  ChevronDown
 } from 'lucide';
 
 // Translations Dictionary for UI static text
 const translations = {
   ar: {
-    top_status: "سجل معتمد - الهيئة السعودية للمهندسين | الرياض، المملكة العربية السعودية",
+    page_title: "م. ناصر علي كمال | مدير تطوير عقاري ومعماري رئيسي",
+    top_status: "متاح لإدارة وتطوير المشاريع الكبرى وتسليم المفتاح EPC",
     brand_name: "م. ناصر علي كمال",
     brand_sub: "مدير تطوير عقاري ومعماري رئيسي",
     nav_about: "الرؤية والخبرة",
     nav_competencies: "التخصصات",
     nav_projects: "المشاريع المطورة",
-    nav_gallery: "سجل التوثيق الميداني",
+    nav_transformation: "التحول الهندسي",
+    nav_gallery: "التوثيق الميداني",
     nav_clients: "العملاء والشركاء",
     nav_credentials: "الاعتمادات",
     nav_contact: "طلب استشارة",
     btn_print: "تصدير الدوسيه PDF",
-    btn_cad: "نمط CAD Blueprint",
+    btn_cad: "CAD Mode",
     quick_about: "الرؤية",
     quick_projects: "المشاريع",
     quick_gallery: "التوثيق",
+    quick_clients: "الشركاء",
     quick_contact: "استشارة",
     swipe_hint: "اسحب أفقياً لاستعراض المشاريع",
     swipe_gallery_hint: "اسحب لمشاهدة لقطات التنفيذ الميداني",
@@ -65,8 +77,14 @@ const translations = {
     hero_name: "ناصر علي كمال",
     hero_name_full: "م. ناصر علي كمال",
     hero_subtitle: "دمج الرؤية المعمارية الإبداعية مع حوكمة المشاريع الكبرى، البنية التحتية، ومشاريع تسليم المفتاح EPC بالمملكة العربية السعودية.",
+    hero_trust_badge: "خبرة معتمدة +38 عاماً بالمملكة",
+    stat_exp: "سنة خبرة مهنية بالمملكة",
+    stat_projects: "مشروع منجز ومسلم",
+    stat_infra: "ريال حجم المشاريع المشرف عليها",
     tab_architect: "الرؤية المعمارية",
     tab_dev: "إدارة التطوير EPC",
+    architect_title: "الرؤية المعمارية وتخطيط الفراغات",
+    architect_desc: "صياغة الهوية المعمارية، تصميم الواجهات المستدامة والمعاصرة، التنسيق الفراغي، والديكورات الترفيهية والتجارية الفاخرة ومطابقة كود البناء السعودي SBC.",
     persona_arch_title: "الرؤية المعمارية وتخطيط الفراغات",
     persona_arch_desc: "صياغة الهوية المعمارية، تصميم الواجهات المستدامة والمعاصرة، التنسيق الفراغي، والديكورات الترفيهية والتجارية الفاخرة ومطابقة كود البناء السعودي.",
     persona_dev_title: "إدارة التطوير العقاري وتسليم المفتاح (EPC)",
@@ -91,12 +109,26 @@ const translations = {
     pillar3_desc: "مطابقة اشتراطات كود البناء السعودي (SBC) والدفاع المدني والإشراف الصارم.",
     team_caption_1: "المهندس ناصر علي كمال مع قيادات وفريق العمل في حفل تسليم وافتتاح المشاريع",
     team_caption_2: "الجولات الميدانية والإشراف الهندسي المباشر على جودة التنفيذ بالموقع",
+    timeline_tag: "CAREER ERA SCRUBBER • 1986 — 2024",
+    timeline_title: "مسار الريادة والتطور الهندسي عبر 38 عاماً",
+    era1_title: "التأسيس والتصميم الأصيل",
+    era2_title: "المشاريع السيادية والجامعية",
+    era3_title: "البنية التحتية والأبراج",
+    era4_title: "تسليم المفتاح EPC ورؤية 2030",
     sec_comp_sub: "القدرات والخبرات التخصصية",
     sec_comp_title: "مجالات التميز في التطوير والمعمار",
     sec_proj_sub: "سابقة الأعمال والمنجزات",
     sec_proj_title: "أبرز المشاريع الاستراتيجية المطورة",
     sec_proj_desc: "توثيق تفصيلي للمشاريع الوطنية الكبرى، أعمال البنية التحتية، الأبراج، والمجمعات السكنية والترفيهية.",
     btn_view_details: "عرض ملف وتفاصيل المشروع",
+    sec_trans_sub: "التحدي والإنجاز الميداني",
+    sec_trans_title: "التحول الهندسي التفاعلي: من الحفر والخرسانات إلى التسليم الفاخر",
+    sec_trans_desc: "اسحب المؤشر التفاعلي لاستكشاف التحول الإنشائي والمعماري لمشاريعنا الكبرى من مراحل الأساسات وصب الخرسانات إلى مرحلة التسليم والتشغيل النهائي.",
+    trans_tab_pnu: "إسكان 50 فيلا بجامعة الأميرة نورة",
+    trans_tab_res: "خزان بريمان الاستراتيجي (170M لتر)",
+    badge_after: "AFTER • الإنجاز النهائي",
+    badge_before: "BEFORE • صب الخرسانات والأساسات",
+    compare_hint: "⟵ اسحب المؤشر الذهبي يميناً ويساراً للمقارنة بين مرحلة التنفيذ والتسليم ⟶",
     sec_gallery_sub: "التنفيذ الميداني بالصور",
     sec_gallery_title: "سجل التوثيق الهندسي والميداني",
     sec_gallery_desc: "صور واقعية من مراحل صب الخرسانات، تركيب حديد التسليح، الجدران الاستنادية، والتشطيبات الفاخرة.",
@@ -123,6 +155,21 @@ const translations = {
     contact_location_label: "المقر والعنوان",
     contact_location_val: "الرياض - حي الوزارات - المملكة العربية السعودية",
     btn_whatsapp: "مراسلة مباشرة عبر واتساب",
+    builder_tag: "INTERACTIVE CONSULTATION BUILDER",
+    builder_title: "بناء طلب الاستشارة والمشروع التفاعلي",
+    builder_desc: "حدد نطاق ونوع مشروعك للحصول على استشارة هندسية فورية مباشرة مع م. ناصر علي كمال:",
+    step_sector: "01. SECTOR / نوع المشروع",
+    step_scope: "02. SCOPE / نطاق العمل",
+    chip_infra: "🏗️ بنية تحتية وخزانات",
+    chip_towers: "🏢 أبراج ومرافق",
+    chip_res: "🏡 مجمعات سكنية",
+    chip_ent: "🎡 ترفيه وتجاري",
+    chip_epc: "تسليم مفتاح EPC",
+    chip_dev: "تطوير عقاري شامل",
+    chip_consult: "استشارة وتصميم",
+    btn_instant_whatsapp: "إرسال الطلب المخصص عبر واتساب فوراً",
+    btn_toggle_form: "أو تعبئة النموذج البريدي المباشر",
+    btn_toggle_form_hide: "إخفاء النموذج المباشر",
     form_title: "إرسال استفسار أو طلب استشارة",
     form_name: "الاسم الكريم / الجهة",
     form_phone: "رقم الهاتف أو الجوال",
@@ -141,21 +188,24 @@ const translations = {
     modal_technical_title: "النطاق الهندسي والتطويري:"
   },
   en: {
-    top_status: "Accredited Member - Saudi Council of Engineers | Riyadh, Kingdom of Saudi Arabia",
+    page_title: "Arch. Nasser Ali Kamal | Real Estate Development Director & Principal Architect",
+    top_status: "Available for Mega Development Management & Turnkey EPC Execution",
     brand_name: "Arch. Nasser Ali Kamal",
     brand_sub: "Senior Development Manager & Principal Architect",
     nav_about: "Vision & Experience",
     nav_competencies: "Specializations",
     nav_projects: "Key Projects",
+    nav_transformation: "Engineering Evolution",
     nav_gallery: "Site Ledger",
     nav_clients: "Clients & Partners",
     nav_credentials: "Credentials",
     nav_contact: "Consultation",
     btn_print: "Export Dossier PDF",
-    btn_cad: "CAD Blueprint Mode",
+    btn_cad: "CAD Mode",
     quick_about: "Vision",
     quick_projects: "Projects",
     quick_gallery: "Site Ledger",
+    quick_clients: "Clients",
     quick_contact: "Consult",
     swipe_hint: "Swipe horizontally to explore projects",
     swipe_gallery_hint: "Swipe to view on-site execution photos",
@@ -169,8 +219,14 @@ const translations = {
     hero_name: "Nasser Ali Kamal",
     hero_name_full: "Arch. Nasser Ali Kamal",
     hero_subtitle: "Harmonizing visionary architectural design with mega-project development governance, strategic infrastructure, and turnkey EPC execution across Saudi Arabia.",
+    hero_trust_badge: "Accredited KSA Practice +38 Years",
+    stat_exp: "Years Proven KSA Track Record",
+    stat_projects: "Delivered Landmark Projects",
+    stat_infra: "SAR Portfolio Managed & Supervised",
     tab_architect: "Architectural Vision",
     tab_dev: "EPC Development",
+    architect_title: "Architectural Direction & Spatial Design",
+    architect_desc: "Mastering contextual architectural form, high-performance building envelopes, spatial circulation, thematic interiors, and Saudi Building Code (SBC) compliance.",
     persona_arch_title: "Architectural Direction & Spatial Design",
     persona_arch_desc: "Mastering contextual architectural form, high-performance building envelopes, spatial circulation, thematic interiors, and Saudi Building Code (SBC) compliance.",
     persona_dev_title: "Real Estate Development & EPC Management",
@@ -195,12 +251,26 @@ const translations = {
     pillar3_desc: "Strict compliance with Saudi Building Code (SBC) and Civil Defense fire-life safety mandates.",
     team_caption_1: "Arch. Nasser Ali Kamal with executive leadership and engineering teams celebrating milestone facility handovers",
     team_caption_2: "Direct on-site engineering supervision and technical quality control audits at active work sites",
+    timeline_tag: "CAREER ERA SCRUBBER • 1986 — 2024",
+    timeline_title: "Leadership & Engineering Evolution Across 38 Years",
+    era1_title: "Foundations & Heritage",
+    era2_title: "Sovereign & University Mega EPC",
+    era3_title: "Strategic Infrastructure & Towers",
+    era4_title: "Turnkey EPC & Vision 2030",
     sec_comp_sub: "Core Specializations",
     sec_comp_title: "Domains of Excellence in Architecture & Development",
     sec_proj_sub: "Track Record & Folio",
     sec_proj_title: "Featured Landmark Developed Projects",
     sec_proj_desc: "Comprehensive engineering dossier covering national infrastructure, turnkey government complexes, commercial high-rises, and thematic entertainment destinations.",
     btn_view_details: "View Project Dossier",
+    sec_trans_sub: "Engineering Execution & Achievement",
+    sec_trans_title: "Interactive Engineering Evolution: From Foundations to Luxury Delivery",
+    sec_trans_desc: "Drag the interactive comparator to explore the structural and architectural transformation of our landmark projects from deep excavation and concrete casting to final handover.",
+    trans_tab_pnu: "PNU 50 Luxury Faculty Villas",
+    trans_tab_res: "Briman Mega Water Reservoir (170M L)",
+    badge_after: "AFTER • Turnkey Completion",
+    badge_before: "BEFORE • Concrete & Rebar Foundations",
+    compare_hint: "⟵ Drag golden slider handle left and right to inspect transformation ⟶",
     sec_gallery_sub: "Field Execution in Photos",
     sec_gallery_title: "Engineering Progress & Construction Ledger",
     sec_gallery_desc: "Real-world photographic documentation of deep foundation pours, rebar reinforcement, retaining walls, and luxury interior completions.",
@@ -227,6 +297,21 @@ const translations = {
     contact_location_label: "Headquarters",
     contact_location_val: "Al Wizarat Dist, Riyadh, Kingdom of Saudi Arabia",
     btn_whatsapp: "Chat on WhatsApp Directly",
+    builder_tag: "INTERACTIVE CONSULTATION BUILDER",
+    builder_title: "Interactive Project Scope & Consultation Builder",
+    builder_desc: "Select your project type and scope to generate an instant customized consultation request directly for Arch. Nasser Ali Kamal:",
+    step_sector: "01. SECTOR / Project Type",
+    step_scope: "02. SCOPE / Required Services",
+    chip_infra: "🏗️ Infrastructure & Reservoirs",
+    chip_towers: "🏢 Towers & Facilities",
+    chip_res: "🏡 Residential Compounds",
+    chip_ent: "🎡 Entertainment & Retail",
+    chip_epc: "Turnkey EPC Delivery",
+    chip_dev: "Full Development Management",
+    chip_consult: "Architectural & Advisory",
+    btn_instant_whatsapp: "Send Customized Request on WhatsApp",
+    btn_toggle_form: "Or Fill the Direct Email Form",
+    btn_toggle_form_hide: "Hide Email Form",
     form_title: "Send an Inquiry or Request a Consultation",
     form_name: "Your Name / Organization",
     form_phone: "Phone / Mobile Number",
@@ -302,14 +387,21 @@ function updateLanguage(lang) {
 
   // Update button appearance
   const langToggle = document.getElementById('langToggle');
-  if (lang === 'ar') {
-    langToggle.innerHTML = '<span class="lang-flag">🇬🇧</span><span class="lang-text">EN</span>';
-  } else {
-    langToggle.innerHTML = '<span class="lang-flag">🇸🇦</span><span class="lang-text">عربي</span>';
+  if (langToggle) {
+    if (lang === 'ar') {
+      langToggle.innerHTML = '<span class="lang-flag">🇬🇧</span><span class="lang-text font-mono">EN</span>';
+    } else {
+      langToggle.innerHTML = '<span class="lang-flag">🇸🇦</span><span class="lang-text font-mono">عربي</span>';
+    }
+  }
+
+  // Update page title
+  if (translations[lang] && translations[lang].page_title) {
+    document.title = translations[lang].page_title;
   }
 
   const archiveSearchInput = document.getElementById('archiveSearchInput');
-  if (archiveSearchInput) {
+  if (archiveSearchInput && translations[lang]) {
     archiveSearchInput.placeholder = translations[lang].archive_search_placeholder;
   }
 
@@ -331,8 +423,10 @@ function updateLanguage(lang) {
   renderGallery();
   renderCredentials();
   renderClients();
+  renderTimelineEra(currentEraKey);
   renderArchiveFilters();
   renderArchiveProjects();
+  setupScopeBuilder();
   refreshIcons();
   setupScrollReveals();
 }

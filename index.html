@@ -452,11 +452,11 @@
         <div class="trans-tabs-bar">
           <button class="trans-tab-btn active" data-compare="pnu">
             <i data-lucide="home"></i>
-            <span>إسكان 50 فيلا بجامعة الأميرة نورة</span>
+            <span data-i18n="trans_tab_pnu">إسكان 50 فيلا بجامعة الأميرة نورة</span>
           </button>
           <button class="trans-tab-btn" data-compare="reservoir">
             <i data-lucide="waves"></i>
-            <span>خزان بريمان الاستراتيجي (170M لتر)</span>
+            <span data-i18n="trans_tab_res">خزان بريمان الاستراتيجي (170M لتر)</span>
           </button>
         </div>
 
@@ -465,12 +465,12 @@
           <div class="compare-container" id="compareBox">
             <!-- After Image (Base) -->
             <img src="/assets/projects/pnu_housing_villas.png" alt="After Completion" class="compare-img compare-after-img" id="afterImage">
-            <span class="compare-badge badge-after font-mono">AFTER • الإنجاز النهائي</span>
+            <span class="compare-badge badge-after font-mono" data-i18n="badge_after">AFTER • الإنجاز النهائي</span>
 
             <!-- Before Image (Overlay clipped) -->
             <div class="compare-overlay" id="compareOverlay" style="width: 50%;">
               <img src="/assets/projects/concrete_pump_rebar.png" alt="Before Construction" class="compare-img compare-before-img" id="beforeImage">
-              <span class="compare-badge badge-before font-mono">BEFORE • صب الخرسانات والأساسات</span>
+              <span class="compare-badge badge-before font-mono" data-i18n="badge_before">BEFORE • صب الخرسانات والأساسات</span>
             </div>
 
             <!-- Draggable Golden Handle -->
@@ -523,7 +523,7 @@
       <div class="container">
         <div class="editorial-header text-center">
           <div class="editorial-eyebrow centered">
-            <span class="eyebrow-num font-mono">05</span>
+            <span class="eyebrow-num font-mono">06</span>
             <span class="eyebrow-text" data-i18n="sec_cred_sub">الوثائق والشهادات الرسمية</span>
           </div>
           <h2 class="editorial-title" data-i18n="sec_cred_title">الاعتمادات والتراخيص النظامية</h2>
@@ -541,11 +541,11 @@
         <!-- Section Header with Trust Seal -->
         <div class="editorial-header text-center">
           <div class="editorial-eyebrow centered">
-            <span class="eyebrow-num font-mono">06</span>
+            <span class="eyebrow-num font-mono">07</span>
             <span class="eyebrow-text" data-i18n="sec_clients_sub">سجل الثقة والشركاء الاستراتيجيين</span>
           </div>
           <h2 class="editorial-title" data-i18n="sec_clients_title">كبار الشركاء والجهات الحكومية وصناع التطوير</h2>
-          <p class="editorial-subtitle" style="margin-inline: auto;" data-i18n="sec_clients_desc">
+          <p class="editorial-subtitle clients-desc-lead" data-i18n="sec_clients_desc">
             سجل حافل من الشراكات المعتمدة في إدارة التطوير، التنفيذ العام، وتسليم المفتاح EPC مع كبرى الوزارات السيادية والشركات المساهمة والمجموعات الاستثمارية في المملكة.
           </p>
         </div>
@@ -571,31 +571,23 @@
         </div>
 
         <!-- Continuous Horizontal Animated Logos Marquee -->
-        <div class="logos-marquee-section">
-          <div class="logos-marquee-wrapper" id="logosMarquee">
-            <div class="marquee-track" id="marqueeTrack1">
-              <!-- Rendered dynamically -->
-            </div>
-            <div class="marquee-track" id="marqueeTrack2" aria-hidden="true">
+        <div class="clients-logos-marquee-section">
+          <div class="logos-marquee-wrapper" id="logosMarqueeWrapper">
+            <div class="logos-marquee-track" id="logosMarqueeTrack">
               <!-- Rendered dynamically -->
             </div>
           </div>
-        </div>
-
-        <!-- Tier-1 Strategic Clients & Project Proof Grid -->
-        <div class="clients-proof-grid" id="clientsGrid">
-          <!-- Injected dynamically with individual logos and enriched project scopes -->
         </div>
 
         <!-- Official Verified Client Boards from PDF Portfolio -->
-        <div class="clients-official-boards">
-          <div class="official-boards-header">
-            <div class="font-mono official-boards-tag" data-i18n="official_boards_tag">OFFICIAL ACCREDITED CLIENT REGISTRY • DOCUMENTED PROOF</div>
-            <h3 class="official-boards-title" data-i18n="official_boards_title">لوحات العملاء والشركاء المعتمدة رسمياً في وثائق وسجلات المنشأة</h3>
+        <div class="official-registry-boards mt-8">
+          <div class="boards-header text-center mb-4">
+            <span class="boards-tag font-mono" data-i18n="official_boards_tag">OFFICIAL ACCREDITED CLIENT REGISTRY • DOCUMENTED PROOF</span>
+            <h3 class="boards-title" data-i18n="official_boards_title">لوحات العملاء والشركاء المعتمدة رسمياً في وثائق وسجلات المنشأة</h3>
           </div>
 
-          <div class="client-proof-cards">
-            <div class="proof-card" data-img="/assets/clients/clients_grid_2.png" data-title="لوحة الوزارات والجهات الحكومية السيادية">
+          <div class="proof-cards-grid">
+            <div class="proof-card" data-img="/assets/clients/clients_grid_2.png" data-title="لوحة الوزارات والجهات الحكومية والسيادية">
               <div class="proof-card-header font-mono">
                 <span class="proof-code">DOC-REG-GOV</span>
                 <span>SOVEREIGN & GOVERNMENT REGISTRY</span>
@@ -644,7 +636,7 @@
             <!-- Left: Contact Details & Fast WhatsApp -->
             <div class="contact-info-col">
               <div class="editorial-eyebrow">
-                <span class="eyebrow-num font-mono">07</span>
+                <span class="eyebrow-num font-mono">08</span>
                 <span class="eyebrow-text text-gold" data-i18n="sec_contact_sub">التواصل المباشر</span>
               </div>
               <h2 class="contact-heading" data-i18n="sec_contact_title">جاهزون لبحث المشاريع والاستشارات الإنشائية والمعمارية</h2>
@@ -698,18 +690,18 @@
             <!-- Right: Architectural Project Scope Builder & Interactive Inquiry -->
             <div class="contact-form-col">
               <div class="interactive-scope-builder">
-                <div class="form-header-badge font-mono">INTERACTIVE CONSULTATION BUILDER</div>
+                <div class="form-header-badge font-mono" data-i18n="builder_tag">INTERACTIVE CONSULTATION BUILDER</div>
                 <h3 class="form-title" data-i18n="builder_title">بناء طلب الاستشارة والمشروع التفاعلي</h3>
                 <p class="builder-subtitle" data-i18n="builder_desc">حدد نطاق ونوع مشروعك للحصول على استشارة هندسية فورية مباشرة مع م. ناصر علي كمال:</p>
 
                 <!-- Step 1: Sector Choice -->
                 <div class="builder-step">
-                  <span class="step-label font-mono">01. SECTOR / نوع المشروع</span>
+                  <span class="step-label font-mono" data-i18n="step_sector">01. SECTOR / نوع المشروع</span>
                   <div class="chip-group" id="sectorChips">
-                    <button type="button" class="scope-chip active" data-value="بنية تحتية وخزانات">🏗️ بنية تحتية وخزانات</button>
-                    <button type="button" class="scope-chip" data-value="أبراج ومرافق صيدلانية">🏢 أبراج ومرافق</button>
-                    <button type="button" class="scope-chip" data-value="مجمعات وفلل سكنية">🏡 مجمعات سكنية</button>
-                    <button type="button" class="scope-chip" data-value="وجهات ترفيهية ومولات">🎡 ترفيه وتجاري</button>
+                    <button type="button" class="scope-chip active" data-value="بنية تحتية وخزانات" data-i18n="chip_infra">🏗️ بنية تحتية وخزانات</button>
+                    <button type="button" class="scope-chip" data-value="أبراج ومرافق صيدلانية" data-i18n="chip_towers">🏢 أبراج ومرافق</button>
+                    <button type="button" class="scope-chip" data-value="مجمعات وفلل سكنية" data-i18n="chip_res">🏡 مجمعات سكنية</button>
+                    <button type="button" class="scope-chip" data-value="وجهات ترفيهية ومولات" data-i18n="chip_ent">🎡 ترفيه وتجاري</button>
                   </div>
                 </div>
 

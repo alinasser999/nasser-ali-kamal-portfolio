@@ -37,11 +37,12 @@
   --shadow-modal: 0 25px 60px rgba(18, 20, 23, 0.2);
 
   /* Typography Systems */
-  --font-serif: 'Cormorant Garamond', 'Cinzel', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
   --font-ar-head: 'Cairo', 'Tajawal', sans-serif;
   --font-ar-body: 'Cairo', sans-serif;
+  --font-numbers: 'Plus Jakarta Sans', 'Cairo', system-ui, sans-serif;
 
   --font-heading: var(--font-ar-head);
   --font-body: var(--font-ar-body);
@@ -65,8 +66,22 @@
 }
 
 html[lang="en"] {
-  --font-heading: var(--font-serif);
-  --font-body: var(--font-sans);
+  --font-heading: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-numbers: 'Plus Jakarta Sans', sans-serif;
+}
+
+.ribbon-num,
+.stat-counter,
+.hero-counter,
+.era-stat-num,
+.trust-num,
+.stat-num {
+  font-family: var(--font-numbers) !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+  font-feature-settings: "tnum" 1, "lnum" 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
 }
 
 /* ==========================================================================
