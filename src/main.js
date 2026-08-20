@@ -184,6 +184,9 @@ const translations = {
     form_submit: "إرسال الاستفسار الآن",
     footer_sub: "السيرة المهنية وملف سابقة الأعمال المعمارية والتطويرية | الرياض، المملكة العربية السعودية",
     footer_rights: "جميع الحقوق محفوظة - م. ناصر علي كمال",
+    dock_whatsapp: "واتساب مباشر",
+    dock_call: "اتصال فوري",
+    dock_catalog: "دليل المشاريع",
     modal_highlights_title: "أبرز مواصفات ومنجزات المشروع:",
     modal_technical_title: "النطاق الهندسي والتطويري:"
   },
@@ -326,6 +329,9 @@ const translations = {
     form_submit: "Submit Request Now",
     footer_sub: "Senior Development Manager & Architect Dossier | Riyadh, Kingdom of Saudi Arabia",
     footer_rights: "All Rights Reserved - Arch. Nasser Ali Kamal",
+    dock_whatsapp: "WhatsApp",
+    dock_call: "Direct Call",
+    dock_catalog: "Projects Catalog",
     modal_highlights_title: "Key Specifications & Milestone Achievements:",
     modal_technical_title: "Engineering & Development Scope:"
   }
@@ -1274,6 +1280,7 @@ function setupBlueprintMode() {
 function setupArchiveModal() {
   const seeAllTop = document.getElementById('seeAllProjectsBtn');
   const mobileSeeAll = document.getElementById('mobileSeeAllProjectsBtn');
+  const dockArchiveBtn = document.getElementById('dockArchiveBtn');
   const archiveModal = document.getElementById('archiveModal');
   const archiveCloseBtn = document.getElementById('archiveCloseBtn');
   const archiveSearchInput = document.getElementById('archiveSearchInput');
@@ -1294,6 +1301,7 @@ function setupArchiveModal() {
 
   if (seeAllTop) seeAllTop.addEventListener('click', openArchive);
   if (mobileSeeAll) mobileSeeAll.addEventListener('click', openArchive);
+  if (dockArchiveBtn) dockArchiveBtn.addEventListener('click', openArchive);
   if (archiveCloseBtn) archiveCloseBtn.addEventListener('click', closeArchive);
 
   if (archiveSearchInput) {
