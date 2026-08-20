@@ -26,35 +26,10 @@
     <div class="grid-crosshairs crosshair-br">+</div>
   </div>
 
-  <!-- Live Architectural Operations & Status Bar -->
-  <div class="top-status-bar" id="topStatusBar">
-    <div class="container status-inner">
-      <div class="status-left">
-        <span class="status-beacon-wrap">
-          <span class="status-dot live-pulse"></span>
-          <span class="status-live-badge font-mono">LIVE STUDIO</span>
-        </span>
-        <span class="status-text" data-i18n="top_status">متاح لإدارة وتطوير المشاريع الكبرى وتسليم المفتاح EPC</span>
-      </div>
-      <div class="status-right font-mono">
-        <span class="status-pill" id="liveRiyadhTime">
-          <i data-lucide="clock" style="width: 12px; height: 12px;"></i>
-          <span id="riyadhClock">RIYADH --:--:--</span>
-        </span>
-        <span class="status-pill hide-on-mobile">
-          <i data-lucide="sun" style="width: 12px; height: 12px; color: var(--accent-ochre);"></i>
-          <span>28°C RIYADH</span>
-        </span>
-        <span class="status-pill hide-on-mobile">
-          <span class="font-mono">SCE #12093</span>
-        </span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header / Navigation (Refined & Comfortable Eye Ergonomics) -->
+  <!-- Header / Navigation (Matching Reference Exactly) -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
+      <!-- Brand Identity (Right in RTL) -->
       <a href="#" class="brand-logo" aria-label="Home">
         <div class="brand-text">
           <span class="brand-name" data-i18n="brand_name">م. ناصر علي كمال</span>
@@ -62,31 +37,32 @@
         </div>
       </a>
 
-      <!-- Desktop Nav -->
+      <!-- Center Rounded Navigation Capsule -->
       <nav class="main-nav" id="mainNav">
-        <a href="#about" class="nav-link active" data-i18n="nav_about">الرؤية والخبرة</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">الرؤية والخبرة</a>
         <a href="#projects" class="nav-link" data-i18n="nav_projects">المشاريع المطورة</a>
-        <a href="#transformation" class="nav-link nav-link-highlight" data-i18n="nav_transformation">التحول الهندسي</a>
+        <a href="#transformation" class="nav-link nav-link-highlight active" data-i18n="nav_transformation">التحول الهندسي</a>
+        <a href="#projects" class="nav-link" data-i18n="nav_gallery">التوثيق الميداني</a>
         <a href="#clients" class="nav-link" data-i18n="nav_clients">العملاء والشركاء</a>
         <a href="#credentials" class="nav-link" data-i18n="nav_credentials">الاعتمادات</a>
       </nav>
 
-      <!-- Action Utilities -->
+      <!-- Action Utilities (Left in RTL) -->
       <div class="header-actions">
         <!-- Blueprint CAD Mode Toggle (Desktop) -->
         <button id="blueprintToggle" class="btn-blueprint hide-on-mobile" title="تبديل النمط المعماري (CAD Blueprint)">
-          <i data-lucide="layers"></i>
           <span class="cad-text font-mono" data-i18n="btn_cad">CAD Mode</span>
+          <i data-lucide="layers"></i>
         </button>
 
-        <!-- Language Switcher -->
+        <!-- Language Selector -->
         <button id="langToggle" class="btn-lang font-mono" title="Toggle Language">
-          <i data-lucide="globe"></i>
-          <span class="lang-text font-mono">English</span>
+          <span class="lang-code-bold">EN</span>
+          <span class="lang-code-muted">GB</span>
         </button>
 
         <!-- Contact CTA (Desktop) -->
-        <a href="#contact" class="btn-primary header-cta hide-on-mobile" data-i18n="nav_contact">طلب استشارة</a>
+        <a href="#contact" class="btn-header-cta hide-on-mobile" data-i18n="nav_contact">طلب استشارة</a>
 
         <!-- Mobile Menu Toggle -->
         <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Menu">
@@ -123,6 +99,7 @@
       <a href="#about" class="mobile-nav-link" data-i18n="nav_about">الرؤية والخبرة</a>
       <a href="#competencies" class="mobile-nav-link" data-i18n="nav_competencies">التخصصات</a>
       <a href="#projects" class="mobile-nav-link" data-i18n="nav_projects">المشاريع المطورة</a>
+      <a href="#transformation" class="mobile-nav-link" data-i18n="nav_transformation">التحول الهندسي</a>
       <a href="#clients" class="mobile-nav-link" data-i18n="nav_clients">العملاء والشركاء</a>
       <a href="#credentials" class="mobile-nav-link" data-i18n="nav_credentials">الاعتمادات</a>
       <a href="#contact" class="mobile-nav-link drawer-cta" data-i18n="nav_contact">طلب استشارة</a>
@@ -147,103 +124,79 @@
   </div>
 
   <main>
-    <!-- Hero Section - Executive Architectural Monograph (Option 1 Redesign) -->
+    <!-- Hero Section - Executive Architectural Archive (Exact Match to Reference) -->
     <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-monograph-layout">
+      <div class="container hero-container">
+        <div class="hero-grid-layout">
           
-          <!-- Monograph Editorial Header -->
-          <div class="hero-editorial-head">
-            <div class="hero-meta-badge font-mono">
-              <span>ARCHITECTURAL FOLIO / 1986 — 2024</span>
-              <span>•</span>
-              <span data-i18n="hero_badge_loc">المملكة العربية السعودية</span>
+          <!-- Right Column: Content & Typography (in RTL) -->
+          <div class="hero-content-col">
+            <!-- Top Metadata Row -->
+            <div class="hero-meta-row">
+              <div class="hero-location-tag">
+                <i data-lucide="map-pin" class="loc-icon"></i>
+                <span data-i18n="hero_badge_loc">المملكة العربية السعودية</span>
+              </div>
+              <div class="hero-meta-badge font-mono">
+                ARCHITECTURAL FOLIO / 1986 — 2024
+              </div>
             </div>
 
-            <h1 class="hero-title">
-              <span class="hero-name-primary" data-i18n="hero_name_full">م. ناصر علي كمال</span>
-              <span class="hero-title-sub" data-i18n="brand_sub">مدير تطوير عقاري ومهندس معماري رئيسي</span>
-            </h1>
+            <!-- Main Heading & Role -->
+            <h1 class="hero-title-name" data-i18n="hero_name_full">م. ناصر علي كمال</h1>
+            <div class="hero-role-title" data-i18n="brand_sub">مدير تطوير عقاري ومعماري</div>
+            
+            <!-- Orange Divider Line -->
+            <div class="hero-role-divider"></div>
 
-            <p class="hero-subtitle" data-i18n="hero_subtitle">
-              دمج الرؤية المعمارية الإبداعية مع حوكمة المشاريع الكبرى، البنية التحتية، ومشاريع تسليم المفتاح EPC بالمملكة العربية السعودية.
+            <!-- Hero Statement -->
+            <h2 class="hero-statement-title" data-i18n="hero_statement">خبرة تقود المشروع من الرؤية إلى التسليم</h2>
+
+            <!-- Description -->
+            <p class="hero-description" data-i18n="hero_description_exact">
+              مدير تطوير عقاري ومعماري بخبرة تتجاوز 38 عامًا في قيادة المشاريع الكبرى من التصميم والتخطيط إلى التنفيذ والتسليم بالمملكة العربية السعودية.
             </p>
-          </div>
 
-          <!-- Executive Natural 4:5 Portrait Frame (Enhanced Museum-Grade Architectural Border) -->
-          <div class="hero-portrait-wrap">
-            <div class="executive-portrait-card" id="portraitMatteFrame">
-              <!-- Laser Scanner Line on Persona Switch -->
-              <div class="laser-scanner" aria-hidden="true"></div>
+            <!-- CTA Buttons -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn-hero-primary">
+                <span data-i18n="hero_btn_projects_exact">استعرض المشاريع</span>
+                <i data-lucide="arrow-left" class="btn-arrow-orange"></i>
+              </a>
+              <a href="#contact" class="btn-hero-secondary">
+                <span data-i18n="hero_btn_contact_exact">اطلب استشارة</span>
+                <i data-lucide="arrow-left" class="btn-arrow-dark"></i>
+              </a>
+            </div>
 
-              <!-- Elegant Subtle Corner Accents -->
-              <div class="frame-corner top-start font-mono">┌</div>
-              <div class="frame-corner top-end font-mono">┐</div>
-              <div class="frame-corner bottom-start font-mono">└</div>
-              <div class="frame-corner bottom-end font-mono">┘</div>
-
-              <div class="portrait-image-container">
-                <img 
-                  src="/assets/portraits/dad_formal.png" 
-                  alt="م. ناصر علي كمال - مدير تطوير عقاري ومعماري رئيسي" 
-                  class="executive-portrait-img"
-                  id="heroPortraitImg"
-                >
-                <div class="portrait-floating-badge font-mono">
-                  <i data-lucide="shield-check" style="width: 15px; height: 15px; color: var(--accent-ochre);"></i>
-                  <span data-i18n="hero_trust_badge">خبرة معتمدة +38 عاماً بالمملكة</span>
-                </div>
+            <!-- Proof Row at Bottom -->
+            <div class="hero-proof-row">
+              <div class="proof-item">
+                <i data-lucide="shield-check" class="proof-icon"></i>
+                <span class="proof-text" data-i18n="proof_exp">+38 عامًا من الخبرة</span>
+              </div>
+              <div class="proof-divider"></div>
+              <div class="proof-item">
+                <i data-lucide="key" class="proof-icon"></i>
+                <span class="proof-text" data-i18n="proof_epc">EPC وتسليم مفتاح</span>
+              </div>
+              <div class="proof-divider"></div>
+              <div class="proof-item">
+                <i data-lucide="map-pin" class="proof-icon"></i>
+                <span class="proof-text" data-i18n="proof_ksa">المملكة العربية السعودية</span>
               </div>
             </div>
           </div>
 
-          <!-- 3-Stat Executive Metric Ribbon with Live Counting Physics -->
-          <div class="hero-metrics-ribbon" id="heroMetricsRibbon">
-            <div class="metric-ribbon-item">
-              <span class="ribbon-num font-mono hero-counter" data-target="38" data-suffix="+">0+</span>
-              <span class="ribbon-label" data-i18n="stat_exp">سنة خبرة مهنية بالمملكة</span>
-            </div>
-            <div class="metric-ribbon-item">
-              <span class="ribbon-num font-mono hero-counter" data-target="50" data-suffix="+">0+</span>
-              <span class="ribbon-label" data-i18n="stat_projects">مشروع منجز ومسلم</span>
-            </div>
-            <div class="metric-ribbon-item">
-              <span class="ribbon-num font-mono hero-counter" data-target="500" data-prefix="+" data-suffix="M">0M</span>
-              <span class="ribbon-label" data-i18n="stat_infra">ريال حجم المشاريع المشرف عليها</span>
-            </div>
-          </div>
-
-          <!-- Sleek Segmented Persona Switcher & Fast Actions -->
-          <div class="hero-persona-wrapper">
-            <div class="persona-segmented-control" role="tablist">
-              <button class="persona-pill-btn active" id="tabArchitect" role="tab" aria-selected="true">
-                <i data-lucide="compass"></i>
-                <span data-i18n="tab_architect">الرؤية المعمارية</span>
-              </button>
-              <button class="persona-pill-btn" id="tabDevManager" role="tab" aria-selected="false">
-                <i data-lucide="building-2"></i>
-                <span data-i18n="tab_dev">إدارة التطوير EPC</span>
-              </button>
-            </div>
-
-            <!-- Dynamic Persona Focus Card -->
-            <div class="persona-focus-card" id="personaCard">
-              <h3 class="persona-focus-title" id="personaTitle" data-i18n="architect_title">الرؤية المعمارية وتخطيط الفراغات</h3>
-              <p class="persona-focus-desc" id="personaDesc" data-i18n="architect_desc">
-                صياغة الهوية المعمارية، تصميم الواجهات المستدامة والمعاصرة، التنسيق الفراغي، والديكورات الترفيهية والتجارية الفاخرة ومطابقة كود البناء السعودي SBC.
-              </p>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="hero-actions">
-              <a href="#projects" class="btn-primary">
-                <i data-lucide="layers"></i>
-                <span data-i18n="hero_btn_projects">استعراض سجل المشاريع</span>
-              </a>
-              <a href="https://wa.me/966545000073" target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                <i data-lucide="message-circle"></i>
-                <span data-i18n="hero_btn_contact">طلب استشارة أو اجتماع</span>
-              </a>
+          <!-- Left Column: Complete Architectural Archive Composition (in RTL) -->
+          <div class="hero-visual-col">
+            <div class="hero-archive-board-wrap">
+              <img 
+                src="/assets/images/nasser-hero-archive-composite.jpg" 
+                alt="م. ناصر علي كمال - السجل المعماري وإدارة التطوير"
+                class="hero-archive-composite-img"
+                id="heroArchiveImg"
+              >
             </div>
           </div>
 

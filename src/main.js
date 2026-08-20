@@ -12,6 +12,8 @@ import {
   Building2,
   Layers,
   Zap,
+  Shield,
+  Key,
   ShieldCheck,
   ClipboardList,
   ArrowLeft,
@@ -95,6 +97,13 @@ const translations = {
     tag_code: "Saudi Building Code SBC",
     hero_btn_projects: "استعراض سجل المشاريع",
     hero_btn_contact: "طلب استشارة أو اجتماع",
+    hero_statement: "خبرة تقود المشروع من الرؤية إلى التسليم",
+    hero_description_exact: "مدير تطوير عقاري ومعماري بخبرة تتجاوز 38 عامًا في قيادة المشاريع الكبرى من التصميم والتخطيط إلى التنفيذ والتسليم بالمملكة العربية السعودية.",
+    hero_btn_projects_exact: "استعرض المشاريع",
+    hero_btn_contact_exact: "اطلب استشارة",
+    proof_exp: "+38 عامًا من الخبرة",
+    proof_epc: "EPC وتسليم مفتاح",
+    proof_ksa: "المملكة العربية السعودية",
     legend_title: "المعماري ومدير التطوير",
     caption_name: "م. ناصر علي كمال",
     caption_role: "مدير تطوير عقاري ومهندس معماري",
@@ -240,6 +249,13 @@ const translations = {
     tag_code: "Saudi Building Code SBC",
     hero_btn_projects: "Explore Project Folio",
     hero_btn_contact: "Request Consultation",
+    hero_statement: "Expertise Leading Projects from Vision to Delivery",
+    hero_description_exact: "Senior Real Estate Development Director & Principal Architect with over 38 years of experience leading mega projects from design and master planning to turnkey execution and delivery across Saudi Arabia.",
+    hero_btn_projects_exact: "Explore Projects",
+    hero_btn_contact_exact: "Request Consultation",
+    proof_exp: "+38 Years of Experience",
+    proof_epc: "EPC & Turnkey Delivery",
+    proof_ksa: "Kingdom of Saudi Arabia",
     legend_title: "Architect & Development Director",
     caption_name: "Arch. Nasser Ali Kamal",
     caption_role: "Development Manager & Architect",
@@ -360,6 +376,8 @@ function refreshIcons() {
       Building2,
       Layers,
       Zap,
+      Shield,
+      Key,
       ShieldCheck,
       ClipboardList,
       ArrowLeft,
@@ -395,9 +413,9 @@ function updateLanguage(lang) {
   const langToggle = document.getElementById('langToggle');
   if (langToggle) {
     if (lang === 'ar') {
-      langToggle.innerHTML = '<i data-lucide="globe"></i><span class="lang-text font-mono">English</span>';
+      langToggle.innerHTML = '<span class="lang-code-bold">EN</span> <span class="lang-code-muted">GB</span>';
     } else {
-      langToggle.innerHTML = '<i data-lucide="globe"></i><span class="lang-text font-mono">العربية</span>';
+      langToggle.innerHTML = '<span class="lang-code-bold">عربي</span> <span class="lang-code-muted">SA</span>';
     }
   }
 
@@ -1357,62 +1375,76 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => scanner.classList.remove('scanning'), 1800);
   }
 
-  tabArchitect.addEventListener('click', () => {
-    tabArchitect.classList.add('active');
-    tabDevManager.classList.remove('active');
-    currentPersona = 'architect';
-    renderPersona();
-    triggerLaserScan();
-    heroPortraitImg.style.opacity = '0.2';
-    setTimeout(() => {
-      heroPortraitImg.src = portfolioData.profile.images.formal;
-      heroPortraitImg.style.opacity = '1';
-      refreshIcons();
-    }, 150);
-  });
+  if (tabArchitect && tabDevManager) {
+    tabArchitect.addEventListener('click', () => {
+      tabArchitect.classList.add('active');
+      tabDevManager.classList.remove('active');
+      currentPersona = 'architect';
+      renderPersona();
+      triggerLaserScan();
+      if (heroPortraitImg) {
+        heroPortraitImg.style.opacity = '0.2';
+        setTimeout(() => {
+          heroPortraitImg.src = portfolioData.profile.images.formal;
+          heroPortraitImg.style.opacity = '1';
+          refreshIcons();
+        }, 150);
+      }
+    });
 
-  tabDevManager.addEventListener('click', () => {
-    tabDevManager.classList.add('active');
-    tabArchitect.classList.remove('active');
-    currentPersona = 'devManager';
-    renderPersona();
-    triggerLaserScan();
-    heroPortraitImg.style.opacity = '0.2';
-    setTimeout(() => {
-      heroPortraitImg.src = portfolioData.profile.images.site;
-      heroPortraitImg.style.opacity = '1';
-      refreshIcons();
-    }, 150);
-  });
+    tabDevManager.addEventListener('click', () => {
+      tabDevManager.classList.add('active');
+      tabArchitect.classList.remove('active');
+      currentPersona = 'devManager';
+      renderPersona();
+      triggerLaserScan();
+      if (heroPortraitImg) {
+        heroPortraitImg.style.opacity = '0.2';
+        setTimeout(() => {
+          heroPortraitImg.src = portfolioData.profile.images.site;
+          heroPortraitImg.style.opacity = '1';
+          refreshIcons();
+        }, 150);
+      }
+    });
+  }
 
   // Modals Close Listeners
   const modalCloseBtn = document.getElementById('modalCloseBtn');
   const projectModal = document.getElementById('projectModal');
-  modalCloseBtn.addEventListener('click', () => {
-    projectModal.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-
-  projectModal.addEventListener('click', (e) => {
-    if (e.target === projectModal) {
+  if (modalCloseBtn && projectModal) {
+    modalCloseBtn.addEventListener('click', () => {
       projectModal.classList.remove('open');
       document.body.style.overflow = '';
-    }
-  });
+    });
+  }
+
+  if (projectModal) {
+    projectModal.addEventListener('click', (e) => {
+      if (e.target === projectModal) {
+        projectModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 
   const docModalCloseBtn = document.getElementById('docModalCloseBtn');
   const docModal = document.getElementById('docModal');
-  docModalCloseBtn.addEventListener('click', () => {
-    docModal.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-
-  docModal.addEventListener('click', (e) => {
-    if (e.target === docModal) {
+  if (docModalCloseBtn && docModal) {
+    docModalCloseBtn.addEventListener('click', () => {
       docModal.classList.remove('open');
       document.body.style.overflow = '';
-    }
-  });
+    });
+  }
+
+  if (docModal) {
+    docModal.addEventListener('click', (e) => {
+      if (e.target === docModal) {
+        docModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 
   // Mobile Drawer Controls
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
