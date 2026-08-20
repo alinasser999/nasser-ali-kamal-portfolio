@@ -1747,93 +1747,186 @@ section {
 }
 
 /* ==========================================================================
-   Competencies Section
+   Competencies Section - Architectural Capabilities Matrix
    ========================================================================== */
 
 .competencies-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .competencies-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .competencies-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.75rem;
+    gap: 2rem;
   }
 }
 
 .comp-card {
   background: var(--bg-surface);
-  border: var(--border-hairline);
-  padding: 1.5rem 1.25rem;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 1.75rem 1.5rem;
   box-shadow: var(--shadow-subtle);
-  transition: all var(--transition-fast);
+  transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  .comp-card {
-    padding: 2.25rem 1.75rem;
-  }
+.comp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition-fast);
 }
 
 .comp-card:hover {
-  border-color: var(--ink-primary);
-  transform: translateY(-4px);
+  border-color: var(--accent-ochre);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-editorial);
 }
 
-.comp-card-header {
+.comp-card:hover::before {
+  background: var(--accent-ochre);
+}
+
+.comp-card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--border-hairline);
 }
 
-.comp-num {
-  font-size: 0.78rem;
+.comp-code-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
   color: var(--accent-ochre);
-  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-.comp-icon {
-  width: 36px;
-  height: 36px;
-  border: var(--border-hairline);
+.comp-index {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ink-muted);
+}
+
+.comp-card-main {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.comp-icon-box {
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--border-medium);
   background: var(--bg-secondary);
+  border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink-primary);
-  transition: transform var(--transition-fast);
+  color: var(--accent-ochre);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
 }
 
-.comp-icon i {
-  width: 18px;
-  height: 18px;
+.comp-card:hover .comp-icon-box {
+  background: var(--ink-primary);
+  border-color: var(--ink-primary);
+  color: #FFFFFF;
+}
+
+.comp-icon-box i {
+  width: 22px;
+  height: 22px;
+}
+
+.comp-content-box {
+  display: flex;
+  flex-direction: column;
 }
 
 .comp-title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 800;
   color: var(--ink-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
   line-height: 1.35;
 }
 
 .comp-desc {
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   color: var(--ink-secondary);
   line-height: 1.65;
+}
+
+.comp-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.comp-tag-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-full);
+  color: var(--ink-secondary);
+  transition: all var(--transition-fast);
+}
+
+.comp-card:hover .comp-tag-pill {
+  border-color: var(--border-medium);
+  background: #FFFFFF;
+}
+
+.comp-card-footer {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+
+.comp-footer-icon {
+  width: 14px;
+  height: 14px;
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.comp-proven-label {
+  font-weight: 800;
+  color: var(--ink-primary);
+}
+
+.comp-proven-val {
+  color: var(--accent-ochre);
+  font-weight: 700;
 }
 
 /* ==========================================================================

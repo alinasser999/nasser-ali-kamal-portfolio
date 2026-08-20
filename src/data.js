@@ -95,56 +95,110 @@ Throughout his career, he has directed landmark national undertakings spanning h
   competencies: [
     {
       num: "01",
+      code: "SPEC-01 / ARCHITECTURE",
       icon: "compass",
       title: { ar: "التصميم المعماري وتخطيط الماستر بلان", en: "Architectural Design & Master-Planning" },
       desc: {
-        ar: "صياغة الهوية المعمارية، تصميم الواجهات المستدامة والمعاصرة، وتوزيع الكتل والفراغات بكفاءة وظيفية وجمالية فائقة.",
-        en: "Architectural concept creation, facade engineering, circulation zoning, and spatial optimization for mixed-use developments."
+        ar: "صياغة الهوية المعمارية، دراسة الكتلة والتوجيه البيئي، وتصميم الواجهات المستدامة والمعاصرة مع تحسين كفاءة استخدام الفراغات.",
+        en: "Architectural concept creation, facade engineering, environmental massing, circulation zoning, and spatial optimization for mixed-use developments."
+      },
+      tags: {
+        ar: ["صياغة الواجهات", "تخطيط الفراغات", "كفاءة الكتل"],
+        en: ["Facade Engineering", "Spatial Zoning", "Massing Studies"]
+      },
+      provenIn: {
+        ar: "جامعة الأميرة نورة ومجمعات الديار",
+        en: "Princess Nora University & Deyar Compound"
       }
     },
     {
       num: "02",
+      code: "SPEC-02 / DEV-MANAGEMENT",
       icon: "building-2",
-      title: { ar: "إدارة التطوير العقاري والمشاريع الكبرى", en: "Real Estate Development & Governance" },
+      title: { ar: "إدارة التطوير العقاري وحوكمة المشاريع", en: "Real Estate Development & Governance" },
       desc: {
-        ar: "قيادة استراتيجيات التطوير من دراسات الجدوى والترخيص إلى إعداد خطط التنفيذ، وحوكمة الميزانيات وتحقيق أعلى عائد استثماري.",
+        ar: "قيادة استراتيجيات التطوير من دراسات الجدوى الاقتصادية وإجراءات التراخيص والمخططات التنفيذية، وحوكمة الميزانيات والعطاءات وتحقيق أعلى عائد استثماري.",
         en: "Directing development strategy from concept and viability to municipal approvals, master execution plans, budget control, and ROI maximization."
+      },
+      tags: {
+        ar: ["الجدوى الاقتصادية", "حوكمة الميزانيات", "إدارة المناقصات"],
+        en: ["Feasibility Modeling", "Budget Governance", "Tender Strategy"]
+      },
+      provenIn: {
+        ar: "المشاريع الاستثمارية والتجارية الكبرى",
+        en: "Mega Commercial & Investment Assets"
       }
     },
     {
       num: "03",
+      code: "SPEC-03 / TURNKEY-EPC",
       icon: "hard-hat",
       title: { ar: "مشاريع تسليم المفتاح الحكومية (Turnkey EPC)", en: "Government Turnkey EPC Execution" },
       desc: {
-        ar: "إدارة وتسليم مجمعات أمنية وحكومية متكاملة تشمل البنية التحتية، المباني الإدارية، وأنظمة الحماية والسلامة المشددة.",
+        ar: "إدارة وتنفيذ مجمعات أمنية وحكومية سيادية متكاملة تشمل الأعمال المدنية، البنية التحتية، المباني الإدارية، وأنظمة الحماية والسلامة المشددة.",
         en: "End-to-end turnkey delivery of high-security government facilities, civil substructures, administrative buildings, and hardened perimeters."
+      },
+      tags: {
+        ar: ["مجمعات سيادية أمنية", "بنية تحتية متكاملة", "تسليم قياسي"],
+        en: ["High-Security Facilities", "Civil Substructures", "Fast-Track Handover"]
+      },
+      provenIn: {
+        ar: "مشاريع خادم الحرمين الشريفين (KAP-1)",
+        en: "King Abdullah Security Centers (KAP-1)"
       }
     },
     {
       num: "04",
+      code: "SPEC-04 / THEMATIC-FITOUT",
       icon: "layers",
       title: { ar: "العمارة الترفيهية والتشطيبات الفاخرة", en: "Thematic Architecture & Luxury Fit-Out" },
       desc: {
-        ar: "تصميم وتنفيذ مدن الملاهي الترفيهية (سفوري لاند، اكستريم زون)، الكافيهات الفاخرة، والواجهات الزجاجية والرخامية الدقيقة.",
+        ar: "تصميم وتنفيذ مدن الملاهي الترفيهية المعاصرة (سفوري لاند، اكستريم زون)، الكافيهات الفاخرة، والواجهات الزجاجية والرخامية الدقيقة.",
         en: "Bespoke experiential fit-outs for mega entertainment venues, illuminated 3D structures, high-end hospitality cafes, and luxury retail."
+      },
+      tags: {
+        ar: ["مدن ملاهي ترفيهية", "تشطيبات فاخرة", "أعمال الرخام والزجاج"],
+        en: ["Entertainment Arenas", "Luxury Fit-Out", "Marble & Joinery"]
+      },
+      provenIn: {
+        ar: "مجموعة العثيم (سفوري لاند واكستريم زون)",
+        en: "Al Othaim Group (Saffori Land & Xtreme Zone)"
       }
     },
     {
       num: "05",
+      code: "SPEC-05 / HEAVY-MEP",
       icon: "zap",
       title: { ar: "البنية التحتية والأنظمة الكهروميكانيكية (MEP)", en: "Infrastructure & Heavy MEP Integration" },
       desc: {
-        ar: "الإشراف على محطات ضخ المياه العملاقة (خزانات بريمان 170M لتر)، غرف المحولات، شبكات التكييف المركزي، ومكافحة الحريق.",
-        en: "Supervising mega pumping infrastructure (170M liter reservoir), heavy substation foundations, central HVAC, and life-safety systems."
+        ar: "الإشراف على محطات ضخ المياه العملاقة، غرف المحولات الكهربائية الرئيسية، شبكات التكييف المركزي، ومكافحة الحريق بأعلى معايير الاعتمادية.",
+        en: "Supervising mega pumping infrastructure, heavy electrical substation vaults, central HVAC, and life-safety systems with high reliability."
+      },
+      tags: {
+        ar: ["محطات ضخ عملاقة", "غرف المحولات الرئيسية", "التكييف ومكافحة الحريق"],
+        en: ["Mega Pumping Stations", "Substation Vaults", "Central HVAC & Fire"]
+      },
+      provenIn: {
+        ar: "خزانات بريمان 170M لتر وبرج سبيماكو",
+        en: "Briman Reservoir 170M L & SPIMACO Tower"
       }
     },
     {
       num: "06",
+      code: "SPEC-06 / SBC-QAQC",
       icon: "shield-check",
       title: { ar: "كود البناء السعودي وضمان الجودة (SBC & QA/QC)", en: "Saudi Building Code (SBC) & Quality Assurance" },
       desc: {
-        ar: "الالتزام الصارم باشتراطات كود البناء السعودي (SBC)، معايير الدفاع المدني للسلامة والوقاية، ومراقبة جودة المواد الإنشائية.",
+        ar: "الالتزام الصارم بكافة متطلبات كود البناء السعودي (SBC)، اشتراطات الدفاع المدني للسلامة والوقاية، ومراقبة الجودة الميدانية والفحص الإنشائي.",
         en: "Strict enforcement of Saudi Building Code compliance, Civil Defense fire safety mandates, and rigorous on-site material testing & QA/QC."
+      },
+      tags: {
+        ar: ["مطابقة كود SBC", "اشتراطات الدفاع المدني", "فحص الجودة والمواد"],
+        en: ["SBC Compliance", "Civil Defense Mandates", "QA/QC Site Audits"]
+      },
+      provenIn: {
+        ar: "كافة المشاريع والمنشآت المنفذة",
+        en: "All Delivered Landmark Facilities"
       }
     }
   ],

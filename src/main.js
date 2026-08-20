@@ -517,16 +517,31 @@ function renderCompetencies() {
 
   container.innerHTML = portfolioData.competencies.map(comp => `
     <div class="comp-card">
-      <div class="comp-card-header">
-        <span class="comp-num font-mono">${comp.num}</span>
-        <div class="comp-icon">
+      <div class="comp-card-top font-mono">
+        <span class="comp-code-badge">${comp.code}</span>
+        <span class="comp-index font-mono">${comp.num}</span>
+      </div>
+      <div class="comp-card-main">
+        <div class="comp-icon-box">
           <i data-lucide="${comp.icon}"></i>
         </div>
+        <div class="comp-content-box">
+          <h3 class="comp-title">${comp.title[currentLang]}</h3>
+          <p class="comp-desc">${comp.desc[currentLang]}</p>
+        </div>
       </div>
-      <h3 class="comp-title">${comp.title[currentLang]}</h3>
-      <p class="comp-desc">${comp.desc[currentLang]}</p>
+      <div class="comp-tags-row">
+        ${comp.tags[currentLang].map(t => `<span class="comp-tag-pill">${t}</span>`).join('')}
+      </div>
+      <div class="comp-card-footer">
+        <i data-lucide="check-circle-2" class="comp-footer-icon"></i>
+        <span class="comp-proven-label font-mono">${currentLang === 'ar' ? 'التطبيق الموثق:' : 'Key Proven Scope:'}</span>
+        <span class="comp-proven-val">${comp.provenIn[currentLang]}</span>
+      </div>
     </div>
   `).join('');
+
+  refreshIcons();
 }
 
 // Render Category Filter Tabs
