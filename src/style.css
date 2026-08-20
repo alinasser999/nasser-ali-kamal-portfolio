@@ -1462,22 +1462,24 @@ body.cad-blueprint-mode .persona-pill-btn.active i {
    ========================================================================== */
 
 section {
-  padding-block: 3.5rem;
+  scroll-margin-top: calc(var(--header-height-mobile) + 36px);
+  padding-block: 2.5rem;
 }
 
 @media (min-width: 768px) {
   section {
-    padding-block: 6rem;
+    scroll-margin-top: calc(var(--header-height) + 40px);
+    padding-block: 3.5rem;
   }
 }
 
 .editorial-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 @media (min-width: 768px) {
   .editorial-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.25rem;
   }
 }
 
@@ -3521,7 +3523,8 @@ html[dir="rtl"] .marquee-track {
    ========================================================================== */
 
 .transformation-section {
-  padding-block: 4rem;
+  scroll-margin-top: calc(var(--header-height) + 40px);
+  padding-block: 3rem;
   background: var(--bg-surface);
   border-top: 1px solid var(--border-medium);
   border-bottom: 1px solid var(--border-medium);
