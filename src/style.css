@@ -114,15 +114,6 @@ body.cad-blueprint-mode {
   --shadow-modal: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
 
-body.cad-blueprint-mode .brand-badge {
-  background: #00F0FF;
-  border-color: #00F0FF;
-}
-
-body.cad-blueprint-mode .brand-monogram {
-  color: #0A1128;
-}
-
 body.cad-blueprint-mode .btn-primary,
 body.cad-blueprint-mode .btn-see-all-full {
   background: #00F0FF;
@@ -508,57 +499,49 @@ button, input, select, textarea {
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
+  transition: opacity var(--transition-fast);
+  padding: 0.2rem 0;
 }
 
-.brand-badge {
-  width: 40px;
-  height: 40px;
-  border: 1.5px solid var(--accent-ochre);
-  background: var(--ink-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(18, 20, 23, 0.15);
-  transition: transform var(--transition-fast);
-}
-
-.brand-logo:hover .brand-badge {
-  transform: scale(1.05);
-}
-
-.brand-monogram {
-  font-family: var(--font-mono);
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: #FFFFFF;
-  letter-spacing: -0.04em;
+.brand-logo:hover {
+  opacity: 0.85;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .brand-name {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.12rem;
   color: var(--ink-primary);
   letter-spacing: -0.01em;
-  line-height: 1.2;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .brand-sub {
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   color: var(--accent-ochre);
   font-weight: 700;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1rem;
+  }
+  .brand-sub {
+    font-size: 0.68rem;
+  }
 }
 
 .main-nav {
