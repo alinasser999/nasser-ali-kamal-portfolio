@@ -1086,33 +1086,6 @@ function setupPortraitTilt() {
   });
 }
 
-// Setup Custom Drafting Cursor Follower
-function setupCustomCursor() {
-  const cursor = document.getElementById('draftingCursor');
-  const coords = document.getElementById('cursorCoords');
-  if (!cursor || !coords) return;
-
-  let mouseX = 0;
-  let mouseY = 0;
-  let cursorX = 0;
-  let cursorY = 0;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    coords.textContent = `X:${mouseX} Y:${mouseY}`;
-  });
-
-  function renderCursor() {
-    cursorX += (mouseX - cursorX) * 0.25;
-    cursorY += (mouseY - cursorY) * 0.25;
-    cursor.style.left = `${cursorX}px`;
-    cursor.style.top = `${cursorY}px`;
-    requestAnimationFrame(renderCursor);
-  }
-  requestAnimationFrame(renderCursor);
-}
-
 // Setup Reading Scroll Progress Bar & Floating Bar
 function setupScrollProgress() {
   const progressBar = document.getElementById('readingProgressBar');
@@ -1416,7 +1389,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollReveals();
   setupScrollTracker();
   setupPortraitTilt();
-  setupCustomCursor();
   setupScrollProgress();
   setupBlueprintMode();
   setupArchiveModal();

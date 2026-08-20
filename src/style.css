@@ -213,51 +213,6 @@ html[dir="rtl"] .reading-progress-bar {
   transform-origin: right;
 }
 
-/* Custom Drafting Cursor HUD */
-.custom-drafting-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 10000;
-  display: none;
-  align-items: center;
-  gap: 8px;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
-}
-
-@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
-  .custom-drafting-cursor {
-    display: flex;
-  }
-}
-
-@media (max-width: 1023px) {
-  .custom-drafting-cursor {
-    display: none !important;
-  }
-}
-
-.cursor-crosshair {
-  font-size: 18px;
-  line-height: 1;
-  font-weight: 700;
-  color: var(--accent-ochre);
-  text-shadow: 0 0 8px var(--accent-ochre);
-}
-
-.cursor-coords {
-  background: var(--ink-primary);
-  color: var(--bg-primary);
-  font-size: 0.65rem;
-  padding: 2px 6px;
-  border-radius: var(--radius-xs);
-  border: 1px solid var(--border-hairline);
-  white-space: nowrap;
-  opacity: 0.85;
-}
-
 /* Drafting Grid Canvas Background */
 .drafting-canvas {
   position: fixed;
@@ -3789,7 +3744,6 @@ html[dir="rtl"] .marquee-track {
   .modal-overlay,
   .archive-modal-overlay,
   .drafting-canvas,
-  .custom-drafting-cursor,
   .reading-progress-bar,
   .floating-quick-bar {
     display: none !important;
