@@ -1299,12 +1299,20 @@ function setupScopeBuilder() {
   const toggleDirectFormBtn = document.getElementById('toggleDirectFormBtn');
   const directForm = document.getElementById('inquiryForm');
 
-  let selectedSector = 'بنية تحتية وخزانات استراتيجية';
-  let selectedScope = 'تسليم مفتاح Turnkey EPC';
+  let activeSectorChip = document.querySelector('#sectorChips .scope-chip.active');
+  let activeScopeChip = document.querySelector('#scopeChips .scope-chip.active');
 
   function updateWhatsappLink() {
     if (!dynamicWhatsappBtn) return;
-    const msg = `السلام عليكم ورحمة الله، سعادة المهندس ناصر علي كمال المحترم.\nأود الاستفسار وطلب استشارة هندسية متخصصة:\n- قطاع المشروع: ${selectedSector}\n- نطاق العمل المطلوب: ${selectedScope}\nنأمل التنسيق لعقد اجتماع عمل وبحث تفاصيل التطوير والإشراف.`;
+    const sectorText = (activeSectorChip ? activeSectorChip.textContent.trim() : '🏗️ بنية تحتية وخزانات');
+    const scopeText = (activeScopeChip ? activeScopeChip.textContent.trim() : 'تسليم مفتاح EPC');
+
+    let msg = '';
+    if (currentLang === 'en') {
+      msg = `Hello Arch. Nasser Ali Kamal,\nI would like to request an architectural & development consultation:\n- Project Sector: ${sectorText}\n- Scope Required: ${scopeText}\nLooking forward to scheduling an executive discussion.`;
+    } else {
+      msg = `السلام عليكم ورحمة الله، سعادة المهندس ناصر علي كمال المحترم.\nأود الاستفسار وطلب استشارة هندسية متخصصة:\n- قطاع المشروع: ${sectorText}\n- نطاق العمل المطلوب: ${scopeText}\nنأمل التنسيق لعقد اجتماع عمل وبحث تفاصيل التطوير والإشراف.`;
+    }
     dynamicWhatsappBtn.href = `https://wa.me/966545000073?text=${encodeURIComponent(msg)}`;
   }
 
@@ -1312,7 +1320,7 @@ function setupScopeBuilder() {
     chip.addEventListener('click', () => {
       sectorChips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
-      selectedSector = chip.getAttribute('data-value');
+      activeSectorChip = chip;
       updateWhatsappLink();
     });
   });
@@ -1321,16 +1329,20 @@ function setupScopeBuilder() {
     chip.addEventListener('click', () => {
       scopeChips.forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
-      selectedScope = chip.getAttribute('data-value');
+      activeScopeChip = chip;
       updateWhatsappLink();
     });
   });
 
-  if (toggleDirectFormBtn && directForm) {
+  if (toggleDirectFormBtn && directForm && !toggleDirectFormBtn.dataset.bound) {
+    toggleDirectFormBtn.dataset.bound = 'true';
     toggleDirectFormBtn.addEventListener('click', () => {
       directForm.classList.toggle('hidden-form');
       const isHidden = directForm.classList.contains('hidden-form');
-      toggleDirectFormBtn.querySelector('span').textContent = isHidden ? 'أو تعبئة النموذج البريدي المباشر' : 'إخفاء النموذج المباشر';
+      const span = toggleDirectFormBtn.querySelector('span');
+      if (span) {
+        span.textContent = isHidden ? translations[currentLang].btn_toggle_form : translations[currentLang].btn_toggle_form_hide;
+      }
     });
   }
 
