@@ -1050,6 +1050,199 @@ function setupScrollProgress() {
   }
 }
 
+// 1. Live Riyadh Real-Time Clock & Operations Status
+function startLiveRiyadhClock() {
+  const clockEl = document.getElementById('riyadhClock');
+  if (!clockEl) return;
+
+  function update() {
+    const now = new Date();
+    // Riyadh is UTC+3
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const riyadhDate = new Date(utc + (3600000 * 3));
+    
+    const hours = String(riyadhDate.getHours()).padStart(2, '0');
+    const minutes = String(riyadhDate.getMinutes()).padStart(2, '0');
+    const seconds = String(riyadhDate.getSeconds()).padStart(2, '0');
+
+    clockEl.textContent = `RIYADH ${hours}:${minutes}:${seconds} (GMT+3)`;
+  }
+  update();
+  setInterval(update, 1000);
+}
+
+// 2. Interactive 38-Year Milestone Career Scrubber
+let currentEraKey = 'era1';
+
+function renderTimelineEra(eraKey) {
+  const eraContainer = document.getElementById('timelineEraCard');
+  if (!eraContainer || !portfolioData.timelineEras) return;
+
+  const era = portfolioData.timelineEras[eraKey];
+  if (!era) return;
+
+  eraContainer.innerHTML = `
+    <div class="era-card-content">
+      <div class="era-header-row">
+        <div>
+          <span class="era-period-badge font-mono">${era.period}</span>
+          <h4 class="era-title">${era.title[currentLang] || era.title.ar}</h4>
+        </div>
+        <span class="era-role-tag font-mono">${era.role[currentLang] || era.role.ar}</span>
+      </div>
+      <p class="era-summary">${era.summary[currentLang] || era.summary.ar}</p>
+      <div class="era-stats-row">
+        ${era.stats.map(s => `
+          <div class="era-stat-box">
+            <span class="era-stat-num font-mono">${s.num}</span>
+            <span class="era-stat-label">${s.label[currentLang] || s.label.ar}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function setupTimelineScrubber() {
+  const eraPills = document.querySelectorAll('.era-pill-btn');
+  if (!eraPills.length) return;
+
+  eraPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      eraPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      currentEraKey = pill.getAttribute('data-era');
+      renderTimelineEra(currentEraKey);
+    });
+  });
+  renderTimelineEra(currentEraKey);
+}
+
+// 3. Interactive Before ➔ After Engineering Slider
+let currentCompareKey = 'pnu';
+
+function setupBeforeAfterSlider() {
+  const container = document.getElementById('compareBox');
+  const overlay = document.getElementById('compareOverlay');
+  const handle = document.getElementById('compareHandle');
+  const beforeImg = document.getElementById('beforeImage');
+  const afterImg = document.getElementById('afterImage');
+  const tabBtns = document.querySelectorAll('.trans-tab-btn');
+
+  if (!container || !overlay || !handle || !beforeImg || !afterImg) return;
+
+  let isDragging = false;
+
+  function setSliderPosition(percentage) {
+    const clamped = Math.max(0, Math.min(100, percentage));
+    overlay.style.width = `${clamped}%`;
+    handle.style.left = `${clamped}%`;
+  }
+
+  function handleMove(clientX) {
+    const rect = container.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percentage = (x / rect.width) * 100;
+    setSliderPosition(percentage);
+  }
+
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    handleMove(e.clientX);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    handleMove(e.clientX);
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+
+  // Touch Support
+  container.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    if (e.touches[0]) handleMove(e.touches[0].clientX);
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    if (e.touches[0]) handleMove(e.touches[0].clientX);
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+
+  // Tabs for switching between PNU and Reservoir
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCompareKey = btn.getAttribute('data-compare');
+      const data = portfolioData.transformationPairs[currentCompareKey];
+      if (data) {
+        beforeImg.style.opacity = '0.3';
+        afterImg.style.opacity = '0.3';
+        setTimeout(() => {
+          beforeImg.src = data.before.image;
+          afterImg.src = data.after.image;
+          beforeImg.style.opacity = '1';
+          afterImg.style.opacity = '1';
+          setSliderPosition(50);
+        }, 150);
+      }
+    });
+  });
+}
+
+// 4. Interactive Project Scope & WhatsApp Builder
+function setupScopeBuilder() {
+  const sectorChips = document.querySelectorAll('#sectorChips .scope-chip');
+  const scopeChips = document.querySelectorAll('#scopeChips .scope-chip');
+  const dynamicWhatsappBtn = document.getElementById('dynamicWhatsappBtn');
+  const toggleDirectFormBtn = document.getElementById('toggleDirectFormBtn');
+  const directForm = document.getElementById('inquiryForm');
+
+  let selectedSector = 'بنية تحتية وخزانات استراتيجية';
+  let selectedScope = 'تسليم مفتاح Turnkey EPC';
+
+  function updateWhatsappLink() {
+    if (!dynamicWhatsappBtn) return;
+    const msg = `السلام عليكم ورحمة الله، سعادة المهندس ناصر علي كمال المحترم.\nأود الاستفسار وطلب استشارة هندسية متخصصة:\n- قطاع المشروع: ${selectedSector}\n- نطاق العمل المطلوب: ${selectedScope}\nنأمل التنسيق لعقد اجتماع عمل وبحث تفاصيل التطوير والإشراف.`;
+    dynamicWhatsappBtn.href = `https://wa.me/966545000073?text=${encodeURIComponent(msg)}`;
+  }
+
+  sectorChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      sectorChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      selectedSector = chip.getAttribute('data-value');
+      updateWhatsappLink();
+    });
+  });
+
+  scopeChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      scopeChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      selectedScope = chip.getAttribute('data-value');
+      updateWhatsappLink();
+    });
+  });
+
+  if (toggleDirectFormBtn && directForm) {
+    toggleDirectFormBtn.addEventListener('click', () => {
+      directForm.classList.toggle('hidden-form');
+      const isHidden = directForm.classList.contains('hidden-form');
+      toggleDirectFormBtn.querySelector('span').textContent = isHidden ? 'أو تعبئة النموذج البريدي المباشر' : 'إخفاء النموذج المباشر';
+    });
+  }
+
+  updateWhatsappLink();
+}
+
 // Setup Blueprint CAD Mode Toggle (Desktop & Mobile)
 function setupBlueprintMode() {
   const toggleBtn = document.getElementById('blueprintToggle');
@@ -1110,6 +1303,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
   updateLanguage('ar');
+  startLiveRiyadhClock();
+  setupTimelineScrubber();
+  setupBeforeAfterSlider();
+  setupScopeBuilder();
   setupScrollReveals();
   setupScrollTracker();
   setupPortraitTilt();

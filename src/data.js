@@ -696,5 +696,99 @@ Throughout his career, he has directed landmark national undertakings spanning h
       issuer: { ar: "وزارة الموارد البشرية والتنمية الاجتماعية", en: "Ministry of Human Resources" },
       image: "/assets/documents/saudization_certificate.png"
     }
-  ]
+  ],
+
+  timelineEras: {
+    era1: {
+      period: "1986 — 1995",
+      title: { ar: "التأسيس والتصميم المعماري الأصيل", en: "Foundations & Authentic Architectural Heritage" },
+      role: { ar: "معماري ومصمم رئيسي", en: "Principal Architect & Lead Designer" },
+      summary: {
+        ar: "بداية المسيرة المهنية عبر تصميم الفلل الدبلوماسية، التشكيلات الحجرية الكلاسيكية، وتطوير المخططات العمرانية في الرياض ومناطق المملكة.",
+        en: "Inception of professional mastery through diplomatic residences, stone facade detailing, and regional master-planning in Riyadh."
+      },
+      stats: [
+        { num: "10+", label: { ar: "سنوات أولى من التميز", en: "Years Initial Mastery" } },
+        { num: "+20", label: { ar: "مخطط وفيلا مصممة", en: "Villas & Designs" } }
+      ]
+    },
+    era2: {
+      period: "1996 — 2010",
+      title: { ar: "المشاريع السيادية والجامعية الكبرى (KAP1 & PNU)", en: "Sovereign Mega Projects & University Campus" },
+      role: { ar: "مدير مشاريع تسليم مفتاح (EPC)", en: "Turnkey EPC Project Director" },
+      summary: {
+        ar: "قيادة تطوير صروح وطنية كبرى تشمل جامعة الأميرة نورة (PNU - إسكان أعضاء هيئة التدريس، الأنفاق، الجسور) ومراكز خادم الحرمين الشريفين الأمنية (KAP-1).",
+        en: "Directing national monumental assets including Princess Nora University (Faculty Housing, Bridges, Retaining Walls) and King Abdullah Security Facilities (KAP-1)."
+      },
+      stats: [
+        { num: "+50", label: { ar: "فيلا جامعية فاخرة", en: "Faculty Luxury Villas" } },
+        { num: "24", label: { ar: "شهراً مدة الإنجاز القياسي", en: "Months Record Delivery" } }
+      ]
+    },
+    era3: {
+      period: "2011 — 2020",
+      title: { ar: "البنية التحتية الاستراتيجية والأبراج الصيدلانية", en: "Strategic Infrastructure & Pharma Towers" },
+      role: { ar: "مدير التطوير والتنفيذ الميداني", en: "Field Execution & Development Director" },
+      summary: {
+        ar: "تنفيذ أضخم خزان مائي استراتيجي بالمملكة بسعة 170 مليون لتر بجدة، وتطوير برج سبيماكو الدوائية وقواعد المحولات الكهروميكانيكية الثقيلة.",
+        en: "Execution of KSA's largest strategic water reservoir (170M Liters, Jeddah) and SPIMACO Pharmaceutical Corporate Tower."
+      },
+      stats: [
+        { num: "170M", label: { ar: "لتر سعة الخزان", en: "Liters Storage Capacity" } },
+        { num: "10,000", label: { ar: "م² مساحة مسطحات", en: "m² Built Footprint" } }
+      ]
+    },
+    era4: {
+      period: "2021 — 2024",
+      title: { ar: "مشاريع تسليم المفتاح EPC ووجهات الترفيه ورؤية 2030", en: "Turnkey EPC, Thematic Destinations & Vision 2030" },
+      role: { ar: "مدير تطوير عقاري ومعماري رئيسي", en: "Senior Real Estate Development Manager" },
+      summary: {
+        ar: "إدارة متكاملة لمشاريع التطوير العقاري، مدن سفوري لاند الترفيهية لمجموعة العثيم، مجمعات عمارات الديار السكنية، ومجمعات ستريب مول التجارية المعاصرة.",
+        en: "Full-lifecycle real estate development management for Al Othaim Theme Parks (Saffori Land), Deyaar Residential Compounds, and contemporary commercial strips."
+      },
+      stats: [
+        { num: "+38", label: { ar: "عاماً من الإنجاز الموثق", en: "Years Track Record" } },
+        { num: "+500M", label: { ar: "ريال حجم الإشراف الإجمالي", en: "SAR Portfolio Managed" } }
+      ]
+    }
+  },
+
+  transformationPairs: {
+    pnu: {
+      title: {
+        ar: "مشروع إسكان 50 فيلا فاخرة بجامعة الأميرة نورة (PN05)",
+        en: "PNU 50 Luxury Faculty Villas Housing (PN05)"
+      },
+      before: {
+        label: { ar: "مرحلة صب الخرسانات وأساسات حديد التسليح", en: "Concrete Pouring & Rebar Foundations" },
+        image: "/assets/projects/concrete_pump_rebar.png"
+      },
+      after: {
+        label: { ar: "الفلل المكتملة والتشطيب النهائي الفاخر", en: "Completed Luxury Villas & Landscaping" },
+        image: "/assets/projects/pnu_housing_villas.png"
+      },
+      description: {
+        ar: "تحول الموقع من أعمال الحفر والأساسات الخرسانية الكثيفة وشبكات البنية التحتية إلى مجمع سكني صرحي متكامل لأعضاء هيئة التدريس بجامعة الأميرة نورة.",
+        en: "Total transformation from deep excavation and structural reinforcement to a fully finished, turnkey luxury residential compound."
+      }
+    },
+    reservoir: {
+      title: {
+        ar: "مشروع خزان مياه بريمان الاستراتيجي بجدة (170M لتر)",
+        en: "Briman Strategic Mega Water Reservoir (170M Liters)"
+      },
+      before: {
+        label: { ar: "حفر الأساسات وجدران العزل الأسطوانية", en: "Excavation & Cylindrical Retaining Slabs" },
+        image: "/assets/projects/jeddah_water_reservoir_2.png"
+      },
+      after: {
+        label: { ar: "الخزان الاستراتيجي ومحطات الضخ المنجزة", en: "Completed Strategic Reservoir & Pumps" },
+        image: "/assets/projects/jeddah_water_reservoir_1.png"
+      },
+      description: {
+        ar: "من مرحلة تسوية وتجهيز الموقع وتسليح القواعد الأسطوانية الضخمة إلى تشغيل أحد أكبر خزانات الأمن المائي في الشرق الأوسط بسعة 170,000,000 لتر.",
+        en: "Evolution from heavy ground stabilization and rebar grids to operating one of the Middle East's largest strategic water security assets."
+      }
+    }
+  }
 };
