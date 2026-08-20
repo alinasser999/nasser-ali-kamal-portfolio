@@ -591,17 +591,23 @@ button, input, select, textarea {
 .btn-lang {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.45rem 0.75rem;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
   background: var(--bg-surface);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-full);
   color: var(--ink-primary);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 800;
   cursor: pointer;
   box-shadow: var(--shadow-subtle);
   transition: all var(--transition-fast);
+}
+
+.btn-lang i {
+  width: 15px;
+  height: 15px;
+  color: var(--accent-ochre);
 }
 
 .btn-lang:hover {

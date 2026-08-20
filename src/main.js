@@ -395,9 +395,9 @@ function updateLanguage(lang) {
   const langToggle = document.getElementById('langToggle');
   if (langToggle) {
     if (lang === 'ar') {
-      langToggle.innerHTML = '<span class="lang-flag">🇬🇧</span><span class="lang-text font-mono">EN</span>';
+      langToggle.innerHTML = '<i data-lucide="globe"></i><span class="lang-text font-mono">English</span>';
     } else {
-      langToggle.innerHTML = '<span class="lang-flag">🇸🇦</span><span class="lang-text font-mono">عربي</span>';
+      langToggle.innerHTML = '<i data-lucide="globe"></i><span class="lang-text font-mono">العربية</span>';
     }
   }
 
