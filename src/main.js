@@ -420,7 +420,6 @@ function updateLanguage(lang) {
   renderCompetencies();
   renderCategoryFilters();
   renderProjects();
-  renderGallery();
   renderCredentials();
   renderClients();
   renderArchiveFilters();
@@ -781,45 +780,6 @@ function openProjectModal(projectId) {
   refreshIcons();
 }
 
-// Render Field Gallery Masonry
-function renderGallery() {
-  const container = document.getElementById('galleryMasonry');
-  if (!container) return;
-
-  const galleryItems = [
-    { log: "LOG-01", src: "/assets/projects/concrete_pump_rebar.png", caption: { ar: "صب الخرسانة الجاهزة وتثبيت حديد التسليح", en: "Concrete Pump Pouring & Rebar Rigging" } },
-    { log: "LOG-02", src: "/assets/projects/jeddah_water_reservoir_1.png", caption: { ar: "خزانات المياه الاستراتيجية ببريمان (170M لتر)", en: "Strategic Water Reservoir, Briman (170M Liters)" } },
-    { log: "LOG-03", src: "/assets/projects/pnu_housing_villas.png", caption: { ar: "أساسات ولبشة 50 فيلا - جامعة الأميرة نورة", en: "50 Villas Raft Foundation - PNU Housing" } },
-    { log: "LOG-04", src: "/assets/projects/pnu_library_tunnels.png", caption: { ar: "الجدران الاستنادية وأنفاق الخدمات بجامعة الأميرة نورة", en: "Retaining Walls & Service Tunnels - PNU" } },
-    { log: "LOG-05", src: "/assets/projects/spemaco_tower.png", caption: { ar: "برج سبيماكو وقواعد المضخات والمحولات", en: "SPEMACO Tower & Transformer Base Works" } },
-    { log: "LOG-06", src: "/assets/projects/saffori_land_khafji.png", caption: { ar: "ديكورات وأعمدة سفوري لاند الترفيهية المضيئة", en: "Saffori Land Thematic Illuminated Pillars" } },
-    { log: "LOG-07", src: "/assets/projects/eldeyar_residence_pool.png", caption: { ar: "مسبح ومرافق مجمع عمارات الديار السكني", en: "Indoor Pool & Leisure Facilities - El-Deyar" } },
-    { log: "LOG-08", src: "/assets/projects/xtreme_zone.png", caption: { ar: "اكستريم زون بنمط الحاويات الصناعية المعاصر", en: "Xtreme Zone Industrial Container Concept" } },
-    { log: "LOG-09", src: "/assets/projects/luxury_villa_facade.png", caption: { ar: "واجهات الفلل السكنية الفاخرة والتشطيبات", en: "Luxury Residential Villa Architecture" } }
-  ];
-
-  container.innerHTML = galleryItems.map(item => `
-    <div class="gallery-card" data-src="${item.src}">
-      <div class="gallery-card-header font-mono">
-        <span>${item.log}</span>
-        <span>SITE INSPECTION</span>
-      </div>
-      <div class="gallery-card-img-box">
-        <img src="${item.src}" alt="${item.caption[currentLang]}" class="gallery-card-img" loading="lazy">
-      </div>
-      <div class="gallery-card-caption">
-        <span>${item.caption[currentLang]}</span>
-      </div>
-    </div>
-  `).join('');
-
-  container.querySelectorAll('.gallery-card').forEach(item => {
-    item.addEventListener('click', () => {
-      openDocModal(item.getAttribute('data-src'), item.querySelector('.gallery-card-caption').textContent);
-    });
-  });
-}
-
 // Render Official Credentials
 function renderCredentials() {
   const container = document.getElementById('credentialsGrid');
@@ -929,9 +889,9 @@ function setupScrollTracker() {
     about: { code: 'LVL 01 • VISION', nav: 'about' },
     competencies: { code: 'LVL 02 • DISCIPLINE', nav: 'about' },
     projects: { code: 'LVL 03 • MEGA EPC', nav: 'projects' },
-    gallery: { code: 'LVL 04 • FIELD LOG', nav: 'gallery' },
-    clients: { code: 'LVL 05 • PARTNERS', nav: 'clients' },
-    credentials: { code: 'LVL 06 • ACCREDITED', nav: 'clients' },
+    transformation: { code: 'LVL 04 • COMPARE', nav: 'projects' },
+    credentials: { code: 'LVL 05 • ACCREDITED', nav: 'clients' },
+    clients: { code: 'LVL 06 • PARTNERS', nav: 'clients' },
     contact: { code: 'LVL 07 • CONSULT', nav: 'contact' }
   };
 
@@ -945,7 +905,7 @@ function setupScrollTracker() {
     }
 
     // Determine current visible section
-    const sections = ['contact', 'credentials', 'clients', 'gallery', 'projects', 'competencies', 'about', 'hero'];
+    const sections = ['contact', 'clients', 'credentials', 'transformation', 'projects', 'competencies', 'about', 'hero'];
     for (const secId of sections) {
       const el = document.getElementById(secId);
       if (el) {
@@ -969,7 +929,7 @@ function setupScrollTracker() {
 let clientsStatsAnimated = false;
 
 function setupScrollReveals() {
-  const revealTargets = document.querySelectorAll('.editorial-header, .about-editorial-grid, .competencies-grid, .projects-grid, .gallery-masonry, .credentials-grid, .clients-proof-grid, .contact-card, .clients-trust-strip');
+  const revealTargets = document.querySelectorAll('.editorial-header, .about-editorial-grid, .competencies-grid, .projects-grid, .credentials-grid, .clients-proof-grid, .contact-card, .clients-trust-strip');
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -993,7 +953,7 @@ function setupScrollReveals() {
   });
 
   revealTargets.forEach(el => {
-    if (el.id === 'competenciesGrid' || el.id === 'projectsGrid' || el.id === 'galleryMasonry' || el.id === 'credentialsGrid' || el.id === 'clientsGrid') {
+    if (el.id === 'competenciesGrid' || el.id === 'projectsGrid' || el.id === 'credentialsGrid' || el.id === 'clientsGrid') {
       el.classList.add('reveal-stagger');
     } else {
       el.classList.add('reveal');
