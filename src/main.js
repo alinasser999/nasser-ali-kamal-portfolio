@@ -423,7 +423,6 @@ function updateLanguage(lang) {
   renderGallery();
   renderCredentials();
   renderClients();
-  renderTimelineEra(currentEraKey);
   renderArchiveFilters();
   renderArchiveProjects();
   setupScopeBuilder();
@@ -1138,54 +1137,7 @@ function startLiveRiyadhClock() {
   setInterval(update, 1000);
 }
 
-// 2. Interactive 38-Year Milestone Career Scrubber
-let currentEraKey = 'era1';
-
-function renderTimelineEra(eraKey) {
-  const eraContainer = document.getElementById('timelineEraCard');
-  if (!eraContainer || !portfolioData.timelineEras) return;
-
-  const era = portfolioData.timelineEras[eraKey];
-  if (!era) return;
-
-  eraContainer.innerHTML = `
-    <div class="era-card-content">
-      <div class="era-header-row">
-        <div>
-          <span class="era-period-badge font-mono">${era.period}</span>
-          <h4 class="era-title">${era.title[currentLang] || era.title.ar}</h4>
-        </div>
-        <span class="era-role-tag font-mono">${era.role[currentLang] || era.role.ar}</span>
-      </div>
-      <p class="era-summary">${era.summary[currentLang] || era.summary.ar}</p>
-      <div class="era-stats-row">
-        ${era.stats.map(s => `
-          <div class="era-stat-box">
-            <span class="era-stat-num font-mono">${s.num}</span>
-            <span class="era-stat-label">${s.label[currentLang] || s.label.ar}</span>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
-}
-
-function setupTimelineScrubber() {
-  const eraPills = document.querySelectorAll('.era-pill-btn');
-  if (!eraPills.length) return;
-
-  eraPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      eraPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      currentEraKey = pill.getAttribute('data-era');
-      renderTimelineEra(currentEraKey);
-    });
-  });
-  renderTimelineEra(currentEraKey);
-}
-
-// 3. Interactive Before ➔ After Engineering Slider
+// 2. Interactive Before ➔ After Engineering Slider
 let currentCompareKey = 'pnu';
 
 function setupBeforeAfterSlider() {
@@ -1383,7 +1335,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updateLanguage('ar');
   startLiveRiyadhClock();
-  setupTimelineScrubber();
   setupBeforeAfterSlider();
   setupScopeBuilder();
   setupScrollReveals();
