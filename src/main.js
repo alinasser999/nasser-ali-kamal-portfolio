@@ -1,4 +1,11 @@
 import { portfolioData } from './data.js';
+
+// Prevent browser from restoring scroll position or jumping to fragments when opened
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 import {
   createIcons,
   Briefcase,
@@ -1605,11 +1612,74 @@ function setupArchiveModal() {
   }
 }
 
+// Setup Smooth In-Page Anchor Navigation without polluting address bar with hash fragments
+function setupSmoothNavigation() {
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    // Ignore links that open modals or have javascript triggers like #
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+
+    if (href === '#' || href === '#hero') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      try {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      } catch (err) {}
+      return;
+    }
+
+    // Try finding the matching section element
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
+        // Keep the address bar URL clean so copying/sharing always shares the base link (opening at Hero)
+        try {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        } catch (err) {}
+      }
+    } catch (err) {
+      // If href is not a valid CSS selector, let default handle it
+    }
+  });
+}
+
+// Window load safety: ensure page starts at Hero section (Top)
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    try {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    } catch (e) {}
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+});
+
 // Event Listeners Setup
 document.addEventListener('DOMContentLoaded', () => {
+  // Clear any existing hash so opening/sharing link always starts at Hero
+  if (window.location.hash) {
+    try {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    } catch (e) {}
+  }
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
   updateLanguage('ar');
+  setupSmoothNavigation();
   startLiveRiyadhClock();
   setupBeforeAfterSlider();
   setupScopeBuilder();

@@ -81,10 +81,10 @@ Throughout his career, he has directed landmark national undertakings spanning h
       }
     },
     images: {
-      formal: "/assets/portraits/dad_formal.png",
-      site: "/assets/portraits/dad_site.png",
-      team_celebration: "/assets/portraits/team_celebration.png",
-      site_team: "/assets/portraits/site_engineers_team.png"
+      formal: "/assets/portraits/dad_formal.webp",
+      site: "/assets/portraits/dad_site.webp",
+      team_celebration: "/assets/portraits/team_celebration.webp",
+      site_team: "/assets/portraits/site_engineers_team.webp"
     }
   },
 
@@ -274,14 +274,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "استكمال الأعمال الإنشائية التخصصية للبرج، غرف محولات الكهرباء الرئيسية، غرف المضخات، والأعمال المدنية المرتبطة بالبنية التحتية للبرج.",
             "en": "Specialized substructure engineering, heavy electrical transformer vaults, mechanical pump plant facilities, and core structural works."
         },
-        "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg",
+        "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.webp",
         "gallery": [
-            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg",
-            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1687_407x486.jpeg",
-            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.jpeg",
-            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1691_372x577.jpeg",
-            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1692_411x590.jpeg",
-            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1693_497x596.jpeg"
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.webp",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1687_407x486.webp",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.webp",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1691_372x577.webp",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1692_411x590.webp",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1693_497x596.webp"
         ],
         "highlights": [
             {
@@ -354,14 +354,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تطوير وإشراف على الأساسات الخرسانية واللبشة المسلحة لـ 50 فيلا سكنية فاخرة لمنسوبي الجامعة بأعلى معايير الاستدامة المعمارية.",
             "en": "Development direction and architectural/structural supervision of reinforced raft foundations for 50 faculty residential villas."
         },
-        "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg",
+        "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.webp",
         "gallery": [
-            "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg",
-            "/assets/projects_extracted/pnu_villas/page_09_img_xref776_680x726.jpeg",
-            "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.jpeg",
-            "/assets/projects_extracted/pnu_villas/page_40_img_xref5977_960x960.jpeg",
-            "/assets/projects_extracted/pnu_villas/page_40_img_xref6036_960x960.jpeg",
-            "/assets/projects_extracted/pnu_villas/page_45_img_xref6577_647x406.jpeg"
+            "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.webp",
+            "/assets/projects_extracted/pnu_villas/page_09_img_xref776_680x726.webp",
+            "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.webp",
+            "/assets/projects_extracted/pnu_villas/page_40_img_xref5977_960x960.webp",
+            "/assets/projects_extracted/pnu_villas/page_40_img_xref6036_960x960.webp",
+            "/assets/projects_extracted/pnu_villas/page_45_img_xref6577_647x406.webp"
         ],
         "highlights": [
             {
@@ -434,19 +434,19 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "الإشراف الهندسي المتكامل على إنشاء الخزان الاستراتيجي بسعة 170 مليون لتر، بمساحة 10,000 متر مربع وأعمدة خرسانية ضخمة وسقوف مسلحة.",
             "en": "Executive engineering oversight of the 170-Million-Liter strategic reservoir across 10,000 m2 footprint with massive structural columns."
         },
-        "image": "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.jpeg",
+        "image": "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.webp",
         "gallery": [
-            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2264_634x374.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2265_946x592.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2266_1025x466.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2605_668x439.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2606_670x666.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2607_613x464.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2608_671x508.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2609_613x524.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_39_img_xref5746_612x612.jpeg",
-            "/assets/projects_extracted/briman_reservoir/page_39_img_xref5807_846x846.jpeg"
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.webp",
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2264_634x374.webp",
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2265_946x592.webp",
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2266_1025x466.webp",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2605_668x439.webp",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2606_670x666.webp",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2607_613x464.webp",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2608_671x508.webp",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2609_613x524.webp",
+            "/assets/projects_extracted/briman_reservoir/page_39_img_xref5746_612x612.webp",
+            "/assets/projects_extracted/briman_reservoir/page_39_img_xref5807_846x846.webp"
         ],
         "highlights": [
             {
@@ -523,20 +523,20 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تطوير وتشييد صرح سكني فاخر بارتفاع 5 أدوار على مساحة أرض 1,500 م²، مع مسبح داخلي نصف أولمبي، صالات استقبال ملكية، وتكسيات حجرية فاخرة.",
             "en": "Turnkey architectural development of a 5-story premier residential mansion across 1,500 m2 with indoor semi-olympic pool and luxury stone facades."
         },
-        "image": "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg",
+        "image": "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.webp",
         "gallery": [
-            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2735_647x745.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2736_736x725.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2959_679x979.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2960_648x719.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2961_785x719.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3097_746x942.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3098_652x697.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3099_746x707.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3275_567x748.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3276_714x976.jpeg",
-            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3277_751x969.jpeg"
+            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2735_647x745.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2736_736x725.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2959_679x979.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2960_648x719.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2961_785x719.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3097_746x942.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3098_652x697.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3099_746x707.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3275_567x748.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3276_714x976.webp",
+            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3277_751x969.webp"
         ],
         "highlights": [
             {
@@ -613,14 +613,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تصميم وتنفيذ الديكورات المعمارية الخشبية المبتكرة، الأسقف الصوتية المفرغة، والإضاءات التفاعلية بمساحة 450 م².",
             "en": "Architectural interior conception and turnkey fitout with bespoke timber slatted ceiling geometry and ambient lighting across 450 m2."
         },
-        "image": "/assets/projects_extracted/oliver_brown/page_30_img_xref4126_1719x1090.jpeg",
+        "image": "/assets/projects_extracted/oliver_brown/page_30_img_xref4126_1719x1090.webp",
         "gallery": [
-            "/assets/projects_extracted/oliver_brown/page_30_img_xref4126_1719x1090.jpeg",
-            "/assets/projects_extracted/oliver_brown/page_29_img_xref3956_2301x394.jpeg",
-            "/assets/projects_extracted/oliver_brown/page_29_img_xref4018_486x576.jpeg",
-            "/assets/projects_extracted/oliver_brown/page_29_img_xref4040_576x683.jpeg",
-            "/assets/projects_extracted/oliver_brown/page_29_img_xref4041_1024x576.jpeg",
-            "/assets/projects_extracted/oliver_brown/page_31_img_xref4210_1719x1090.jpeg"
+            "/assets/projects_extracted/oliver_brown/page_30_img_xref4126_1719x1090.webp",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref3956_2301x394.webp",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref4018_486x576.webp",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref4040_576x683.webp",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref4041_1024x576.webp",
+            "/assets/projects_extracted/oliver_brown/page_31_img_xref4210_1719x1090.webp"
         ],
         "highlights": [
             {
@@ -693,13 +693,13 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تصميم وإشراف على واجهات معدنية ذهبية مفرغة CNC، معارض تجارية بمسارات خدمة سيارات Drive-thru، وبلازا مفتوحة بمساحة 3,800 م².",
             "en": "Architectural design and oversight of CNC perforated gold metal facades, drive-thru lanes, and open retail plaza across 3,800 m2."
         },
-        "image": "/assets/projects_extracted/commercial_plaza/page_42_img_xref6233_1780x1023.jpeg",
+        "image": "/assets/projects_extracted/commercial_plaza/page_42_img_xref6233_1780x1023.webp",
         "gallery": [
-            "/assets/projects_extracted/commercial_plaza/page_42_img_xref6233_1780x1023.jpeg",
-            "/assets/projects_extracted/commercial_plaza/page_43_img_xref6392_1200x1200.jpeg",
-            "/assets/projects_extracted/commercial_plaza/page_43_img_xref6441_1200x1200.jpeg",
-            "/assets/projects_extracted/commercial_plaza/page_44_img_xref6510_1024x642.jpeg",
-            "/assets/projects_extracted/commercial_plaza/page_46_img_xref6643_2036x1010.jpeg"
+            "/assets/projects_extracted/commercial_plaza/page_42_img_xref6233_1780x1023.webp",
+            "/assets/projects_extracted/commercial_plaza/page_43_img_xref6392_1200x1200.webp",
+            "/assets/projects_extracted/commercial_plaza/page_43_img_xref6441_1200x1200.webp",
+            "/assets/projects_extracted/commercial_plaza/page_44_img_xref6510_1024x642.webp",
+            "/assets/projects_extracted/commercial_plaza/page_46_img_xref6643_2036x1010.webp"
         ],
         "highlights": [
             {
@@ -772,15 +772,15 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "الإشراف على مبنى الإدارة العامة، المكتبة المركزية، المساجد، والجدران الاستنادية المحيطة بمباني الجامعة مع شبكات الطرق الخدمية.",
             "en": "Structural & architectural engineering oversight for headquarters, main library, campus mosques, and massive reinforced retaining walls."
         },
-        "image": "/assets/projects_extracted/pnu_admin/page_10_img_xref1034_469x662.jpeg",
+        "image": "/assets/projects_extracted/pnu_admin/page_10_img_xref1034_469x662.webp",
         "gallery": [
-            "/assets/projects_extracted/pnu_admin/page_10_img_xref1030_428x367.jpeg",
-            "/assets/projects_extracted/pnu_admin/page_10_img_xref1031_480x613.jpeg",
-            "/assets/projects_extracted/pnu_admin/page_10_img_xref1032_450x600.jpeg",
-            "/assets/projects_extracted/pnu_admin/page_10_img_xref1033_466x601.jpeg",
-            "/assets/projects_extracted/pnu_admin/page_10_img_xref1034_469x662.jpeg",
-            "/assets/projects_extracted/pnu_admin/page_41_img_xref6098_647x647.jpeg",
-            "/assets/projects_extracted/pnu_admin/page_41_img_xref6157_642x642.jpeg"
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1030_428x367.webp",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1031_480x613.webp",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1032_450x600.webp",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1033_466x601.webp",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1034_469x662.webp",
+            "/assets/projects_extracted/pnu_admin/page_41_img_xref6098_647x647.webp",
+            "/assets/projects_extracted/pnu_admin/page_41_img_xref6157_642x642.webp"
         ],
         "highlights": [
             {
@@ -853,11 +853,11 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تنفيذ وإشراف على القواعد والواجهات والجسور الرابطة بين مباني الكليات (مباني 121، 170، 190) والجسر رقم 8.",
             "en": "Execution and supervision of entrance walls, facades, and elevated connecting skybridge No. 8 between College Buildings 121, 170, and 190."
         },
-        "image": "/assets/projects_extracted/pnu_colleges/page_11_img_xref1358_815x613.jpeg",
+        "image": "/assets/projects_extracted/pnu_colleges/page_11_img_xref1358_815x613.webp",
         "gallery": [
-            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1358_815x613.jpeg",
-            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1359_637x928.jpeg",
-            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1360_650x928.jpeg"
+            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1358_815x613.webp",
+            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1359_637x928.webp",
+            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1360_650x928.webp"
         ],
         "highlights": [
             {
@@ -930,15 +930,15 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تطوير وتشييد مدينة ألعاب متكاملة بمساحة 4,200 م²، تشمل الألعاب الميكانيكية الشاهقة، الديكورات الثيمية، وقواعد التثبيت الإنشائية الديناميكية.",
             "en": "Turnkey architectural development of a 4,200 m2 indoor FEC theme park including heavy ride anchorages, safety envelopes, and thematic facades."
         },
-        "image": "/assets/projects_extracted/saffori_khafji/page_32_img_xref4282_2200x1009.jpeg",
+        "image": "/assets/projects_extracted/saffori_khafji/page_32_img_xref4282_2200x1009.webp",
         "gallery": [
-            "/assets/projects_extracted/saffori_khafji/page_32_img_xref4282_2200x1009.jpeg",
-            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4494_1041x983.jpeg",
-            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4495_1041x983.jpeg",
-            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4605_975x983.jpeg",
-            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4765_1047x939.jpeg",
-            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4866_1060x499.jpeg",
-            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4867_1068x517.jpeg"
+            "/assets/projects_extracted/saffori_khafji/page_32_img_xref4282_2200x1009.webp",
+            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4494_1041x983.webp",
+            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4495_1041x983.webp",
+            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4605_975x983.webp",
+            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4765_1047x939.webp",
+            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4866_1060x499.webp",
+            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4867_1068x517.webp"
         ],
         "highlights": [
             {
@@ -1011,14 +1011,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تصميم وتنفيذ مجمع ترفيهي ثنائي (سفوري لاند + اكستريم زون) بمساحة 5,000 م² يشمل ساحات ترامبولين، ألعاب حركية، ومسارات تسلق معلقة.",
             "en": "Turnkey delivery of a dual entertainment zone (Saffori Land + Xtreme Zone) over 5,000 m2 featuring interconnected trampolines and obstacle arenas."
         },
-        "image": "/assets/projects_extracted/saffori_hafr/page_36_img_xref5175_1045x978.jpeg",
+        "image": "/assets/projects_extracted/saffori_hafr/page_36_img_xref5175_1045x978.webp",
         "gallery": [
-            "/assets/projects_extracted/saffori_hafr/page_36_img_xref5175_1045x978.jpeg",
-            "/assets/projects_extracted/saffori_hafr/page_36_img_xref5281_959x934.jpeg",
-            "/assets/projects_extracted/saffori_hafr/page_37_img_xref5390_1042x978.jpeg",
-            "/assets/projects_extracted/saffori_hafr/page_37_img_xref5495_984x983.jpeg",
-            "/assets/projects_extracted/saffori_hafr/page_38_img_xref5502_1042x939.jpeg",
-            "/assets/projects_extracted/saffori_hafr/page_38_img_xref5612_966x965.jpeg"
+            "/assets/projects_extracted/saffori_hafr/page_36_img_xref5175_1045x978.webp",
+            "/assets/projects_extracted/saffori_hafr/page_36_img_xref5281_959x934.webp",
+            "/assets/projects_extracted/saffori_hafr/page_37_img_xref5390_1042x978.webp",
+            "/assets/projects_extracted/saffori_hafr/page_37_img_xref5495_984x983.webp",
+            "/assets/projects_extracted/saffori_hafr/page_38_img_xref5502_1042x939.webp",
+            "/assets/projects_extracted/saffori_hafr/page_38_img_xref5612_966x965.webp"
         ],
         "highlights": [
             {
@@ -1091,11 +1091,11 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تشييد مجمع أمني متكامل يشمل مباني القيادة، السكن، المستودعات، والأسوار الأمنية عالية التحصين وفق الكود الأمني الموحد.",
             "en": "EPC construction of a classified security complex including headquarters, barracks, armory facilities, and fortified anti-ram perimeter walls."
         },
-        "image": "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1846_1750x617.jpeg",
+        "image": "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1846_1750x617.webp",
         "gallery": [
-            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1844_688x389.jpeg",
-            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1845_611x389.jpeg",
-            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1846_1750x617.jpeg"
+            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1844_688x389.webp",
+            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1845_611x389.webp",
+            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1846_1750x617.webp"
         ],
         "highlights": [
             {
@@ -1168,11 +1168,11 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تنفيذ أعمال الأساسات والهياكل الخرسانية والمرافق الخدمية للمجمع الأمني رقم 231 بمنطقة المدينة المنورة.",
             "en": "Civil engineering, structural framing, and utility infrastructure execution for MOI Security Compound Site 231 in Madinah."
         },
-        "image": "/assets/projects_extracted/kap1_madinah/page_14_img_xref2020_710x731.jpeg",
+        "image": "/assets/projects_extracted/kap1_madinah/page_14_img_xref2020_710x731.webp",
         "gallery": [
-            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2020_710x731.jpeg",
-            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2021_727x713.jpeg",
-            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2022_774x598.jpeg"
+            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2020_710x731.webp",
+            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2021_727x713.webp",
+            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2022_774x598.webp"
         ],
         "highlights": [
             {
@@ -1245,13 +1245,13 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تصميم وتنفيذ عيادات طبية استشارية متخصصة تشمل غرف العمليات الصغرى، أجنحة الليزر، وصالات الاستقبال الفاخرة بمساحة 1,200 م².",
             "en": "Turnkey architectural interior design and clinical fitout for aesthetic medicine, minor surgery suites, and VIP lounges across 1,200 m2."
         },
-        "image": "/assets/projects_extracted/derma_clinic/page_22_img_xref3659_1355x425.jpeg",
+        "image": "/assets/projects_extracted/derma_clinic/page_22_img_xref3659_1355x425.webp",
         "gallery": [
-            "/assets/projects_extracted/derma_clinic/page_22_img_xref3655_490x430.jpeg",
-            "/assets/projects_extracted/derma_clinic/page_22_img_xref3656_490x583.jpeg",
-            "/assets/projects_extracted/derma_clinic/page_22_img_xref3657_513x527.jpeg",
-            "/assets/projects_extracted/derma_clinic/page_22_img_xref3658_489x550.jpeg",
-            "/assets/projects_extracted/derma_clinic/page_22_img_xref3659_1355x425.jpeg"
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3655_490x430.webp",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3656_490x583.webp",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3657_513x527.webp",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3658_489x550.webp",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3659_1355x425.webp"
         ],
         "highlights": [
             {
@@ -1324,11 +1324,11 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "الإشراف على تشييد التوسعات الإنشائية، غرف العناية، والمباني الخدمية المرتبطة بالمجمع الطبي.",
             "en": "Structural expansion oversight, clinical ward development, and auxiliary utility buildings for the medical complex."
         },
-        "image": "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3404_1248x1000.jpeg",
+        "image": "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3404_1248x1000.webp",
         "gallery": [
-            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3403_947x446.jpeg",
-            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3404_1248x1000.jpeg",
-            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3405_947x557.jpeg"
+            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3403_947x446.webp",
+            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3404_1248x1000.webp",
+            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3405_947x557.webp"
         ],
         "highlights": [
             {
@@ -1401,13 +1401,13 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "صب الأرضيات الصناعية فائقة التحمل (Heavy Duty Slabs)، قواعد أفران الحرق العملاقة، ومسارات الرافعات الجسرية بمساحة 12,000 م².",
             "en": "Mass industrial heavy-duty slab casting, high-temperature kiln foundations, and overhead gantry crane tracks over 12,000 m2."
         },
-        "image": "/assets/projects_extracted/alfanar_factory/page_08_img_xref517_817x624.jpeg",
+        "image": "/assets/projects_extracted/alfanar_factory/page_08_img_xref517_817x624.webp",
         "gallery": [
-            "/assets/projects_extracted/alfanar_factory/page_08_img_xref515_616x489.jpeg",
-            "/assets/projects_extracted/alfanar_factory/page_08_img_xref516_616x490.jpeg",
-            "/assets/projects_extracted/alfanar_factory/page_08_img_xref517_817x624.jpeg",
-            "/assets/projects_extracted/alfanar_factory/page_08_img_xref518_658x489.jpeg",
-            "/assets/projects_extracted/alfanar_factory/page_08_img_xref519_660x490.jpeg"
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref515_616x489.webp",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref516_616x490.webp",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref517_817x624.webp",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref518_658x489.webp",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref519_660x490.webp"
         ],
         "highlights": [
             {
@@ -1480,10 +1480,10 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "تصميم وتنفيذ الديكورات المعمارية، وتنسيق الإضاءة وتجهيز منطقة البار ومقاعد الجلوس بمساحة 220 م².",
             "en": "Architectural interior fitout, beverage bar ergonomics, and ambient lighting design across 220 m2."
         },
-        "image": "/assets/projects_extracted/mocha_more/page_35_img_xref4959_1021x997.jpeg",
+        "image": "/assets/projects_extracted/mocha_more/page_35_img_xref4959_1021x997.webp",
         "gallery": [
-            "/assets/projects_extracted/mocha_more/page_35_img_xref4959_1021x997.jpeg",
-            "/assets/projects_extracted/mocha_more/page_35_img_xref5065_990x989.jpeg"
+            "/assets/projects_extracted/mocha_more/page_35_img_xref4959_1021x997.webp",
+            "/assets/projects_extracted/mocha_more/page_35_img_xref5065_990x989.webp"
         ],
         "highlights": [
             {
@@ -1537,7 +1537,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "التعليم العالي والمجمعات السكنية", en: "Higher Education & Faculty Compounds" },
       project: { ar: "مشروع إسكان 50 فيلا فاخرة والأنفاق الخدمية (PN05)", en: "50 Luxury Faculty Villas & Retaining Infrastructure" },
       scope: { ar: "تطوير وإشراف هندسي متكامل", en: "Turnkey EPC & Site Supervision" },
-      logo: "/assets/clients/logos_hd/education.png",
+      logo: "/assets/clients/logos_hd/education.webp",
       icon: "building-2"
     },
     {
@@ -1547,7 +1547,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "الخزانات ومحطات الضخ الاستراتيجية", en: "Strategic Mega Water Reservoirs" },
       project: { ar: "مشروع خزانات مياه بريمان بجدة (170M لتر)", en: "Briman Strategic Water Reservoir (170M Liters)" },
       scope: { ar: "إشراف هندسي وإنشائي ومحطات الضخ", en: "Structural Supervision & Pumping Plants" },
-      logo: "/assets/clients/logos_hd/health.png",
+      logo: "/assets/clients/logos_hd/health.webp",
       icon: "zap"
     },
     {
@@ -1557,7 +1557,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "الأبراج والمرافق الصيدلانية", en: "Corporate Towers & Pharma Facilities" },
       project: { ar: "برج سبيماكو وقواعد محولات ومضخات الطاقة", en: "SPIMACO Tower & High-Voltage Infrastructure" },
       scope: { ar: "تسليم مفتاح وأعمال خرسانية وكهروميكانيكية", en: "Turnkey Concrete & Heavy MEP" },
-      logo: "/assets/clients/logos_hd/spimaco.png",
+      logo: "/assets/clients/logos_hd/spimaco.webp",
       icon: "shield-check"
     },
     {
@@ -1567,7 +1567,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "مدن الملاهي والمجمعات التجارية", en: "Thematic Theme Parks & Megamalls" },
       project: { ar: "مدن سفوري لاند الترفيهية ومول العثيم", en: "Saffori Land Thematic Attractions & Megamalls" },
       scope: { ar: "تصميم ديكورات وأعمدة مضيئة وتشطيبات فاخرة", en: "3D Thematic Design & Luxury Fit-Out" },
-      logo: "/assets/clients/logos_hd/othaim.png",
+      logo: "/assets/clients/logos_hd/othaim.webp",
       icon: "layers"
     },
     {
@@ -1577,7 +1577,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "المصانع والمباني الإدارية الثقيلة", en: "Factory Complexes & Heavy Industrial Slabs" },
       project: { ar: "مباني مرافق المصنع والبوابات الإدارية", en: "Factory Administration & Heavy Machine Facilities" },
       scope: { ar: "تنفيذ إنشائي وأرضيات خرسانية فائقة التحمل", en: "Heavy-Duty Slabs & Infrastructure" },
-      logo: "/assets/clients/logos_hd/alfanar.png",
+      logo: "/assets/clients/logos_hd/alfanar.webp",
       icon: "hard-hat"
     },
     {
@@ -1587,7 +1587,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "المجمعات السكنية والمرافق الترفيهية", en: "Luxury Residential Compounds" },
       project: { ar: "مجمع عمارات الديار السكني والمسابح والمرافق", en: "El-Deyar Luxury Residence & Leisure Facilities" },
       scope: { ar: "تطوير عقاري وإشراف على التشطيبات الشاملة", en: "Full Residential Development Oversight" },
-      logo: "/assets/clients/logos_hd/deyaar.png",
+      logo: "/assets/clients/logos_hd/deyaar.webp",
       icon: "building"
     },
     {
@@ -1597,7 +1597,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "المشاريع الحضرية والبنية التحتية", en: "Urban Development & Infrastructure" },
       project: { ar: "مشاريع التطوير الحضري والتراخيص البلدية", en: "Urban Infrastructure & Municipal Compliance" },
       scope: { ar: "مطابقة كود البناء السعودي والتنسيق الهندسي", en: "Saudi Building Code SBC Compliance" },
-      logo: "/assets/clients/logos_hd/riyadh_municipality.png",
+      logo: "/assets/clients/logos_hd/riyadh_municipality.webp",
       icon: "compass"
     },
     {
@@ -1607,7 +1607,7 @@ Throughout his career, he has directed landmark national undertakings spanning h
       sector: { ar: "المولات المفتوحة والمراكز التجارية", en: "Open-Air Commercial Strips & Strip Malls" },
       project: { ar: "مجمعات ستريب مول ومراكز التسوق بالرياض", en: "Contemporary Commercial Strips in Riyadh" },
       scope: { ar: "تصميم معماري وتطوير الواجهات الحجرية والزجاجية", en: "Architectural Glazing & Stone Cladding" },
-      logo: "/assets/clients/logos_hd/motoon.png",
+      logo: "/assets/clients/logos_hd/motoon.webp",
       icon: "award"
     }
   ],
@@ -1618,28 +1618,28 @@ Throughout his career, he has directed landmark national undertakings spanning h
       title: { ar: "السجل التجاري الرئيسي للمنشأة", en: "Commercial Registration (CR)" },
       no: "1010111276",
       issuer: { ar: "وزارة التجارة - المملكة العربية السعودية", en: "Ministry of Commerce, KSA" },
-      image: "/assets/documents/cr_certificate.png"
+      image: "/assets/documents/cr_certificate.webp"
     },
     {
       code: "VAT-300046348700003",
       title: { ar: "شهادة تسجيل ضريبة القيمة المضافة", en: "VAT Registration Certificate" },
       no: "300046348700003",
       issuer: { ar: "هيئة الزكاة والضريبة والجمارك (ZATCA)", en: "ZATCA Authority, KSA" },
-      image: "/assets/documents/vat_certificate.png"
+      image: "/assets/documents/vat_certificate.webp"
     },
     {
       code: "SPL-RCWD3082",
       title: { ar: "إثبات العنوان الوطني المعتمد", en: "National Address Certificate" },
       no: "RCWD3082",
       issuer: { ar: "البريد السعودي (سبل)", en: "Saudi Post (SPL)" },
-      image: "/assets/documents/national_address.png"
+      image: "/assets/documents/national_address.webp"
     },
     {
       code: "SAUD-169783",
       title: { ar: "شهادة التوطين والامتثال (سعودة)", en: "Saudization Compliance Certificate" },
       no: "169783-16775242",
       issuer: { ar: "وزارة الموارد البشرية والتنمية الاجتماعية", en: "Ministry of Human Resources" },
-      image: "/assets/documents/saudization_certificate.png"
+      image: "/assets/documents/saudization_certificate.webp"
     }
   ],
 
@@ -1654,14 +1654,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
                 "ar": "BEFORE • صب اللبشة والأساسات المسلحة",
                 "en": "BEFORE • Raft Foundation Pours"
             },
-            "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.jpeg"
+            "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.webp"
         },
         "after": {
             "label": {
                 "ar": "AFTER • الفلل السكنية المكتملة",
                 "en": "AFTER • Completed Luxury Villas"
             },
-            "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg"
+            "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.webp"
         },
         "description": {
             "ar": "تحول الموقع من أعمال تسليح اللبشة الخرسانية الكثيفة لأساسات 50 مبنى سكني إلى مجمع فلل راقٍ مكتمل المواصفات لأعضاء هيئة التدريس بالحرم الجامعي.",
@@ -1678,14 +1678,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
                 "ar": "BEFORE • شبكات التسليح والشد المسبق",
                 "en": "BEFORE • Rebar & Tendons Grid"
             },
-            "image": "/assets/projects/briman_reservoir_before.jpg"
+            "image": "/assets/projects/briman_reservoir_before.webp"
         },
         "after": {
             "label": {
                 "ar": "AFTER • اكتمال صب الجدران الخرسانية والأسطح",
                 "en": "AFTER • Cast Retaining Walls & Deck"
             },
-            "image": "/assets/projects/briman_reservoir_after.jpg"
+            "image": "/assets/projects/briman_reservoir_after.webp"
         },
         "description": {
             "ar": "توثيق ميداني مباشر لمراحل تنفيذ خزان بريمان الاستراتيجي بجدة بسعة 170 مليون لتر؛ من تركيب شبكات حديد التسليح وكابلات الشد الانحنائية إلى اكتمال صب الجدران الخرسانية العملاقة والأعمال العلوية.",
@@ -1702,14 +1702,14 @@ Throughout his career, he has directed landmark national undertakings spanning h
                 "ar": "BEFORE • صب قواعد محولات ومضخات الطاقة",
                 "en": "BEFORE • Substructure High-Voltage Vaults"
             },
-            "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.jpeg"
+            "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.webp"
         },
         "after": {
             "label": {
                 "ar": "AFTER • البرج الإداري الشاهق المكتمل",
                 "en": "AFTER • Completed Glass Tower"
             },
-            "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg"
+            "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.webp"
         },
         "description": {
             "ar": "من مرحلة الأعمال الخرسانية التخصصية في البنية التحتية السفلية وقواعد غرف الطاقة إلى البرج المكتبي الأيقوني على شريان الأعمال بالعاصمة الرياض.",
