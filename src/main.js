@@ -28,6 +28,9 @@ import {
   X,
   ExternalLink,
   ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  Camera,
   Eye,
   Sliders,
   FileText,
@@ -41,8 +44,7 @@ import {
   Clock,
   Home,
   Waves,
-  ChevronsLeftRight,
-  ChevronDown
+  ChevronsLeftRight
 } from 'lucide';
 
 // Translations Dictionary for UI static text
@@ -392,6 +394,9 @@ function refreshIcons() {
       X,
       ExternalLink,
       ChevronRight,
+      ChevronLeft,
+      ChevronDown,
+      Camera,
       Eye,
       Sliders,
       FileText,
@@ -598,6 +603,9 @@ function renderProjects() {
     : portfolioData.projects.filter(p => p.category === activeCategory);
 
   container.innerHTML = filteredProjects.map(proj => {
+    const totalPhotos = proj.gallery ? proj.gallery.length : 1;
+    const miniThumbs = (proj.gallery || [proj.image]).slice(0, 4);
+
     return `
       <div class="project-folio-card" data-project-id="${proj.id}">
         <div class="folio-header font-mono">
@@ -605,7 +613,20 @@ function renderProjects() {
           <span>${proj.year}</span>
         </div>
         <div class="folio-thumb-box">
-          <img src="${proj.image}" alt="${proj.title[currentLang]}" class="folio-thumb" loading="lazy">
+          <span class="folio-photo-badge font-mono">
+            <i data-lucide="camera"></i>
+            <span>${totalPhotos} ${currentLang === 'ar' ? 'لوحات' : 'Plates'}</span>
+          </span>
+          <img src="${proj.image}" alt="${proj.title[currentLang]}" class="folio-thumb" id="cardImg_${proj.id}" loading="lazy">
+          ${totalPhotos > 1 ? `
+            <div class="folio-quick-strip">
+              ${miniThumbs.map((thumb, tIdx) => `
+                <div class="folio-quick-dot ${tIdx === 0 ? 'active' : ''}" data-target-img="cardImg_${proj.id}" data-src="${thumb}" title="${currentLang === 'ar' ? `معاينة لقطة ${tIdx + 1}` : `Preview ${tIdx + 1}`}">
+                  <img src="${thumb}" alt="thumb">
+                </div>
+              `).join('')}
+            </div>
+          ` : ''}
         </div>
         <div class="folio-body">
           <div class="folio-meta-row font-mono">
@@ -616,8 +637,14 @@ function renderProjects() {
           <div class="folio-role">${proj.role[currentLang]}</div>
           <p class="folio-scope">${proj.scope[currentLang]}</p>
           
+          ${proj.specs ? `
+            <div class="folio-specs-row">
+              ${proj.specs.map(s => `<span class="folio-spec-chip font-mono">${s.label[currentLang]}: ${s.value}</span>`).join('')}
+            </div>
+          ` : ''}
+
           <div class="folio-footer">
-            <span class="font-mono">${translations[currentLang].btn_view_details}</span>
+            <span class="font-mono">${translations[currentLang].btn_view_details} (${totalPhotos} ${currentLang === 'ar' ? 'صور' : 'Photos'})</span>
             <i data-lucide="arrow-left" class="arrow-icon"></i>
           </div>
         </div>
@@ -625,11 +652,32 @@ function renderProjects() {
     `;
   }).join('');
 
+  // Attach card click handlers for full modal
   container.querySelectorAll('.project-folio-card').forEach(card => {
     card.addEventListener('click', () => {
       const projId = card.getAttribute('data-project-id');
       openProjectModal(projId);
     });
+  });
+
+  // Attach quick-dot preview handlers on the card
+  container.querySelectorAll('.folio-quick-dot').forEach(dot => {
+    const switchPhoto = (e) => {
+      e.stopPropagation();
+      const targetId = dot.getAttribute('data-target-img');
+      const newSrc = dot.getAttribute('data-src');
+      const cardImg = document.getElementById(targetId);
+      if (cardImg) {
+        cardImg.src = newSrc;
+      }
+      const parentStrip = dot.closest('.folio-quick-strip');
+      if (parentStrip) {
+        parentStrip.querySelectorAll('.folio-quick-dot').forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      }
+    };
+    dot.addEventListener('mouseenter', switchPhoto);
+    dot.addEventListener('click', switchPhoto);
   });
 
   refreshIcons();
@@ -702,31 +750,38 @@ function renderArchiveProjects() {
     return;
   }
 
-  container.innerHTML = list.map(proj => `
-    <div class="project-folio-card" data-project-id="${proj.id}">
-      <div class="folio-header font-mono">
-        <span class="folio-code">${proj.dwgCode}</span>
-        <span>${proj.year}</span>
-      </div>
-      <div class="folio-thumb-box">
-        <img src="${proj.image}" alt="${proj.title[currentLang]}" class="folio-thumb" loading="lazy">
-      </div>
-      <div class="folio-body">
-        <div class="folio-meta-row font-mono">
-          <span class="folio-typology">${proj.typology[currentLang]}</span>
-          <span>${proj.location[currentLang]}</span>
+  container.innerHTML = list.map(proj => {
+    const totalPhotos = proj.gallery ? proj.gallery.length : 1;
+    return `
+      <div class="project-folio-card" data-project-id="${proj.id}">
+        <div class="folio-header font-mono">
+          <span class="folio-code">${proj.dwgCode}</span>
+          <span>${proj.year}</span>
         </div>
-        <h3 class="folio-title">${proj.title[currentLang]}</h3>
-        <div class="folio-role">${proj.role[currentLang]}</div>
-        <p class="folio-scope">${proj.scope[currentLang]}</p>
-        
-        <div class="folio-footer">
-          <span class="font-mono">${translations[currentLang].btn_view_details}</span>
-          <i data-lucide="arrow-left" class="arrow-icon"></i>
+        <div class="folio-thumb-box">
+          <span class="folio-photo-badge font-mono">
+            <i data-lucide="camera"></i>
+            <span>${totalPhotos} ${currentLang === 'ar' ? 'لوحات' : 'Plates'}</span>
+          </span>
+          <img src="${proj.image}" alt="${proj.title[currentLang]}" class="folio-thumb" loading="lazy">
+        </div>
+        <div class="folio-body">
+          <div class="folio-meta-row font-mono">
+            <span class="folio-typology">${proj.typology[currentLang]}</span>
+            <span>${proj.location[currentLang]}</span>
+          </div>
+          <h3 class="folio-title">${proj.title[currentLang]}</h3>
+          <div class="folio-role">${proj.role[currentLang]}</div>
+          <p class="folio-scope">${proj.scope[currentLang]}</p>
+          
+          <div class="folio-footer">
+            <span class="font-mono">${translations[currentLang].btn_view_details}</span>
+            <i data-lucide="arrow-left" class="arrow-icon"></i>
+          </div>
         </div>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 
   container.querySelectorAll('.project-folio-card').forEach(card => {
     card.addEventListener('click', () => {
@@ -738,70 +793,194 @@ function renderArchiveProjects() {
   refreshIcons();
 }
 
-// Open Project Modal
+// Global modal keyboard handler reference
+let modalKeyHandler = null;
+
+// Open Project Modal with Cinema Gallery Viewer
 function openProjectModal(projectId) {
   const project = portfolioData.projects.find(p => p.id === projectId);
   if (!project) return;
 
   const modal = document.getElementById('projectModal');
   const modalContent = document.getElementById('modalContent');
+  if (!modal || !modalContent) return;
 
-  let activeImg = project.gallery[0] || project.image;
+  const galleryList = project.gallery && project.gallery.length > 0 ? project.gallery : [project.image];
+  let currentIndex = 0;
 
-  function buildModalHtml() {
-    return `
-      <div class="modal-gallery-hero">
-        <img src="${activeImg}" alt="${project.title[currentLang]}" id="modalHeroImg">
+  function renderModal() {
+    const currentImg = galleryList[currentIndex];
+    const total = galleryList.length;
+
+    modalContent.innerHTML = `
+      <!-- Cinema Gallery Stage -->
+      <div class="modal-gallery-hero" id="modalHeroStage">
+        <img src="${currentImg}" alt="${project.title[currentLang]}" id="modalHeroImg">
+        
+        <span class="gallery-plate-badge font-mono" id="modalPlateBadge">
+          ${currentLang === 'ar' ? `لوحة ${currentIndex + 1} من ${total}` : `PLATE ${currentIndex + 1} OF ${total}`}
+        </span>
+
+        ${total > 1 ? `
+          <button class="gallery-nav-arrow gallery-nav-prev" id="galleryPrevBtn" aria-label="Previous image">
+            <i data-lucide="${currentLang === 'ar' ? 'chevron-right' : 'chevron-left'}"></i>
+          </button>
+          <button class="gallery-nav-arrow gallery-nav-next" id="galleryNextBtn" aria-label="Next image">
+            <i data-lucide="${currentLang === 'ar' ? 'chevron-left' : 'chevron-right'}"></i>
+          </button>
+        ` : ''}
       </div>
 
-      ${project.gallery.length > 1 ? `
-        <div class="modal-thumbs-row">
-          ${project.gallery.map(img => `
-            <button class="modal-thumb-btn ${img === activeImg ? 'active' : ''}" data-src="${img}">
-              <img src="${img}" alt="thumbnail">
+      <!-- Filmstrip Thumbnails Row -->
+      ${total > 1 ? `
+        <div class="modal-thumbs-row" id="modalThumbsStrip">
+          ${galleryList.map((img, idx) => `
+            <button class="modal-thumb-btn ${idx === currentIndex ? 'active' : ''}" data-index="${idx}" aria-label="Plate ${idx + 1}">
+              <img src="${img}" alt="thumbnail ${idx + 1}">
             </button>
           `).join('')}
         </div>
       ` : ''}
 
+      <!-- Project Metadata Header -->
       <div class="modal-code-tag font-mono">${project.dwgCode} • ${project.year} • ${project.location[currentLang]}</div>
       <h2 class="modal-title">${project.title[currentLang]}</h2>
-      <div class="modal-role-tag">${project.role[currentLang]}</div>
-      <div class="modal-client font-mono"><i data-lucide="building-2"></i> ${project.client[currentLang]}</div>
+      <div class="modal-role-tag font-mono">${project.role[currentLang]}</div>
+      <div class="modal-client"><i data-lucide="building-2"></i> ${project.client[currentLang]}</div>
 
+      <!-- Technical Specifications Matrix -->
+      ${project.specs && project.specs.length > 0 ? `
+        <div class="modal-specs-grid">
+          ${project.specs.map(s => `
+            <div class="modal-spec-card">
+              <span class="modal-spec-label">${s.label[currentLang]}</span>
+              <span class="modal-spec-val">${s.value}</span>
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
+
+      <!-- Technical Engineering Details -->
       <div class="modal-desc-block">
         <h4>${translations[currentLang].modal_technical_title}</h4>
         <p>${project.details[currentLang]}</p>
       </div>
 
+      <!-- Key Project Highlights -->
       <div class="mb-4">
         <h4 style="color: var(--ink-primary); margin-bottom: 0.75rem; font-size: 0.95rem; font-weight: 800;">${translations[currentLang].modal_highlights_title}</h4>
         <div class="modal-highlights">
           ${project.highlights.map(hl => `
             <div class="modal-hl-item">
-              <i data-lucide="award"></i>
+              <i data-lucide="check-circle-2"></i>
               <span>${hl[currentLang]}</span>
             </div>
           `).join('')}
         </div>
       </div>
+
+      <!-- Direct Consultation CTA for this specific project -->
+      <div class="modal-cta-box">
+        <div>
+          <strong style="color: var(--ink-primary); font-size: 0.92rem; display: block;">${currentLang === 'ar' ? 'هل تود بحث استشارة أو تطوير نطاق عمل مماثل؟' : 'Interested in discussing a similar project scope?'}</strong>
+          <span style="font-size: 0.8rem; color: var(--ink-muted);">${currentLang === 'ar' ? 'تواصل مباشرة مع المهندس ناصر علي كمال' : 'Connect directly with Arch. Nasser Ali Kamal'}</span>
+        </div>
+        <a href="https://wa.me/966545000073?text=${encodeURIComponent(currentLang === 'ar' ? `السلام عليكم، أود بحث استشارة وتطوير بخصوص مشروع مماثل لـ (${project.title.ar})` : `Hello, I would like to inquire regarding a project scope similar to (${project.title.en})`)}" target="_blank" rel="noopener noreferrer" class="modal-cta-btn">
+          <i data-lucide="message-circle"></i>
+          <span>${currentLang === 'ar' ? 'طلب استشارة بخصوص هذا المشروع' : 'Inquire About This Scope'}</span>
+        </a>
+      </div>
     `;
+
+    refreshIcons();
+    attachGalleryHandlers();
   }
 
-  modalContent.innerHTML = buildModalHtml();
+  function goToSlide(newIdx) {
+    currentIndex = (newIdx + galleryList.length) % galleryList.length;
+    const heroImg = document.getElementById('modalHeroImg');
+    const plateBadge = document.getElementById('modalPlateBadge');
+    
+    if (heroImg) {
+      heroImg.style.opacity = '0.4';
+      heroImg.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        heroImg.src = galleryList[currentIndex];
+        heroImg.style.opacity = '1';
+        heroImg.style.transform = 'scale(1)';
+      }, 120);
+    }
+
+    if (plateBadge) {
+      plateBadge.textContent = currentLang === 'ar'
+        ? `لوحة ${currentIndex + 1} من ${galleryList.length}`
+        : `PLATE ${currentIndex + 1} OF ${galleryList.length}`;
+    }
+
+    const thumbs = modalContent.querySelectorAll('.modal-thumb-btn');
+    thumbs.forEach(t => {
+      if (parseInt(t.getAttribute('data-index'), 10) === currentIndex) {
+        t.classList.add('active');
+        t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      } else {
+        t.classList.remove('active');
+      }
+    });
+  }
+
+  function attachGalleryHandlers() {
+    const prevBtn = document.getElementById('galleryPrevBtn');
+    const nextBtn = document.getElementById('galleryNextBtn');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(currentIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        goToSlide(currentIndex + 1);
+      });
+    }
+
+    modalContent.querySelectorAll('.modal-thumb-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const idx = parseInt(btn.getAttribute('data-index'), 10);
+        goToSlide(idx);
+      });
+    });
+  }
+
+  renderModal();
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 
-  modalContent.querySelectorAll('.modal-thumb-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      activeImg = btn.getAttribute('data-src');
-      modalContent.innerHTML = buildModalHtml();
-      openProjectModal(projectId);
-    });
-  });
+  // Keyboard navigation
+  if (modalKeyHandler) {
+    window.removeEventListener('keydown', modalKeyHandler);
+  }
 
-  refreshIcons();
+  modalKeyHandler = (e) => {
+    if (!modal.classList.contains('open')) return;
+    if (e.key === 'ArrowRight') {
+      currentLang === 'ar' ? goToSlide(currentIndex - 1) : goToSlide(currentIndex + 1);
+    } else if (e.key === 'ArrowLeft') {
+      currentLang === 'ar' ? goToSlide(currentIndex + 1) : goToSlide(currentIndex - 1);
+    } else if (e.key === 'Escape') {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      if (modalKeyHandler) {
+        window.removeEventListener('keydown', modalKeyHandler);
+        modalKeyHandler = null;
+      }
+    }
+  };
+
+  window.addEventListener('keydown', modalKeyHandler);
 }
 
 // Render Official Credentials

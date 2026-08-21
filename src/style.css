@@ -2396,15 +2396,15 @@ section {
 .folio-thumb-box {
   position: relative;
   width: 100%;
-  height: 210px;
+  height: 220px;
   overflow: hidden;
-  background: var(--bg-secondary);
+  background: #111315;
   border-bottom: var(--border-hairline);
 }
 
 @media (min-width: 768px) {
   .folio-thumb-box {
-    height: 250px;
+    height: 260px;
   }
 }
 
@@ -2412,11 +2412,81 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-smooth);
+  transition: transform var(--transition-smooth), opacity 0.25s ease;
 }
 
 .project-folio-card:hover .folio-thumb {
-  transform: scale(1.06);
+  transform: scale(1.05);
+}
+
+/* Photo Count Badge */
+.folio-photo-badge {
+  position: absolute;
+  top: 10px;
+  inset-inline-start: 10px;
+  background: rgba(17, 19, 21, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(225, 138, 0, 0.4);
+  border-radius: var(--radius-xs);
+  color: #FAF8F3;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.project-folio-card:hover .folio-photo-badge {
+  border-color: var(--accent-ochre);
+  background: rgba(17, 19, 21, 0.95);
+}
+
+/* Quick Card Photo Strip / Preview Dots */
+.folio-quick-strip {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast);
+}
+
+.folio-quick-dot {
+  width: 24px;
+  height: 18px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.folio-quick-dot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.folio-quick-dot.active,
+.folio-quick-dot:hover {
+  border-color: #E18A00;
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(225, 138, 0, 0.4);
+}
+
+.folio-quick-dot.active img,
+.folio-quick-dot:hover img {
+  opacity: 1;
 }
 
 .folio-body {
@@ -2448,10 +2518,10 @@ section {
 
 .folio-title {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--ink-primary);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
   line-height: 1.35;
 }
 
@@ -2468,29 +2538,62 @@ section {
   font-size: 0.82rem;
   color: var(--ink-muted);
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+/* Specs Badges on Card */
+.folio-specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.folio-spec-chip {
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  color: var(--ink-secondary);
+}
+
 .folio-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 0.85rem;
-  border-top: var(--border-hairline);
   margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border-hairline);
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--ink-primary);
+  transition: color var(--transition-fast);
+}
+
+.project-folio-card:hover .folio-footer {
+  color: var(--accent-ochre);
 }
 
 .folio-footer i {
   width: 15px;
   height: 15px;
   color: var(--accent-ochre);
+  transition: transform var(--transition-fast);
+}
+
+.project-folio-card:hover .folio-footer i {
+  transform: translateX(-4px);
+}
+
+html[dir="ltr"] .project-folio-card:hover .folio-footer i {
+  transform: translateX(4px);
 }
 
 /* ==========================================================================
@@ -3466,12 +3569,12 @@ html[dir="rtl"] .marquee-track {
 .modal-container {
   position: relative;
   width: 100%;
-  max-width: 880px;
+  max-width: 960px;
   background: var(--bg-surface);
   border: 1px solid var(--ink-primary);
   box-shadow: var(--shadow-modal);
   overflow: hidden;
-  max-height: 90vh;
+  max-height: 92vh;
   display: flex;
   flex-direction: column;
   animation: modalScale 0.3s var(--ease-spring);
@@ -3490,39 +3593,55 @@ html[dir="rtl"] .marquee-track {
   position: absolute;
   top: 0.75rem;
   inset-inline-end: 0.75rem;
-  width: 34px;
-  height: 34px;
-  background: var(--bg-surface);
-  border: var(--border-hairline);
-  color: var(--ink-primary);
+  width: 38px;
+  height: 38px;
+  background: rgba(17, 19, 21, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xs);
+  color: #FAF8F3;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
+  transition: all var(--transition-fast);
+}
+
+.modal-close:hover {
+  background: var(--accent-ochre);
+  border-color: var(--accent-ochre);
+  transform: rotate(90deg);
 }
 
 .modal-body {
-  padding: 1.5rem 1.25rem;
+  padding: 1.25rem;
   overflow-y: auto;
 }
 
 @media (min-width: 768px) {
   .modal-body {
-    padding: 2.25rem;
+    padding: 1.75rem 2rem;
   }
 }
 
+/* Modal Gallery Hero & Stage */
 .modal-gallery-hero {
-  border: var(--border-hairline);
-  background: #000000;
-  margin-bottom: 1.25rem;
-  height: 250px;
+  position: relative;
+  border: 1px solid var(--ink-primary);
+  background: #0B0D0E;
+  margin-bottom: 0.75rem;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-xs);
 }
 
 @media (min-width: 768px) {
   .modal-gallery-hero {
-    height: 400px;
+    height: 440px;
   }
 }
 
@@ -3530,27 +3649,98 @@ html[dir="rtl"] .marquee-track {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: opacity 0.25s ease, transform 0.3s ease;
 }
 
+/* Gallery Navigation Arrows */
+.gallery-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(17, 19, 21, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FAF8F3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+}
+
+.gallery-nav-arrow:hover {
+  background: #E18A00;
+  border-color: #E18A00;
+  color: #111315;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 16px rgba(225, 138, 0, 0.4);
+}
+
+.gallery-nav-prev {
+  inset-inline-start: 12px;
+}
+
+.gallery-nav-next {
+  inset-inline-end: 12px;
+}
+
+/* Plate Counter Badge */
+.gallery-plate-badge {
+  position: absolute;
+  bottom: 12px;
+  inset-inline-start: 12px;
+  background: rgba(17, 19, 21, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(225, 138, 0, 0.5);
+  border-radius: var(--radius-xs);
+  color: #FAF8F3;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Filmstrip Thumbnails Row */
 .modal-thumbs-row {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
   margin-bottom: 1.25rem;
   overflow-x: auto;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modal-thumb-btn {
-  width: 70px;
-  height: 50px;
-  border: 2px solid transparent;
-  background: var(--bg-secondary);
+  width: 80px;
+  height: 56px;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  background: #111315;
   cursor: pointer;
   flex-shrink: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0.65;
+  transition: all var(--transition-fast);
+}
+
+.modal-thumb-btn:hover {
+  opacity: 1;
+  border-color: var(--accent-ochre);
+  transform: translateY(-2px);
 }
 
 .modal-thumb-btn.active {
-  border-color: var(--ink-primary);
+  opacity: 1;
+  border-color: #E18A00;
+  box-shadow: 0 0 10px rgba(225, 138, 0, 0.5);
+  transform: scale(1.04);
 }
 
 .modal-thumb-btn img {
@@ -3562,53 +3752,94 @@ html[dir="rtl"] .marquee-track {
 .modal-code-tag {
   font-size: 0.72rem;
   color: var(--accent-ochre);
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   margin-bottom: 0.25rem;
 }
 
 .modal-title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: var(--ink-primary);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
 }
 
 @media (min-width: 768px) {
   .modal-title {
-    font-size: 1.75rem;
+    font-size: 1.85rem;
   }
 }
 
 .modal-role-tag {
-  font-size: 0.8rem;
-  color: var(--ink-secondary);
+  font-size: 0.85rem;
+  color: var(--accent-ochre);
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
 
 .modal-client {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--ink-muted);
   margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Modal Specs Grid */
+.modal-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .modal-specs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.modal-spec-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: 0.75rem 1rem;
+}
+
+.modal-spec-label {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.modal-spec-val {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--ink-primary);
 }
 
 .modal-desc-block {
   background: var(--bg-secondary);
   padding: 1.25rem;
   border: var(--border-hairline);
+  border-radius: var(--radius-xs);
   margin-bottom: 1.25rem;
 }
 
 .modal-desc-block h4 {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--ink-primary);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
   font-weight: 800;
 }
 
 .modal-desc-block p {
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   color: var(--ink-secondary);
   line-height: 1.65;
 }
@@ -3626,20 +3857,63 @@ html[dir="rtl"] .marquee-track {
 }
 
 .modal-hl-item {
-  background: var(--bg-surface);
-  border: var(--border-hairline);
-  padding: 0.75rem 0.85rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--ink-primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  background: var(--bg-secondary);
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
 }
 
 .modal-hl-item i {
+  width: 16px;
+  height: 16px;
   color: var(--accent-ochre);
   flex-shrink: 0;
+}
+
+/* Modal Consultation Direct CTA */
+.modal-cta-box {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed var(--border-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .modal-cta-box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.modal-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #128C7E;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.modal-cta-btn:hover {
+  background: #0e6e63;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(18, 140, 126, 0.35);
 }
 
 .doc-modal-body {

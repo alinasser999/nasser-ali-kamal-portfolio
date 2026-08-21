@@ -204,439 +204,1330 @@ Throughout his career, he has directed landmark national undertakings spanning h
   ],
 
   categories: [
-    { id: "all", label: { ar: "كافة المشاريع", en: "All Projects" } },
-    { id: "infrastructure", label: { ar: "البنية التحتية والجامعات", en: "Mega Infrastructure" } },
-    { id: "turnkey", label: { ar: "مشاريع تسليم المفتاح", en: "Government Turnkey" } },
-    { id: "commercial", label: { ar: "الأبراج والمجمعات السكنية", en: "Towers & Residential" } },
-    { id: "thematic", label: { ar: "العمارة الترفيهية والكافيهات", en: "Thematic & Leisure" } },
-    { id: "industrial", label: { ar: "المصانع والمنشآت الطبية", en: "Industrial & Healthcare" } }
-  ],
+    {
+        "id": "all",
+        "label": {
+            "ar": "كافة المشاريع (16)",
+            "en": "All Projects (16)"
+        }
+    },
+    {
+        "id": "mega",
+        "label": {
+            "ar": "المشاريع السيادية والجامعية",
+            "en": "Sovereign & Academic"
+        }
+    },
+    {
+        "id": "infrastructure",
+        "label": {
+            "ar": "البنية التحتية والخزانات",
+            "en": "Mega Infrastructure"
+        }
+    },
+    {
+        "id": "commercial",
+        "label": {
+            "ar": "الأبراج والمجمعات السكنية",
+            "en": "Towers & Residential"
+        }
+    },
+    {
+        "id": "thematic",
+        "label": {
+            "ar": "العمارة الترفيهية والكافيهات",
+            "en": "Thematic & Leisure"
+        }
+    },
+    {
+        "id": "healthcare",
+        "label": {
+            "ar": "المنشآت الطبية والصناعية",
+            "en": "Healthcare & Industrial"
+        }
+    }
+],
 
   projects: [
     {
-      id: "pnu-villas",
-      dwgCode: "DWG-PNU-05",
-      year: "2012 - 2014",
-      typology: { ar: "مجمع سكني جامعي", en: "Faculty Residential Compound" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "infrastructure",
-      title: {
-        ar: "جامعة الأميرة نورة - مجمع السكن (PN05)",
-        en: "Princess Nora University - Faculty Housing (PN05)"
-      },
-      role: { ar: "إدارة التطوير والإشراف المعماري والإنشائي", en: "Development Management & Substructure Oversight" },
-      client: { ar: "جامعة الأميرة نورة بنت عبدالرحمن / وزارة التعليم", en: "Princess Nora University / Ministry of Education" },
-      scope: {
-        ar: "تطوير وإشراف على الأساسات الخرسانية واللبشة المسلحة لـ 50 فيلا سكنية فاخرة لمنسوبي الجامعة بأعلى معايير الاستدامة المعمارية.",
-        en: "Development direction and architectural/structural supervision of reinforced raft foundations for 50 faculty residential villas."
-      },
-      image: "/assets/projects/pnu_housing_villas.png",
-      gallery: [
-        "/assets/projects/pnu_housing_villas.png",
-        "/assets/projects/luxury_villa_facade.png"
-      ],
-      highlights: [
-        { ar: "50 فيلا سكنية متكاملة", en: "50 Luxury Residential Villas" },
-        { ar: "لبشة خرسانية مسلحة متطورة وعزل مائي", en: "Engineered Raft Concrete & Waterproofing" },
-        { ar: "مطابقة تامة للمواصفات الأكاديمية العالمية", en: "Strict University Standards Compliance" }
-      ],
-      details: {
-        ar: "شمل دور المهندس ناصر علي كمال الإشراف على دراسات الموقع، مراجعة المخططات التنفيذية، صب اللبشة الخرسانية المسلحة لأساسات 50 فيلا، والتحقق من اشتراطات العزل ومطابقة الكود السعودي.",
-        en: "Arch. Nasser Ali Kamal orchestrated site planning, shop-drawing review, soil stabilization, and mass raft concrete casting for 50 campus faculty villas."
-      }
+        "id": "pnu-villas",
+        "dwgCode": "DWG-PNU-05",
+        "year": "2012 - 2014",
+        "typology": {
+            "ar": "مجمع سكني جامعي فاخر",
+            "en": "Faculty Residential Compound"
+        },
+        "location": {
+            "ar": "الرياض، المملكة العربية السعودية",
+            "en": "Riyadh, Saudi Arabia"
+        },
+        "category": "mega",
+        "title": {
+            "ar": "جامعة الأميرة نورة - إسكان أعضاء هيئة التدريس (50 فيلا)",
+            "en": "Princess Nora University - Faculty Housing (50 Villas)"
+        },
+        "role": {
+            "ar": "إدارة التطوير والإشراف المعماري والإنشائي",
+            "en": "Development Management & Substructure Oversight"
+        },
+        "client": {
+            "ar": "جامعة الأميرة نورة بنت عبدالرحمن / وزارة التعليم",
+            "en": "Princess Nora University / Ministry of Education"
+        },
+        "scope": {
+            "ar": "تطوير وإشراف على الأساسات الخرسانية واللبشة المسلحة لـ 50 فيلا سكنية فاخرة لمنسوبي الجامعة بأعلى معايير الاستدامة المعمارية.",
+            "en": "Development direction and architectural/structural supervision of reinforced raft foundations for 50 faculty residential villas."
+        },
+        "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg",
+            "/assets/projects_extracted/pnu_villas/page_09_img_xref776_680x726.jpeg",
+            "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.jpeg",
+            "/assets/projects_extracted/pnu_villas/page_40_img_xref5977_960x960.jpeg",
+            "/assets/projects_extracted/pnu_villas/page_40_img_xref6036_960x960.jpeg",
+            "/assets/projects_extracted/pnu_villas/page_45_img_xref6577_647x406.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "50 فيلا سكنية متكاملة المرافق",
+                "en": "50 Luxury Residential Villas"
+            },
+            {
+                "ar": "لبشة خرسانية مسلحة متطورة وعزل مائي عالي الكفاءة",
+                "en": "Engineered Raft Concrete & High-Grade Waterproofing"
+            },
+            {
+                "ar": "مطابقة تامة للمواصفات الأكاديمية وكود البناء السعودي",
+                "en": "Strict Academic Standards & SBC Compliance"
+            }
+        ],
+        "details": {
+            "ar": "شمل دور المهندس ناصر علي كمال الإشراف على دراسات الموقع، مراجعة المخططات التنفيذية، صب اللبشة الخرسانية المسلحة لأساسات 50 فيلا، والتحقق من اشتراطات العزل ومطابقة الكود السعودي حتى التسليم المعتمد.",
+            "en": "Arch. Nasser Ali Kamal orchestrated site planning, shop-drawing review, soil stabilization, and mass raft concrete casting for 50 campus faculty villas through verified handover."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "عدد الوحدات",
+                    "en": "Units"
+                },
+                "value": "50 Villas"
+            },
+            {
+                "label": {
+                    "ar": "طريقة التنفيذ",
+                    "en": "Delivery"
+                },
+                "value": "EPC Raft Foundations"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "Riyadh Campus"
+            }
+        ]
     },
     {
-      id: "jeddah-reservoir",
-      dwgCode: "DWG-JED-170M",
-      year: "2014 - 2016",
-      typology: { ar: "بنية تحتية استراتيجية للأمن المائي", en: "Strategic Water Infrastructure" },
-      location: { ar: "جدة - بريمان، المملكة العربية السعودية", en: "Briman, Jeddah, KSA" },
-      category: "infrastructure",
-      title: {
-        ar: "مشروع خزانات المياه الإستراتيجية ببريمان - جدة",
-        en: "Strategic Water Reservoir Project - Briman, Jeddah"
-      },
-      role: { ar: "مدير المشروع والتنفيذ الميداني (تسليم مفتاح)", en: "Turnkey Project & Engineering Director" },
-      client: { ar: "شركة المياه الوطنية / مشاريع الأمن المائي الوطني", en: "National Water Company / Strategic Water Security" },
-      scope: {
-        ar: "إدارة وتنفيذ أعمال تسليم مفتاح (Turnkey) لأضخم خزان استراتيجي بسعة 170 مليون لتر وعلى مساحة 10,000 م².",
-        en: "Full Turnkey development and execution of one of KSA's largest strategic water reservoirs (170 Million Liters, 10,000 m²)."
-      },
-      image: "/assets/projects/jeddah_water_reservoir_1.png",
-      gallery: [
-        "/assets/projects/jeddah_water_reservoir_1.png",
-        "/assets/projects/jeddah_water_reservoir_2.png",
-        "/assets/projects/concrete_pump_rebar.png"
-      ],
-      highlights: [
-        { ar: "سعة استراتيجية: 170,000,000 لتر", en: "170 Million Liters Capacity" },
-        { ar: "مساحة إنشائية: 10,000 متر مربع", en: "10,000 m² Construction Footprint" },
-        { ar: "جدران دائرية عملاقة وأساسات أوتاد متقدمة", en: "Massive Post-Tensioned Cylindrical Walls" }
-      ],
-      details: {
-        ar: "أحد الصروح الوطنية للأمن المائي؛ تضمن المشروع صب خرسانات عالية المقاومة، تسليح جدران أسطوانية ضخمة، الإشراف على محطات الضخ الهيدروليكية، ونظم العزل المائي متعددة الطبقات.",
-        en: "A critical national infrastructure asset requiring high-strength waterproof concrete formulations, heavy cylindrical wall reinforcement, and advanced hydraulic pump integration."
-      }
+        "id": "briman-reservoir",
+        "dwgCode": "DWG-JED-170M",
+        "year": "2014 - 2016",
+        "typology": {
+            "ar": "خزان مياه استراتيجي عملاق (أمن مائي)",
+            "en": "Strategic Mega Water Reservoir"
+        },
+        "location": {
+            "ar": "جدة، منطقة مكة المكرمة",
+            "en": "Jeddah, Makkah Region"
+        },
+        "category": "infrastructure",
+        "title": {
+            "ar": "خزانات بريمان الاستراتيجية بجدة (سعة 170 مليون لتر)",
+            "en": "Jeddah Briman Strategic Water Reservoir (170M Liters)"
+        },
+        "role": {
+            "ar": "إدارة التطوير والإشراف على الأعمال الخرسانية والإنشائية",
+            "en": "Executive Development & Concrete Engineering Direction"
+        },
+        "client": {
+            "ar": "شركة المياه الوطنية (NWC) / وزارة البيئة والمياه والزراعة",
+            "en": "National Water Company (NWC) / MEWA"
+        },
+        "scope": {
+            "ar": "الإشراف الهندسي المتكامل على إنشاء الخزان الاستراتيجي بسعة 170 مليون لتر، بمساحة 10,000 متر مربع وأعمدة خرسانية ضخمة وسقوف مسلحة.",
+            "en": "Executive engineering oversight of the 170-Million-Liter strategic reservoir across 10,000 m2 footprint with massive structural columns."
+        },
+        "image": "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2264_634x374.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2265_946x592.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_15_img_xref2266_1025x466.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2605_668x439.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2606_670x666.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2607_613x464.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2608_671x508.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_16_img_xref2609_613x524.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_39_img_xref5746_612x612.jpeg",
+            "/assets/projects_extracted/briman_reservoir/page_39_img_xref5807_846x846.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "سعة تخزينية 170 مليون لتر ماء",
+                "en": "170 Million Liters Capacity"
+            },
+            {
+                "ar": "مساحة إنشائية تتجاوز 10,000 م²",
+                "en": "10,000+ m² Structural Footprint"
+            },
+            {
+                "ar": "خرسانات مسبقة ومقاومة لضغط المياه والعوامل المناخية",
+                "en": "High-Performance Water-Retaining Concrete"
+            },
+            {
+                "ar": "أحد أضخم ركائز الأمن المائي الوطني بالمملكة",
+                "en": "Core Strategic National Water Infrastructure"
+            }
+        ],
+        "details": {
+            "ar": "تولى الإشراف على صب القواعد الخرسانية الضخمة، جدران الصد المائية، وأعمدة الرفع الهيكلية وسقف الخزان، مع تطبيق معايير هندسية فائقة الدقة لضمان العزل ومقاومة الضغط الهيدروليكي العالي.",
+            "en": "Directed massive raft foundation pours, heavy water-retaining wall assemblies, structural columns, and roof slab casting under stringent hydraulic stress resistance standards."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "السعة",
+                    "en": "Capacity"
+                },
+                "value": "170,000,000 Liters"
+            },
+            {
+                "label": {
+                    "ar": "المساحة",
+                    "en": "Footprint"
+                },
+                "value": "10,000 m²"
+            },
+            {
+                "label": {
+                    "ar": "الجهة المالكة",
+                    "en": "Client"
+                },
+                "value": "National Water Co."
+            }
+        ]
     },
     {
-      id: "kap1-security",
-      dwgCode: "DWG-KAP-049/231",
-      year: "2015 - 2017",
-      typology: { ar: "مجمعات أمنية وحكومية متكاملة", en: "Government High-Security Complexes" },
-      location: { ar: "القويعية والمدينة المنورة", en: "Al-Quwai'iyah & Al-Madinah, KSA" },
-      category: "turnkey",
-      title: {
-        ar: "مشروع خادم الحرمين الشريفين للمراكز الأمنية (KAP-1)",
-        en: "King Abdullah Security Centers Project (KAP-1)"
-      },
-      role: { ar: "مدير التطوير والتنفيذ الشامل (Turnkey)", en: "Turnkey Development & EPC Project Director" },
-      client: { ar: "وزارة الداخلية / مشاريع التطوير الأمني", en: "Ministry of Interior / Security Development Directorate" },
-      scope: {
-        ar: "تنفيذ كامل تسليم مفتاح لمركز القويعية (الموقع 49) ومركز المدينة المنورة (الموقع 231) خلال مدة قياسية 24 شهراً.",
-        en: "Turnkey EPC execution of Site 49 (Al-Quwai'iyah) and Site 231 (Al-Madinah Al-Munawwarah) within a strict 24-month timeline."
-      },
-      image: "/assets/projects/kap1_madinah.png",
-      gallery: [
-        "/assets/projects/kap1_madinah.png",
-        "/assets/projects/kap1_quaiayeh.png"
-      ],
-      highlights: [
-        { ar: "تسليم مفتاح Turnkey شامل", en: "Full Turnkey EPC Delivery" },
-        { ar: "موقعان استراتيجيان: القويعية والمدينة المنورة", en: "Two Key Sites: Quaiayeh & Madinah" },
-        { ar: "مدة التنفيذ: 24 شهراً دون أي تأخير", en: "Delivered Within 24 Months" }
-      ],
-      details: {
-        ar: "قاد المهندس ناصر كمال دورة التطوير الكاملة من تخطيط الموقع العام والكتل المعمارية، إلى المنظومات الأمنية المشددة، غرف العمليات والتحكم، والشبكات الكهروميكانيكية المعتمدة.",
-        en: "Directed architectural master-planning, high-security infrastructure, command & control centers, blast-resistant barriers, and complete utility networks."
-      }
+        "id": "spemaco-tower",
+        "dwgCode": "DWG-SPM-TWR",
+        "year": "2016 - 2018",
+        "typology": {
+            "ar": "برج تجاري وإداري شاهق",
+            "en": "Commercial High-Rise Headquarters"
+        },
+        "location": {
+            "ar": "طريق الملك فهد، الرياض",
+            "en": "King Fahd Road, Riyadh"
+        },
+        "category": "commercial",
+        "title": {
+            "ar": "برج سبيماكو الدوائية (SPEMACO Tower)",
+            "en": "SPEMACO Pharmaceutical Headquarters Tower"
+        },
+        "role": {
+            "ar": "إدارة التطوير الهندسي وغرف المحولات والأنظمة الإنشائية",
+            "en": "Development Engineering & Substructure Infrastructure"
+        },
+        "client": {
+            "ar": "الشركة السعودية للصناعات الدوائية (سبيماكو)",
+            "en": "Saudi Pharmaceutical Industries (SPIMACO)"
+        },
+        "scope": {
+            "ar": "استكمال الأعمال الإنشائية التخصصية للبرج، غرف محولات الكهرباء الرئيسية، غرف المضخات، والأعمال المدنية المرتبطة بالبنية التحتية للبرج.",
+            "en": "Specialized substructure engineering, heavy electrical transformer vaults, mechanical pump plant facilities, and core structural works."
+        },
+        "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1687_407x486.jpeg",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.jpeg",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1691_372x577.jpeg",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1692_411x590.jpeg",
+            "/assets/projects_extracted/spemaco_tower/page_12_img_xref1693_497x596.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "برج مكتبي فاخر بواجهات زجاجية معاصرة",
+                "en": "Iconic Glass Curtain-Wall Corporate Tower"
+            },
+            {
+                "ar": "غرف محولات كهرباء ومضخات متطورة",
+                "en": "Heavy Electrical Substation & Pump Vaults"
+            },
+            {
+                "ar": "موقع استراتيجي على عصب الأعمال بالرياض",
+                "en": "Prime King Fahd Road Corporate Corridor"
+            }
+        ],
+        "details": {
+            "ar": "إدارة الأعمال الهندسية التخصصية في البنية التحتية السفلية للبرج، صب القواعد المسلحة لغرف المحولات المركزية وشبكات التغذية الكهربائية والمضخات التشغيلية وفق أعلى معايير السلامة.",
+            "en": "Managed heavy civil and structural MEP infrastructure at the tower substructure, including high-voltage transformer rooms and mission-critical pumping systems."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "النوع",
+                    "en": "Type"
+                },
+                "value": "High-Rise Tower"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "King Fahd Rd, Riyadh"
+            },
+            {
+                "label": {
+                    "ar": "النطاق",
+                    "en": "Scope"
+                },
+                "value": "Civil & Heavy MEP Infrastructure"
+            }
+        ]
     },
     {
-      id: "pnu-admin-tunnels",
-      dwgCode: "DWG-PNU-03",
-      year: "2011 - 2013",
-      typology: { ar: "أنفاق خدمات وجدران استنادية ومكتبة مركزية", en: "Central Library, Retaining Walls & Tunnels" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "infrastructure",
-      title: {
-        ar: "جامعة الأميرة نورة - مباني الإدارة والمكتبة والأنفاق (PN03)",
-        en: "Princess Nora University - Admin, Library & Service Tunnels (PN03)"
-      },
-      role: { ar: "إشراف هندسي ومعماري", en: "Structural & Architectural Supervision" },
-      client: { ar: "جامعة الأميرة نورة / وزارة التعليم", en: "Princess Nora University / Ministry of Education" },
-      scope: {
-        ar: "تنفيذ القواعد الخرسانية والجدران الاستنادية العالية وشبكة أنفاق الخدمات ومباني المؤتمرات والمساجد.",
-        en: "Execution of concrete foundation works, high retaining walls, underground service tunnel networks, conference centers, and mosques."
-      },
-      image: "/assets/projects/pnu_library_tunnels.png",
-      gallery: [
-        "/assets/projects/pnu_library_tunnels.png"
-      ],
-      highlights: [
-        { ar: "جدران استنادية عملاقة", en: "Heavy Earth-Retaining Walls" },
-        { ar: "شبكة أنفاق خدمات كهروميكانيكية", en: "Subterranean Utility Tunnel Grid" },
-        { ar: "مباني المكتبة المركزية وقاعات المؤتمرات", en: "Central Library & Conference Auditoriums" }
-      ],
-      details: {
-        ar: "إشراف ميداني على صب الخرسانات المسلحة للجدران الاستنادية الحاملة بارتفاعات شاهقة، وتنفيذ أنفاق الخدمات الكهروميكانيكية الرابطة بين الكليات.",
-        en: "On-site supervision of high-load retaining walls, earth stabilization, and underground MEP tunnels connecting university complexes."
-      }
+        "id": "kap1-quaiyah",
+        "dwgCode": "DWG-KAP-49",
+        "year": "2013 - 2015",
+        "typology": {
+            "ar": "مجمع أمني وحكومي سيادي (KAP-1)",
+            "en": "Sovereign High-Security Complex"
+        },
+        "location": {
+            "ar": "القويعية (موقع 49)، منطقة الرياض",
+            "en": "Al-Quwayiyah (Site 49), Riyadh Region"
+        },
+        "category": "mega",
+        "title": {
+            "ar": "مشروع المقار الأمنية KAP-1 (موقع 49 القويعية)",
+            "en": "King Abdullah Security Compound KAP-1 (Site 49 Quaiyah)"
+        },
+        "role": {
+            "ar": "مدير التطوير والتنفيذ العام تسليم مفتاح (EPC Turnkey)",
+            "en": "Turnkey EPC Project Director & General Supervision"
+        },
+        "client": {
+            "ar": "وزارة الداخلية / وزارة المالية بالمملكة العربية السعودية",
+            "en": "Ministry of Interior / Ministry of Finance"
+        },
+        "scope": {
+            "ar": "تنفيذ وتسليم مفتاح (EPC) لمجمع أمني متكامل على مدار 24 شهراً يشمل المباني الإدارية، سكن الضباط والأفراد، التدريب، وشبكات البنية التحتية.",
+            "en": "Full turnkey EPC execution and delivery of high-security command facilities, dormitories, training grounds, and secure infrastructure within 24 months."
+        },
+        "image": "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1844_688x389.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1844_688x389.jpeg",
+            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1845_611x389.jpeg",
+            "/assets/projects_extracted/kap1_quaiyah/page_13_img_xref1846_1750x617.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "تنفيذ تسليم مفتاح كامل EPC في 24 شهراً",
+                "en": "Full Fast-Track 24-Month Turnkey Handover"
+            },
+            {
+                "ar": "مواصفات أمنية وهندسية سيادية مشددة",
+                "en": "Sovereign High-Security Civil Specifications"
+            },
+            {
+                "ar": "بنية تحتية مستقلة ومباني قيادة وإعاشة متكاملة",
+                "en": "Autonomous Sub-Stations, Barracks & HQ"
+            }
+        ],
+        "details": {
+            "ar": "قيادة إدارة التطوير وتسليم المفتاح لكافة منشآت الموقع 49، بدءاً من الحفر والأساسات المسلحة، وتشييد الهياكل الإنشائية، والتشطيبات التخصصية، وصولاً إلى الفحص الأمني والتشغيل النهائي.",
+            "en": "Directed full EPC turnkey execution for Site 49 from earthworks and reinforced concrete superstructures to hardened security claddings and final commissioning."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "مدة المشروع",
+                    "en": "Duration"
+                },
+                "value": "24 Months"
+            },
+            {
+                "label": {
+                    "ar": "نوع العقد",
+                    "en": "Contract"
+                },
+                "value": "EPC Turnkey"
+            },
+            {
+                "label": {
+                    "ar": "الجهة",
+                    "en": "Authority"
+                },
+                "value": "Ministry of Interior"
+            }
+        ]
     },
     {
-      id: "pnu-academic-bridge",
-      dwgCode: "DWG-PNU-01",
-      year: "2011 - 2013",
-      typology: { ar: "بوابات صرحية وجسر رابط خرساني", en: "Monumental Portals & Inter-College Bridge" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "infrastructure",
-      title: {
-        ar: "جامعة الأميرة نورة - الكليات الأكاديمية وجسر رقم 8 (PN01)",
-        en: "Princess Nora University - Academic Colleges & Bridge No. 8 (PN01)"
-      },
-      role: { ar: "إشراف على الأعمال الإنشائية والمعمارية", en: "Structural & Architectural Execution Oversight" },
-      client: { ar: "جامعة الأميرة نورة / وزارة التعليم", en: "Princess Nora University / Ministry of Education" },
-      scope: {
-        ar: "تنفيذ الأساسات وجدران المداخل الرئيسية للمباني (1.2.1، 1.7.0، 1.9.0) والإنشاءات الخرسانية لجسر رقم 8.",
-        en: "Concrete substructures for entrance monument walls (Bldgs 1.2.1, 1.7.0, 1.9.0) and structural concrete for Bridge No. 8."
-      },
-      image: "/assets/projects/pnu_academic_bridge.png",
-      gallery: [
-        "/assets/projects/pnu_academic_bridge.png"
-      ],
-      highlights: [
-        { ar: "تنفيذ جسر رقم 8 الخرساني الرابط", en: "Bridge No. 8 Structural Concrete" },
-        { ar: "مداخل كليات المباني 1.2.1 و 1.7.0 و 1.9.0", en: "Grand Monumental Portals for 3 Colleges" }
-      ],
-      details: {
-        ar: "تنفيذ حلول معمارية وهندسية لربط الكليات عبر جسور خرسانية مصممة لتوزيع الأحمال وتوفير حركة انسيابية للطلاب.",
-        en: "Delivered architectural bridge connectivity and monumental entrance portal substructures with exacting geometric precision."
-      }
+        "id": "kap1-madinah",
+        "dwgCode": "DWG-KAP-231",
+        "year": "2014 - 2016",
+        "typology": {
+            "ar": "مجمع أمني سيادي (KAP-1)",
+            "en": "Sovereign High-Security Complex"
+        },
+        "location": {
+            "ar": "المدينة المنورة (موقع 231)",
+            "en": "Madinah Al-Munawwarah (Site 231)"
+        },
+        "category": "mega",
+        "title": {
+            "ar": "مشروع المقار الأمنية KAP-1 (موقع 231 المدينة المنورة)",
+            "en": "King Abdullah Security Compound KAP-1 (Site 231 Madinah)"
+        },
+        "role": {
+            "ar": "مدير التطوير والتنفيذ العام تسليم مفتاح (EPC Turnkey)",
+            "en": "Turnkey EPC Project Director"
+        },
+        "client": {
+            "ar": "وزارة الداخلية / وزارة المالية بالمملكة العربية السعودية",
+            "en": "Ministry of Interior / Ministry of Finance"
+        },
+        "scope": {
+            "ar": "تنفيذ وتسليم مفتاح لمقر أمني متكامل في المدينة المنورة يشمل مباني القيادة، الثكنات، الساحات، والأمن المحيطي.",
+            "en": "Turnkey EPC execution of complete security complex in Madinah encompassing headquarters, barracks, muster yards, and perimeter security."
+        },
+        "image": "/assets/projects_extracted/kap1_madinah/page_14_img_xref2020_710x731.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2020_710x731.jpeg",
+            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2021_727x713.jpeg",
+            "/assets/projects_extracted/kap1_madinah/page_14_img_xref2022_774x598.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "مقر أمني متكامل تسليم مفتاح (24 شهراً)",
+                "en": "Full Turnkey Security Facility Handover"
+            },
+            {
+                "ar": "أنظمة مراقبة وبوابات محصنة وأسوار أمنية",
+                "en": "Hardened Perimeter & Command Infrastructure"
+            },
+            {
+                "ar": "مواصفات كود البناء السعودي والأمان السيادي",
+                "en": "Strict Sovereign & SBC Code Compliance"
+            }
+        ],
+        "details": {
+            "ar": "إدارة كافة مراحل المشروع من التخطيط الهندسي الميداني، إدارة مقاولي الباطن، التوريدات والمواد المعتمدة، وضبط الجودة الصارم لتسليم الصرح لوزارة الداخلية في الموعد المحدد.",
+            "en": "Orchestrated comprehensive on-site engineering, supply chain governance, and multi-tier contractor coordination to deliver Site 231 on strict schedule."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "المدة",
+                    "en": "Duration"
+                },
+                "value": "24 Months"
+            },
+            {
+                "label": {
+                    "ar": "النوع",
+                    "en": "Delivery"
+                },
+                "value": "Turnkey EPC"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "Madinah"
+            }
+        ]
     },
     {
-      id: "spemaco-tower",
-      dwgCode: "DWG-SPM-TWR",
-      year: "2017 - 2019",
-      typology: { ar: "برج إداري وأعمال كهروميكانيكية خاصة", en: "Corporate High-Rise & Substation Vaults" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "commercial",
-      title: {
-        ar: "برج سبيماكو الدوائية (SPEMACO Tower)",
-        en: "SPEMACO Pharmaceutical High-Rise Tower"
-      },
-      role: { ar: "إشراف هندسي وتطويري على الأعمال التخصصية", en: "Engineering & Specialty Substructure Management" },
-      client: { ar: "الشركة السعودية للصناعات الدوائية (سبيماكو)", en: "Saudi Pharmaceutical Industries (SPIMACO)" },
-      scope: {
-        ar: "استكمال الأعمال الإنشائية المعقدة لغرفة الكهرباء الرئيسية وقواعد غرف المضخات المركزية لبرج سبيماكو.",
-        en: "Structural execution of main electrical substation vault and vibration-damped pump room foundation pads."
-      },
-      image: "/assets/projects/spemaco_tower.png",
-      gallery: [
-        "/assets/projects/spemaco_tower.png"
-      ],
-      highlights: [
-        { ar: "أحد أبرز أبراج العاصمة الرياض", en: "Iconic Architectural High-Rise" },
-        { ar: "قواعد مضخات ومحطات محولات كهرباء", en: "Vibration-Isolated Foundation Pads" }
-      ],
-      details: {
-        ar: "تنفيذ قواعد خرسانية مسلحة خاصة تمتص الاهتزازات الديناميكية للمضخات الميكانيكية وتأمين متطلبات السلامة لغرف المحولات الكهربائية.",
-        en: "Engineered heavy-duty vibration-damped foundation pads for high-capacity booster pumps and reinforced switchgear containment vaults."
-      }
+        "id": "pnu-admin",
+        "dwgCode": "DWG-PNU-03",
+        "year": "2011 - 2013",
+        "typology": {
+            "ar": "صروح جامعية وإدارية كبرى",
+            "en": "University Central Administration & Libraries"
+        },
+        "location": {
+            "ar": "جامعة الأميرة نورة، الرياض",
+            "en": "PNU Campus, Riyadh"
+        },
+        "category": "mega",
+        "title": {
+            "ar": "جامعة الأميرة نورة - مباني الإدارة والمكتبة والمساجد (PN03)",
+            "en": "Princess Nora University - Admin, Library & Mosques (PN03)"
+        },
+        "role": {
+            "ar": "الإشراف الهندسي الإنشائي على الحوائط الاستنادية والأنفاق",
+            "en": "Structural Supervision & Service Tunnels"
+        },
+        "client": {
+            "ar": "جامعة الأميرة نورة / وزارة التعليم",
+            "en": "Princess Nora University / MOE"
+        },
+        "scope": {
+            "ar": "الإشراف الإنشائي على الحوائط الاستنادية الخرسانية المسلحة، أنفاق الخدمات المشتركة، وقواعد المباني الإدارية والمكتبة المركزية.",
+            "en": "Structural engineering direction for heavy reinforced retaining walls, utility service tunnels, and administrative library substructures."
+        },
+        "image": "/assets/projects_extracted/pnu_admin/page_10_img_xref1031_480x613.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1030_428x367.jpeg",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1031_480x613.jpeg",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1032_450x600.jpeg",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1033_466x601.jpeg",
+            "/assets/projects_extracted/pnu_admin/page_10_img_xref1034_469x662.jpeg",
+            "/assets/projects_extracted/pnu_admin/page_41_img_xref6098_647x647.jpeg",
+            "/assets/projects_extracted/pnu_admin/page_41_img_xref6157_642x642.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "حوائط استنادية خرسانية شاهقة وشبكات أنفاق خدمات",
+                "en": "Heavy Retaining Wall Systems & Service Tunnels"
+            },
+            {
+                "ar": "مباني إدارة مركزية ومكتبة ضخمة ومساجد",
+                "en": "Central Administration, Mega Library & Mosques"
+            },
+            {
+                "ar": "تنفيذ دقيق لتحمل الأحمال الهيكلية الكبرى",
+                "en": "High-Load Structural Engineering"
+            }
+        ],
+        "details": {
+            "ar": "إدارة وتوجيه الأعمال الإنشائية في منطقة PN03، والإشراف على تدعيم التربة، الحوائط الاستنادية، وأنفاق الخدمات الممتدة تحت الحرم الجامعي لربط الصروح المركزية.",
+            "en": "Supervised heavy civil substructure construction in PN03 package, including deep retaining walls and sub-surface utility tunnels connecting campus nodes."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "الحزمة",
+                    "en": "Package"
+                },
+                "value": "PN03 Central"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "PNU Campus, Riyadh"
+            },
+            {
+                "label": {
+                    "ar": "النطاق",
+                    "en": "Scope"
+                },
+                "value": "Retaining Walls & Service Tunnels"
+            }
+        ]
     },
     {
-      id: "eldeyar-residence",
-      dwgCode: "DWG-DYR-RES",
-      year: "2018 - 2020",
-      typology: { ar: "مجمع سكني فندقي فاخر", en: "Luxury Residential Compound" },
-      location: { ar: "جنوب الرياض، المملكة العربية السعودية", en: "South Riyadh, KSA" },
-      category: "commercial",
-      title: {
-        ar: "مجمع عمارات الديار السكني (El-Deyar Residence)",
-        en: "El-Deyar Luxury Residential Compound"
-      },
-      role: { ar: "إدارة التطوير والتصميم المعماري الداخلي والخارجي", en: "Development Management & Architectural Design" },
-      client: { ar: "شركة الديار للتطوير العقاري", en: "Deyaar Real Estate Development" },
-      scope: {
-        ar: "تطوير وتنفيذ عمارتين سكنية بارتفاع 5 أدوار على مساحة 1,500 م²، شاملة المسابح والروضة والحدائق وكافة التشطيبات الفندقية.",
-        en: "Development and construction of two 5-floor residential apartment buildings (1,500 m²) including indoor swimming pools, kindergarten, and full landscape."
-      },
-      image: "/assets/projects/eldeyar_residence_1.png",
-      gallery: [
-        "/assets/projects/eldeyar_residence_1.png",
-        "/assets/projects/eldeyar_residence_pool.png"
-      ],
-      highlights: [
-        { ar: "عمارتان سكنية بارتفاع 5 طوابق", en: "Two 5-Story Residential Buildings" },
-        { ar: "مسبح داخلي وحضانة أطفال ومرافق ترفيهية", en: "Indoor Swimming Pool, Daycare & Amenities" },
-        { ar: "تشطيبات فاخرة وتكسيات خارجية معاصرة", en: "High-End Modern Finishes & Cladding" }
-      ],
-      details: {
-        ar: "صياغة المخططات المعمارية للشقق والمرافق المجتمعية مع تنفيذ المسابح الداخلية والروضة وأنظمة العزل والتكسيات المعاصرة.",
-        en: "Master-planned residential layout with integrated community amenities: heated indoor pool, children's daycare, and modern exterior cladding."
-      }
+        "id": "pnu-colleges",
+        "dwgCode": "DWG-PNU-01",
+        "year": "2011 - 2013",
+        "typology": {
+            "ar": "كليات أكاديمية وجسور مشاة",
+            "en": "Academic Colleges & Pedestrian Skybridges"
+        },
+        "location": {
+            "ar": "جامعة الأميرة نورة، الرياض",
+            "en": "PNU Campus, Riyadh"
+        },
+        "category": "mega",
+        "title": {
+            "ar": "جامعة الأميرة نورة - الكليات الأكاديمية والجسور (PN01)",
+            "en": "Princess Nora University - Academic Colleges & Bridges (PN01)"
+        },
+        "role": {
+            "ar": "الإشراف الإنشائي والمعماري على واجهات المباني والجسور الرابطة",
+            "en": "Architectural & Structural Engineering Oversight"
+        },
+        "client": {
+            "ar": "جامعة الأميرة نورة / وزارة التعليم",
+            "en": "Princess Nora University / MOE"
+        },
+        "scope": {
+            "ar": "تنفيذ وإشراف على القواعد والواجهات والجسور الرابطة بين مباني الكليات (مباني 121، 170، 190) والجسر رقم 8.",
+            "en": "Execution and supervision of entrance walls, facades, and elevated connecting skybridge No. 8 between College Buildings 121, 170, and 190."
+        },
+        "image": "/assets/projects_extracted/pnu_colleges/page_11_img_xref1358_815x613.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1358_815x613.jpeg",
+            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1359_637x928.jpeg",
+            "/assets/projects_extracted/pnu_colleges/page_11_img_xref1360_650x928.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "مباني كليات أكاديمية كبرى (121، 170، 190)",
+                "en": "Major Academic College Complexes"
+            },
+            {
+                "ar": "جسر مشاة علوي رابط رقم 8",
+                "en": "Elevated Pedestrian Skybridge No. 8"
+            },
+            {
+                "ar": "واجهات خرسانية معمارية ضخمة بمداخل الكليات",
+                "en": "Monumental Architectural Facades"
+            }
+        ],
+        "details": {
+            "ar": "الإشراف على تشييد واجهات المداخل التذكارية للكليات والجسور الخرسانية المسبقة الإجهاد الرابطة بين المباني الأكاديمية لضمان سهولة وانسيابية الحركة الطلابية.",
+            "en": "Supervised construction of monumental entrance facades and elevated structural bridges connecting academic college buildings across the campus."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "الحزمة",
+                    "en": "Package"
+                },
+                "value": "PN01 Academic"
+            },
+            {
+                "label": {
+                    "ar": "المباني",
+                    "en": "Buildings"
+                },
+                "value": "121, 170, 190 & Bridge 8"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "Riyadh"
+            }
+        ]
     },
     {
-      id: "saffori-land",
-      dwgCode: "DWG-SAF-OTH",
-      year: "2019 - 2021",
-      typology: { ar: "عمارة ترفيهية وديكورات تفاعلية", en: "Thematic Entertainment Arena" },
-      location: { ar: "الخفجي وحفر الباطن - العثيم مول", en: "Al Othaim Malls (Khafji & Hafr Al-Batin)" },
-      category: "thematic",
-      title: {
-        ar: "سفوري لاند الترفيهية (العثيم مول)",
-        en: "Saffori Land Entertainment Arenas (Al Othaim Malls)"
-      },
-      role: { ar: "تصميم وإشراف على التشطيبات المعمارية الترفيهية", en: "Thematic Architectural Design & Fit-Out Oversight" },
-      client: { ar: "شركة عبدالله العثيم للترفيه", en: "Abdullah Al Othaim Leisure & Entertainment" },
-      scope: {
-        ar: "تصميم وتنفيذ الديكورات المعمارية ثلاثية الأبعاد، الأعمدة المضيئة، مناطق الألعاب الكبرى، ومكاتب الاستقبال في فروع الخفجي وحفر الباطن.",
-        en: "Turnkey fit-out, illuminated thematic tree columns, ride installation coordination, and reception concourses at Khafji & Hafr Al-Batin branches."
-      },
-      image: "/assets/projects/saffori_land_khafji.png",
-      gallery: [
-        "/assets/projects/saffori_land_khafji.png",
-        "/assets/projects/saffori_reception.png",
-        "/assets/projects/saffori_hafr_batin.png"
-      ],
-      highlights: [
-        { ar: "أعمدة شجرية مضيئة ثلاثية الأبعاد", en: "Iconic 3D Illuminated LED Tree Columns" },
-        { ar: "كاونترات استقبال منحنية وأرضيات أمان عالية التحمل", en: "Curved Reception Hubs & Impact-Resistant Flooring" },
-        { ar: "تنسيق متكامل للألعاب والمؤثرات الضوئية", en: "Full Rides & Electro-Mechanical Integration" }
-      ],
-      details: {
-        ar: "ابتكار بيئة ترفيهية غامرة تجمع بين التصميم المعماري العضوي والإنارة التفاعلية مع أعلى اشتراطات الأمان المعتمدة عالمياً.",
-        en: "Created an immersive experiential leisure environment combining organic parametric forms, dynamic RGB lighting, and theme-park safety standards."
-      }
+        "id": "eldeyar-residence",
+        "dwgCode": "DWG-DEY-RES",
+        "year": "2017 - 2019",
+        "typology": {
+            "ar": "عمارات سكنية فاخرة وخدمات متكاملة",
+            "en": "Luxury Multi-Family Residential Estate"
+        },
+        "location": {
+            "ar": "جنوب الرياض، المملكة العربية السعودية",
+            "en": "South Riyadh, Saudi Arabia"
+        },
+        "category": "commercial",
+        "title": {
+            "ar": "عمارات الديار السكنية الفاخرة (El-Deyar Residence)",
+            "en": "El-Deyar Luxury Residential Mansions"
+        },
+        "role": {
+            "ar": "إدارة التطوير والتصميم المعماري والإشراف على التنفيذ",
+            "en": "Development Director & Architectural Lead"
+        },
+        "client": {
+            "ar": "شركة الديار للتطوير العقاري",
+            "en": "El-Deyar Real Estate Development"
+        },
+        "scope": {
+            "ar": "تطوير عمارات سكنية فاخرة بارتفاع 5 أدوار ومساحة لاندسكيب 1,500 م²، مع مسبح داخلي خاص، صالات استقبال رخامية، ومنطقة ألعاب أطفال.",
+            "en": "Development and architectural delivery of twin 5-story luxury residential buildings with 1,500 m2 landscaped grounds, indoor pool, and kids arena."
+        },
+        "image": "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2735_647x745.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2736_736x725.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2959_679x979.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2960_648x719.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_18_img_xref2961_785x719.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3097_746x942.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3098_652x697.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_19_img_xref3099_746x707.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3275_567x748.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3276_714x976.jpeg",
+            "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3277_751x969.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "عمارات سكنية بارتفاع 5 أدوار ولاندسكيب 1,500 م²",
+                "en": "Twin 5-Story Mansions & 1,500 m² Landscape"
+            },
+            {
+                "ar": "مسبح داخلي فاخر ومصاعد وصالات ضيافة رخامية",
+                "en": "Private Indoor Swimming Pool & Marble Lobbies"
+            },
+            {
+                "ar": "تشطيبات واجهات عصرية وإشراف ميداني متواصل",
+                "en": "Contemporary Facade Aesthetics & Quality Finish"
+            }
+        ],
+        "details": {
+            "ar": "قيادة دورة التطوير الكاملة من التصميم المعماري والتوزيع الفراغي للشقق الفاخرة، الإشراف على أعمال الخرسانات، التشطيبات الرخامية، المسبح الداخلي، ومناطق الترفيه العائلية.",
+            "en": "Directed the entire development cycle from spatial architectural planning of luxury apartments to structural execution, marble fit-outs, and private recreation amenities."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "الارتفاع",
+                    "en": "Floors"
+                },
+                "value": "5 Stories"
+            },
+            {
+                "label": {
+                    "ar": "اللاندسكيب",
+                    "en": "Landscape"
+                },
+                "value": "1,500 m²"
+            },
+            {
+                "label": {
+                    "ar": "المرافق",
+                    "en": "Amenities"
+                },
+                "value": "Indoor Pool & Play Area"
+            }
+        ]
     },
     {
-      id: "xtreme-zone",
-      dwgCode: "DWG-XTR-002",
-      year: "2020 - 2022",
-      typology: { ar: "عمارة تجارية شبابية بنمط الحاويات", en: "Industrial Cargo Adventure Hub" },
-      location: { ar: "حفر الباطن - العثيم مول", en: "Hafr Al-Batin, KSA" },
-      category: "thematic",
-      title: {
-        ar: "اكستريم زون للشباب (العثيم مول)",
-        en: "Xtreme Zone Adventure Arena (Al Othaim Mall)"
-      },
-      role: { ar: "التصميم المعماري الداخلي والإشراف التنفيذي", en: "Interior Architecture & Construction Management" },
-      client: { ar: "شركة عبدالله العثيم للترفيه", en: "Abdullah Al Othaim Leisure & Entertainment" },
-      scope: {
-        ar: "تنفيذ الديكورات الحضرية بنمط الحاويات الصناعية (Industrial Container Concept)، مع شاشات النيون والأنظمة الصوتية.",
-        en: "Industrial cargo-container architectural styling, ambient neon lighting matrices, cashiers, and high-energy adventure zones."
-      },
-      image: "/assets/projects/xtreme_zone.png",
-      gallery: [
-        "/assets/projects/xtreme_zone.png"
-      ],
-      highlights: [
-        { ar: "تصميم عصري بطراز الحاويات المعدنية P22", en: "Bespoke P22 Shipping Container Architectural Cladding" },
-        { ar: "إضاءات نيون وشاشات رقمية تفاعلية", en: "Atmospheric Neon Glow & Digital Video Walls" }
-      ],
-      details: {
-        ar: "تحويل المساحات التجارية إلى وجهات ترفيهية تفاعلية للشباب بتصميم مستقبلي يجمع بين الأسطح المعدنية المقاومة والإنارة الذكية.",
-        en: "Transformed commercial footprints into high-octane adventure zones featuring corrugated metal enclosures, neon signage, and acoustic baffles."
-      }
+        "id": "prince-sultan-hospital",
+        "dwgCode": "DWG-PSH-MED",
+        "year": "2015 - 2017",
+        "typology": {
+            "ar": "صرح طبي واستشفائي متخصص",
+            "en": "Specialized Medical Center"
+        },
+        "location": {
+            "ar": "المملكة العربية السعودية",
+            "en": "Saudi Arabia"
+        },
+        "category": "healthcare",
+        "title": {
+            "ar": "مستشفى الأمير سلطان بن عبدالعزيز",
+            "en": "Prince Sultan Medical Complex"
+        },
+        "role": {
+            "ar": "التصميم المعماري والإشراف على الواجهات والتشطيبات الطبية",
+            "en": "Architectural Design & Medical Infrastructure Supervision"
+        },
+        "client": {
+            "ar": "القطاع الصحي / الشؤون الصحية",
+            "en": "Healthcare Authority / Health Affairs"
+        },
+        "scope": {
+            "ar": "صياغة المفهوم المعماري وتطوير الواجهات الحجرية والزجاجية المعاصرة، وتوزيع الأجنحة والعيادات التخصصية ومطابقة كود المنشآت الصحية.",
+            "en": "Architectural design, contemporary stone/glass facade engineering, specialized clinic layout programming, and medical code compliance."
+        },
+        "image": "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3404_1248x1000.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3403_947x446.jpeg",
+            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3404_1248x1000.jpeg",
+            "/assets/projects_extracted/prince_sultan_hospital/page_21_img_xref3405_947x557.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "واجهات معمارية استشفائية متميزة بالحجر والزجاج",
+                "en": "Monumental Stone & Glass Medical Facade"
+            },
+            {
+                "ar": "تخطيط فراغي يحقق أعلى انسيابية للمرضى والطواقم",
+                "en": "Optimized Clinical Spatial Flow"
+            },
+            {
+                "ar": "مطابقة معايير وزارة الصحة والدفاع المدني الصارمة",
+                "en": "MOH & Civil Defense Healthcare Compliance"
+            }
+        ],
+        "details": {
+            "ar": "تطوير المنظور المعماري والتصميم التفصيلي لواجهات المستشفى، والإشراف على المداخل الرئيسية والأقسام الاستشفائية وتوفير بيئة طبية علاجية راقية.",
+            "en": "Created the full architectural concept, detailed 3D facade engineering, and supervised clinical spatial integration ensuring a world-class healing environment."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "النوع",
+                    "en": "Typology"
+                },
+                "value": "Hospital Complex"
+            },
+            {
+                "label": {
+                    "ar": "الواجهات",
+                    "en": "Facades"
+                },
+                "value": "Stone & Curtain Glass"
+            },
+            {
+                "label": {
+                    "ar": "المعايير",
+                    "en": "Standards"
+                },
+                "value": "MOH Medical Standards"
+            }
+        ]
     },
     {
-      id: "oliver-brown-mokka",
-      dwgCode: "DWG-OBM-FB",
-      year: "2021 - 2023",
-      typology: { ar: "عمارة داخلية وتصميم ضيافة راقية", en: "Luxury Hospitality & F&B Architecture" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "thematic",
-      title: {
-        ar: "كافيه أوليفر براون ومقهى موكا أند مور",
-        en: "Oliver Brown & Mokka and More Cafes"
-      },
-      role: { ar: "التصميم والتنفيذ المعماري الداخلي الفاخر", en: "Bespoke Interior Architecture & Joinery" },
-      client: { ar: "سلسلة المقاهي الراقية العالمية / شركة متون", en: "Premium Specialty Coffee Franchises / Motoon" },
-      scope: {
-        ar: "أعمال الديكورات الخشبية الفاخرة، الرخام، الأسقف الشبكية الحديثة، ومناطق الجلوس الداخلية والخارجية.",
-        en: "High-end bespoke joinery, Italian marble counters, decorative wood screens, ambient pendant lighting, and full MEP."
-      },
-      image: "/assets/projects/oliver_brown_cafe.png",
-      gallery: [
-        "/assets/projects/oliver_brown_cafe.png",
-        "/assets/projects/mokka_and_more.png"
-      ],
-      highlights: [
-        { ar: "ديكورات خشبية هندسية مفرغة (Custom Joinery)", en: "Intricate CNC Wood Paneling & Branding" },
-        { ar: "كاونترات إعداد قهوة متطورة مطابقة للمواصفات", en: "Commercial Grade Barista Stations & Food-Safe Finishes" }
-      ],
-      details: {
-        ar: "إشراف وتنسيق كامل لأعمال التشطيبات الدقيقة لعلامات الضيافة العالمية لضمان تجربة عملاء استثنائية.",
-        en: "Turnkey fit-out for flagship F&B venues including specialized exhaust systems, food-service plumbing, and architectural lighting."
-      }
+        "id": "derma-clinic",
+        "dwgCode": "DWG-DRM-CLN",
+        "year": "2018 - 2019",
+        "typology": {
+            "ar": "مجمع عيادات طبية وتجميلية راقية",
+            "en": "Premium Dermatology & Aesthetic Center"
+        },
+        "location": {
+            "ar": "طريق العليا، الرياض",
+            "en": "Olaya District, Riyadh"
+        },
+        "category": "healthcare",
+        "title": {
+            "ar": "عيادات ديرما الاستشارية للجلدية والتجميل (Derma Clinic)",
+            "en": "Derma Specialized Dermatology & Aesthetic Clinic"
+        },
+        "role": {
+            "ar": "التصميم المعماري الداخلي والإشراف على التشطيبات الطبية",
+            "en": "Medical Interior Architecture & Turnkey Fit-Out"
+        },
+        "client": {
+            "ar": "مجموعة عيادات ديرما الطبية",
+            "en": "Derma Medical Clinics Group"
+        },
+        "scope": {
+            "ar": "التصميم الداخلي والتشطيب الطبي المتكامل لعيادات الجلدية وجراحة اليوم الواحد، غرف الليزر، والاستقبال الفاخر مع أنظمة تكييف وتعقيم متطورة.",
+            "en": "Interior medical architecture and turnkey fit-out for consultation suites, surgical day-care rooms, laser treatment units, and luxury VIP lounges."
+        },
+        "image": "/assets/projects_extracted/derma_clinic/page_22_img_xref3659_1355x425.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3655_490x430.jpeg",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3656_490x583.jpeg",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3657_513x527.jpeg",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3658_489x550.jpeg",
+            "/assets/projects_extracted/derma_clinic/page_22_img_xref3659_1355x425.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "أجنحة استشارية وعيادات طبية متخصصة",
+                "en": "Specialized Clinical & Laser Suites"
+            },
+            {
+                "ar": "تشطيبات طبية معقمة ومقاومة للبكتيريا",
+                "en": "Antibacterial Medical-Grade Finishes"
+            },
+            {
+                "ar": "تصميم داخلي راقي يعزز راحة المراجعين",
+                "en": "Bespoke Luxury VIP Patient Experience"
+            }
+        ],
+        "details": {
+            "ar": "تنفيذ الأعمال المعمارية والتشطيبات التخصصية، تركيب شبكات الغازات الطبية، العزل الصوتي للأجنحة، وتنسيق الإضاءة المعمارية المريحة.",
+            "en": "Delivered turnkey medical fit-out including specialized HVAC filtration, acoustic clinical partitions, and high-end aesthetic interior styling."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "النوع",
+                    "en": "Type"
+                },
+                "value": "Specialized Medical Center"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "Olaya, Riyadh"
+            },
+            {
+                "label": {
+                    "ar": "التشطيب",
+                    "en": "Finishes"
+                },
+                "value": "Medical Grade Luxury"
+            }
+        ]
     },
     {
-      id: "derma-clinic",
-      dwgCode: "DWG-DRM-MED",
-      year: "2020 - 2022",
-      typology: { ar: "عمارة طبية ومراكز جراحة تجميلية", en: "Healthcare & Specialized Medical Suites" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "industrial",
-      title: {
-        ar: "عيادات ديرما للجلدية وجراحة التجميل (Derma Clinic)",
-        en: "Derma Clinics - Dermatology & Aesthetic Surgery"
-      },
-      role: { ar: "تطوير وإشراف معماري على المنشآت الطبية", en: "Healthcare Architecture & Fit-Out Oversight" },
-      client: { ar: "شركة عيادات ديرما الطبية", en: "Derma Clinics Medical Group" },
-      scope: {
-        ar: "تنفيذ وتشطيب العيادات الطبية، غرف العمليات الصغرى، مكاتب الاستشارات، والأبواب الزجاجية والممرات المعقمة.",
-        en: "Medical-grade clinic fit-out, consultation suites, minor surgical procedure rooms, frosted glass partitions, and sterile corridors."
-      },
-      image: "/assets/projects/derma_clinic.png",
-      gallery: [
-        "/assets/projects/derma_clinic.png"
-      ],
-      highlights: [
-        { ar: "معايير وزارة الصحة للمنشآت الطبية", en: "Ministry of Health Medical Facility Compliance" },
-        { ar: "أرضيات إيبوكسي ومواد مضادة للبكتيريا", en: "Antibacterial Surfaces & Seamless Vinyl/Epoxy Flooring" }
-      ],
-      details: {
-        ar: "تنفيذ دقيق لشبكات الغازات الطبية، العزل الصوتي التام بين غرف الكشف، وأنظمة الإنارة الطبية الخالية من الوهج.",
-        en: "Precision engineering for specialized medical services, acoustic privacy isolation, and sterile environment HVAC filtration."
-      }
+        "id": "oliver-brown",
+        "dwgCode": "DWG-OLV-BRN",
+        "year": "2019 - 2020",
+        "typology": {
+            "ar": "كافيه ومطعم ضيافة أسترالي فاخر",
+            "en": "Luxury Australian Hospitality Lounge"
+        },
+        "location": {
+            "ar": "الرياض، المملكة العربية السعودية",
+            "en": "Riyadh, Saudi Arabia"
+        },
+        "category": "thematic",
+        "title": {
+            "ar": "مقهى أوليفر براون الأسترالي (Oliver Brown Cafe)",
+            "en": "Oliver Brown Australian Luxury Cafe"
+        },
+        "role": {
+            "ar": "التصميم المعماري الداخلي والتنفيذ الدقيق للتشطيبات الفاخرة",
+            "en": "Interior Architecture & High-Precision Joinery Fit-Out"
+        },
+        "client": {
+            "ar": "شركة أوليفر براون العالمية / المشغل السعودي",
+            "en": "Oliver Brown International / Saudi Franchise"
+        },
+        "scope": {
+            "ar": "التنفيذ الدقيق والتشطيب الداخلي الفاخر للمقهى، شاملاً الأقواس الخشبية المعمارية، قواطع المشربية الهندسية، الإضاءة المخفية، وأرضيات التيرازو.",
+            "en": "High-precision interior architectural execution including monumental timber portals, intricate geometric mashrabiya screening, and bespoke counters."
+        },
+        "image": "/assets/projects_extracted/oliver_brown/page_29_img_xref4041_1024x576.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref3956_2301x394.jpeg",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref4018_486x576.jpeg",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref4040_576x683.jpeg",
+            "/assets/projects_extracted/oliver_brown/page_29_img_xref4041_1024x576.jpeg",
+            "/assets/projects_extracted/oliver_brown/page_30_img_xref4126_1719x1090.jpeg",
+            "/assets/projects_extracted/oliver_brown/page_31_img_xref4210_1719x1090.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "أقواس وبوابات خشبية هندسية ضخمة (Obsessed Chocolate)",
+                "en": "Architectural Timber Portals & Branded Feature Wall"
+            },
+            {
+                "ar": "قواطع مشربية إسلامية معاصرة بتفاصيل فائقة الدقة",
+                "en": "Contemporary Geometric Screen Paneling"
+            },
+            {
+                "ar": "تنفيذ متقن للأثاث الثابت والمتحرك والبار الرئيسي",
+                "en": "Bespoke Espresso Bar & Custom Lounge Joinery"
+            }
+        ],
+        "details": {
+            "ar": "إدارة كافة تفاصيل العمارة الداخلية للمقهى، ومطابقة الهوية الأسترالية العالمية مع لمسات معمارية محلية فاخرة في معالجة الأخشاب والرخام والإضاءة.",
+            "en": "Executed the complete branded interior architectural fit-out, uniting global franchise identity with artisanal custom timber cladding and mood lighting."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "العلامة",
+                    "en": "Brand"
+                },
+                "value": "Oliver Brown Australia"
+            },
+            {
+                "label": {
+                    "ar": "نوع العمل",
+                    "en": "Scope"
+                },
+                "value": "High-End Architectural Fit-Out"
+            },
+            {
+                "label": {
+                    "ar": "المواد",
+                    "en": "Materials"
+                },
+                "value": "Natural Timber & Geometric Metal"
+            }
+        ]
     },
     {
-      id: "alfanar-factory",
-      dwgCode: "DWG-ALF-IND",
-      year: "2016 - 2018",
-      typology: { ar: "مباني إدارية وبوابات صناعية ومصانع", en: "Industrial Complex & Corporate Headquarters" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "industrial",
-      title: {
-        ar: "مصنع الفنار للسيراميك والبورسلان (Alfanar Ceramic Factory)",
-        en: "Alfanar Ceramic & Porcelain Factory"
-      },
-      role: { ar: "إدارة التطوير والإنشاءات الصناعية", en: "Industrial Development & Civil Engineering" },
-      client: { ar: "شركة الفنار للمقاولات والصناعة (Alfanar Group)", en: "Alfanar Contracting & Industrial Group" },
-      scope: {
-        ar: "تنفيذ المباني الإدارية، بوابات المصنع، والأرضيات الصناعية الثقيلة وواجهات العرض.",
-        en: "Civil and structural execution of administrative blocks, security gate complexes, heavy industrial slabs, and product showrooms."
-      },
-      image: "/assets/projects/alfanar_factory.png",
-      gallery: [
-        "/assets/projects/alfanar_factory.png"
-      ],
-      highlights: [
-        { ar: "مباني إدارية وبوابات صناعية ضخمة", en: "Industrial Administration & Main Gate Complexes" },
-        { ar: "أرضيات خرسانية فائقة التحمل للمعدات الثقيلة", en: "Heavy-Duty Floor Slabs for High-Tonnage Machinery" }
-      ],
-      details: {
-        ar: "إشراف هندسي على إنشاء مباني مرافق المصنع مع تطبيق معايير الأمان الصناعي ومقاومة الأحمال العالية.",
-        en: "Industrial civil engineering ensuring structural resilience against heavy machinery loads, thermal expansion, and continuous heavy logistics."
-      }
+        "id": "saffori-khafji",
+        "dwgCode": "DWG-SAF-KFJ",
+        "year": "2020 - 2021",
+        "typology": {
+            "ar": "مدينة ألعاب وترفيه عائلي كبرى",
+            "en": "Mega Family Entertainment Center"
+        },
+        "location": {
+            "ar": "العثيم مول، الخفجي، المنطقة الشرقية",
+            "en": "Al Othaim Mall, Khafji, Eastern Province"
+        },
+        "category": "thematic",
+        "title": {
+            "ar": "سفوري لاند الترفيهية - العثيم مول (الخفجي)",
+            "en": "Saffori Land Mega FEC - Al Othaim Mall (Khafji)"
+        },
+        "role": {
+            "ar": "إدارة التطوير المعماري والإنشائي والتشطيبات الترفيهية",
+            "en": "Thematic Architecture & Complete Turnkey Delivery"
+        },
+        "client": {
+            "ar": "شركة العثيم للاستثمار / العثيم للترفيه",
+            "en": "Al Othaim Investment / Al Othaim Entertainment"
+        },
+        "scope": {
+            "ar": "تطوير وتنفيذ مدينة ملاهي سفوري لاند بمساحة ترفيهية ضخمة تشمل قواعد الألعاب الميكانيكية الثقيلة، الإضاءات النيونية، كاونترات الاستقبال، ومعايير السلامة العالمية.",
+            "en": "Turnkey delivery of Saffori Land FEC including heavy dynamic ride foundations, neon acoustic ceilings, grand admissions nexus, and ASTM safety."
+        },
+        "image": "/assets/projects_extracted/saffori_khafji/page_32_img_xref4282_2200x1009.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/saffori_khafji/page_32_img_xref4282_2200x1009.jpeg",
+            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4494_1041x983.jpeg",
+            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4495_1041x983.jpeg",
+            "/assets/projects_extracted/saffori_khafji/page_33_img_xref4605_975x983.jpeg",
+            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4765_1047x939.jpeg",
+            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4866_1060x499.jpeg",
+            "/assets/projects_extracted/saffori_khafji/page_34_img_xref4867_1068x517.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "مدينة ترفيهية عائلية متكاملة بالعثيم مول",
+                "en": "Premier Regional Family Entertainment Destination"
+            },
+            {
+                "ar": "قواعد ميكانيكية متطورة للألعاب الدوارة والقطارات",
+                "en": "Engineered Foundations for Dynamic Heavy Rides"
+            },
+            {
+                "ar": "أسقف معلقة مضيئة وتصاميم ديكورية مبهجة",
+                "en": "Thematic Neon Architecture & Acoustic Envelopes"
+            }
+        ],
+        "details": {
+            "ar": "الإشراف على تثبيت الأحمال الديناميكية للألعاب، صب الخرسانات المسلحة لقواعد الميكانيكا، تشطيب الواجهات والممرات، وتركيب أنظمة إخماد الحريق والتحكم الكهربائي.",
+            "en": "Directed structural ride anchorage engineering, dynamic vibration damping, thematic ceiling installations, and full life-safety commissioning."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "الجهة",
+                    "en": "Operator"
+                },
+                "value": "Al Othaim Entertainment"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Mall"
+                },
+                "value": "Al Othaim Mall Khafji"
+            },
+            {
+                "label": {
+                    "ar": "السلامة",
+                    "en": "Safety"
+                },
+                "value": "ASTM & Saudi Civil Defense"
+            }
+        ]
     },
     {
-      id: "commercial-strip",
-      dwgCode: "DWG-RET-STP",
-      year: "2021 - 2023",
-      typology: { ar: "مجمعات تجارية معاصرة ومولات مفتوحة", en: "Contemporary Open-Air Retail Strip" },
-      location: { ar: "الرياض، المملكة العربية السعودية", en: "Riyadh, Saudi Arabia" },
-      category: "commercial",
-      title: {
-        ar: "مجمع تجاري عصري ومراكز تسوق حديثة",
-        en: "Contemporary Commercial Strip & Retail Plaza"
-      },
-      role: { ar: "تصميم معماري وتطوير عقاري متكامل", en: "Architectural Design & Real Estate Development" },
-      client: { ar: "كبار المطورين العقاريين بالرياض", en: "Premier Commercial Real Estate Developers" },
-      scope: {
-        ar: "تصميم وتنفيذ مجمعات تجارية مفتوحة بواجهات حجرية وزجاجية معاصرة ومواقف سيارات متطورة.",
-        en: "Design and turnkey construction of modern open-air retail strips featuring Riyadh stone, structural glass curtain walls, and landscaped plazas."
-      },
-      image: "/assets/projects/commercial_strip_mall.png",
-      gallery: [
-        "/assets/projects/commercial_strip_mall.png"
-      ],
-      highlights: [
-        { ar: "واجهات زجاجية وحجر طبيعي", en: "Natural Stone & Structural Glazing Facades" },
-        { ar: "تخطيط مواقف وبنية تحتية للمحلات والمطاعم", en: "Integrated Retail & F&B Utilities Infrastructure" }
-      ],
-      details: {
-        ar: "تطوير وجهات تسوق متكاملة توفر مرونة للمستأجرين التجاريين مع سهولة الصيانة والتشغيل.",
-        en: "Modern commercial retail hub built with sustainable building envelopes, optimized traffic flow, and plug-and-play tenant connections."
-      }
+        "id": "saffori-hafr",
+        "dwgCode": "DWG-SAF-HFR",
+        "year": "2021 - 2022",
+        "typology": {
+            "ar": "مدينة ألعاب وترفيه واكستريم زون",
+            "en": "FEC & Xtreme Zone Action Arena"
+        },
+        "location": {
+            "ar": "العثيم مول، حفر الباطن",
+            "en": "Al Othaim Mall, Hafr Al-Batin"
+        },
+        "category": "thematic",
+        "title": {
+            "ar": "سفوري لاند واكستريم زون - العثيم مول (حفر الباطن)",
+            "en": "Saffori Land & Xtreme Zone - Al Othaim Mall (Hafr Al-Batin)"
+        },
+        "role": {
+            "ar": "إدارة التطوير والتصميم المعماري الترفيهي والإشراف الميداني",
+            "en": "Thematic Architecture Director & Field Supervision"
+        },
+        "client": {
+            "ar": "شركة العثيم للاستثمار / العثيم للترفيه",
+            "en": "Al Othaim Investment / Al Othaim Leisure"
+        },
+        "scope": {
+            "ar": "تنفيذ سفوري لاند واكستريم زون، متضمناً أعمدة الشجر الهندسية المضيئة، بوابات الحاويات الصناعية المعاصرة (Industrial Shipping Container Entries)، ومنصات الترامبولين والترامبولين بارك.",
+            "en": "Turnkey delivery of Saffori Land and Xtreme Zone featuring futuristic sculpted illuminated tree columns, industrial container facade portals, and action arenas."
+        },
+        "image": "/assets/projects_extracted/saffori_hafr/page_36_img_xref5175_1045x978.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/saffori_hafr/page_36_img_xref5175_1045x978.jpeg",
+            "/assets/projects_extracted/saffori_hafr/page_36_img_xref5281_959x934.jpeg",
+            "/assets/projects_extracted/saffori_hafr/page_37_img_xref5390_1042x978.jpeg",
+            "/assets/projects_extracted/saffori_hafr/page_37_img_xref5495_984x983.jpeg",
+            "/assets/projects_extracted/saffori_hafr/page_38_img_xref5502_1042x939.jpeg",
+            "/assets/projects_extracted/saffori_hafr/page_38_img_xref5612_966x965.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "أعمدة شجر معمارية مضيئة بتشكيلات ثلاثية الأبعاد",
+                "en": "Sculpted 3D Illuminated Tree Column Architecture"
+            },
+            {
+                "ar": "بوابة اكستريم زون بحاويات الشحن الصناعية والنيون",
+                "en": "Industrial Neon Container Portals & Street-Art Facades"
+            },
+            {
+                "ar": "أضخم مجمع ترفيهي للشباب والعائلات بالمنطقة",
+                "en": "Flagship Action & Family Entertainment Hub"
+            }
+        ],
+        "details": {
+            "ar": "الإشراف على تنفيذ الهياكل الحديدية المعقدة للأعمدة الشجرية ثلاثية الأبعاد، وتكسيات الألمنيوم والإضاءة الديناميكية المبرمجة مع تثبيت ألعاب القوى والمغامرات وفق أعلى معايير الأمان.",
+            "en": "Supervised complex parametric steel framing for the organic tree pavilions, dynamic RGB DMX lighting integration, and high-impact trampoline/climbing infrastructure."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "المشروع",
+                    "en": "Features"
+                },
+                "value": "Saffori Land + Xtreme Zone"
+            },
+            {
+                "label": {
+                    "ar": "الموقع",
+                    "en": "Location"
+                },
+                "value": "Hafr Al-Batin Mall"
+            },
+            {
+                "label": {
+                    "ar": "المفهوم",
+                    "en": "Design"
+                },
+                "value": "Parametric Trees & Industrial Neon"
+            }
+        ]
+    },
+    {
+        "id": "commercial-plaza",
+        "dwgCode": "DWG-COM-PLZ",
+        "year": "2019 - 2021",
+        "typology": {
+            "ar": "مجمع تجاري وبلازا تسوق معاصرة",
+            "en": "Contemporary Commercial Strip Plaza"
+        },
+        "location": {
+            "ar": "الرياض، المملكة العربية السعودية",
+            "en": "Riyadh, Saudi Arabia"
+        },
+        "category": "commercial",
+        "title": {
+            "ar": "المجمع التجاري والبلازا المعاصرة (Drive-Thru Strip Plaza)",
+            "en": "Contemporary Retail Strip Plaza & Corporate Center"
+        },
+        "role": {
+            "ar": "التصميم المعماري وتطوير الواجهات الحجرية والمعدنية المضاءة",
+            "en": "Architectural Design & Facade Lighting Direction"
+        },
+        "client": {
+            "ar": "مجموعة استثمارية وتطوير عقاري كبرى",
+            "en": "Commercial Real Estate Investment Conglomerate"
+        },
+        "scope": {
+            "ar": "تصميم وتطوير مجمع تجاري مفتوح يضم معارض تجارية، مطاعم درايف ثرو، واجهات رخامية وشبك ذهبي مع إضاءة معمارية ليلية فاخرة ومواقف سيارات متكاملة.",
+            "en": "Master planning and architectural delivery of modern open-air retail plaza featuring drive-thru lanes, gold architectural mesh claddings, and nocturnal lighting."
+        },
+        "image": "/assets/projects_extracted/commercial_plaza/page_42_img_xref6233_1780x1023.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/commercial_plaza/page_42_img_xref6233_1780x1023.jpeg",
+            "/assets/projects_extracted/commercial_plaza/page_43_img_xref6392_1200x1200.jpeg",
+            "/assets/projects_extracted/commercial_plaza/page_43_img_xref6441_1200x1200.jpeg",
+            "/assets/projects_extracted/commercial_plaza/page_44_img_xref6510_1024x642.jpeg",
+            "/assets/projects_extracted/commercial_plaza/page_46_img_xref6643_2036x1010.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "واجهات ذهبية ليلية متميزة بشبك معماري مضاء",
+                "en": "Illuminated Gold Architectural Mesh Facade"
+            },
+            {
+                "ar": "صالات استقبال ومصاعد رخامية فندقية فخمة",
+                "en": "Hotel-Grade Marble Lobbies & Glass Elevators"
+            },
+            {
+                "ar": "انسيابية كاملة لمسارات المشاة والسيارات (Drive-Thru)",
+                "en": "Optimized Vehicular & Pedestrian Circulation"
+            }
+        ],
+        "details": {
+            "ar": "صياغة المخطط العام وتصميم الواجهات الخارجية التي تمزج بين الكتل الحجرية والشاشات المعدنية الذهبية، مع الإشراف على أدق تفاصيل التشطيبات الداخلية والسلالم الزجاجية المعلقة.",
+            "en": "Designed the master plan uniting stone massing with parametric golden mesh screens, supervising execution of floating glass staircases and marble lobbies."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "النوع",
+                    "en": "Typology"
+                },
+                "value": "Commercial Strip Plaza"
+            },
+            {
+                "label": {
+                    "ar": "الميزات",
+                    "en": "Highlights"
+                },
+                "value": "Drive-Thru & Night Lighting"
+            },
+            {
+                "label": {
+                    "ar": "الواجهات",
+                    "en": "Materials"
+                },
+                "value": "Gold Mesh & Natural Stone"
+            }
+        ]
+    },
+    {
+        "id": "mocha-more",
+        "dwgCode": "DWG-MCH-MOR",
+        "year": "2020 - 2021",
+        "typology": {
+            "ar": "كافيه تجاري معاصر",
+            "en": "Contemporary Specialty Coffee Lounge"
+        },
+        "location": {
+            "ar": "المملكة العربية السعودية",
+            "en": "Saudi Arabia"
+        },
+        "category": "thematic",
+        "title": {
+            "ar": "مقهى موكا أند مور (Mocha & More Cafe)",
+            "en": "Mocha & More Specialty Cafe"
+        },
+        "role": {
+            "ar": "التصميم المعماري الداخلي والإشراف على التشطيب",
+            "en": "Interior Architecture & Fit-Out Oversight"
+        },
+        "client": {
+            "ar": "سلسلة موكا أند مور للمقاهي",
+            "en": "Mocha & More Hospitality Chain"
+        },
+        "scope": {
+            "ar": "تنفيذ وتطوير الديكورات المعمارية للكافيه، شاملاً الأسقف المعدنية المفتوحة (Industrial Ceiling Baffles)، الإضاءة البؤرية، والواجهات الزجاجية.",
+            "en": "Architectural fit-out including open acoustic ceiling baffles, custom pendant illumination, and contemporary cafe counter joinery."
+        },
+        "image": "/assets/projects_extracted/mocha_more/page_35_img_xref4959_1021x997.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/mocha_more/page_35_img_xref4959_1021x997.jpeg",
+            "/assets/projects_extracted/mocha_more/page_35_img_xref5065_990x989.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "تصميم داخلي عصري بإضاءة دافئة مريحة",
+                "en": "Warm Contemporary Ambience & Precision Lighting"
+            },
+            {
+                "ar": "معالجة احترافية للأسقف المكشوفة وعزل الصوت",
+                "en": "Acoustic Baffle Ceiling Engineering"
+            },
+            {
+                "ar": "استغلال أمثل للمساحات لراحة الضيوف",
+                "en": "Maximized Seating & Circulation Efficiency"
+            }
+        ],
+        "details": {
+            "ar": "الإشراف على الأعمال الكهروميكانيكية والتشطيبات المعمارية للمقهى لتقديم تجربة ضيافة عصرية بأرقى معايير الجودة والسرعة في التنفيذ.",
+            "en": "Managed MEP coordination and bespoke architectural finishes to deliver a distinctive contemporary hospitality venue on schedule."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "النشاط",
+                    "en": "Sector"
+                },
+                "value": "Specialty Hospitality"
+            },
+            {
+                "label": {
+                    "ar": "النمط",
+                    "en": "Aesthetics"
+                },
+                "value": "Modern Warm Industrial"
+            },
+            {
+                "label": {
+                    "ar": "التنفيذ",
+                    "en": "Delivery"
+                },
+                "value": "Fast-Track Fit-Out"
+            }
+        ]
+    },
+    {
+        "id": "alfanar-factory",
+        "dwgCode": "DWG-ALF-IND",
+        "year": "2015 - 2017",
+        "typology": {
+            "ar": "منشأة صناعية ومصنع متكامل",
+            "en": "Industrial Ceramic Manufacturing Plant"
+        },
+        "location": {
+            "ar": "المدينة الصناعية، المملكة العربية السعودية",
+            "en": "Industrial City, Saudi Arabia"
+        },
+        "category": "healthcare",
+        "title": {
+            "ar": "مصنع الفنار للسيراميك والبورسلان (Alfanar Ceramic Factory)",
+            "en": "Alfanar Ceramic & Porcelain Industrial Complex"
+        },
+        "role": {
+            "ar": "الإشراف الإنشائي وتطوير المباني الإدارية والخدمية",
+            "en": "Industrial Civil & Administrative Construction Oversight"
+        },
+        "client": {
+            "ar": "شركة الفنار للصناعة والاستثمار",
+            "en": "Alfanar Industrial Group"
+        },
+        "scope": {
+            "ar": "تطوير وتشييد المبنى الإداري الرئيسي للمصنع، البوابات الأمنية، صالات الإنتاج، والأرضيات الصناعية الثقيلة المقاومة للأحمال العالية.",
+            "en": "Execution and construction supervision of the factory administrative headquarters, security gates, production floors, and heavy-duty industrial slabs."
+        },
+        "image": "/assets/projects_extracted/alfanar_factory/page_08_img_xref517_817x624.jpeg",
+        "gallery": [
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref515_616x489.jpeg",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref516_616x490.jpeg",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref517_817x624.jpeg",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref518_658x489.jpeg",
+            "/assets/projects_extracted/alfanar_factory/page_08_img_xref519_660x490.jpeg"
+        ],
+        "highlights": [
+            {
+                "ar": "مباني إدارة ومختبرات فحص جودة وصالات إنتاج",
+                "en": "Administrative HQ, QA Labs & Production Halls"
+            },
+            {
+                "ar": "أرضيات خرسانية صناعية فائقة التحمل للأوزان الثقيلة",
+                "en": "Heavy-Duty Laser-Screed Industrial Flooring"
+            },
+            {
+                "ar": "بنية تحتية كهربائية وصناعية متطورة",
+                "en": "Advanced Industrial Power & Utility Infrastructure"
+            }
+        ],
+        "details": {
+            "ar": "الإشراف على الأعمال المدنية والإنشائية للمجمع الصناعي، صب الأرضيات المعالجة ضد التآكل والأحمال الثقيلة، وتشطيب المباني الإدارية لشركة الفنار.",
+            "en": "Supervised civil and structural works for the industrial compound, including heavy load-bearing flooring systems and administrative office complexes."
+        },
+        "specs": [
+            {
+                "label": {
+                    "ar": "القطاع",
+                    "en": "Industry"
+                },
+                "value": "Industrial Manufacturing"
+            },
+            {
+                "label": {
+                    "ar": "الجهة",
+                    "en": "Client"
+                },
+                "value": "Alfanar Group"
+            },
+            {
+                "label": {
+                    "ar": "النطاق",
+                    "en": "Scope"
+                },
+                "value": "Civil & Admin Infrastructure"
+            }
+        ]
     }
-  ],
-
-  marqueeLogos: [
-    { name: "وزارة التعليم", src: "/assets/clients/logos_hd/education.png" },
-    { name: "وزارة الصحة", src: "/assets/clients/logos_hd/health.png" },
-    { name: "أمانة منطقة الرياض", src: "/assets/clients/logos_hd/riyadh_municipality.png" },
-    { name: "شركة سبيماكو الدوائية", src: "/assets/clients/logos_hd/spimaco.png" },
-    { name: "شركة الفنار للصناعة", src: "/assets/clients/logos_hd/alfanar.png" },
-    { name: "مجموعة عبدالله العثيم القابضة", src: "/assets/clients/logos_hd/othaim.png" },
-    { name: "شركة الديار للتطوير العقاري", src: "/assets/clients/logos_hd/deyaar.png" },
-    { name: "شركة متون للتطوير العقاري", src: "/assets/clients/logos_hd/motoon.png" },
-    { name: "صيدليات الدواء", src: "/assets/clients/logos_hd/aldawaa.png" },
-    { name: "مطاعم فطيرة الفلافل", src: "/assets/clients/logos_hd/falafel.png" },
-    { name: "عيادات ديرما الطبية", src: "/assets/clients/logos_hd/derma.png" },
-    { name: "فنادق ذا فيو", src: "/assets/clients/logos_hd/theview.png" },
-    { name: "شركة منتور المحدودة", src: "/assets/clients/logos_hd/mentor_co.png" },
-    { name: "مؤسسة ميساء الرياض", src: "/assets/clients/logos_hd/maysaa_riyadh.png" },
-    { name: "مكاتب آل فاضل للاستشارات", src: "/assets/clients/logos_hd/al_fadhel.png" },
-    { name: "مؤسسة توت للمقاولات", src: "/assets/clients/logos_hd/toot_contracting.png" }
-  ],
+],
 
   clients: [
     {
