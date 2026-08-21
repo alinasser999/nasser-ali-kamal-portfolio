@@ -1719,30 +1719,6 @@ Throughout his career, he has directed landmark national undertakings spanning h
             "ar": "من مرحلة الأعمال الخرسانية التخصصية في البنية التحتية السفلية وقواعد غرف الطاقة إلى البرج المكتبي الأيقوني على شريان الأعمال بالعاصمة الرياض.",
             "en": "From specialized substructure power vaults and heavy mechanical plant casting to an iconic corporate high-rise on King Fahd Road."
         }
-    },
-    "eldeyar": {
-        "title": {
-            "ar": "عمارات الديار السكنية الفاخرة (جنوب الرياض)",
-            "en": "El-Deyar Luxury Residential Mansions"
-        },
-        "before": {
-            "label": {
-                "ar": "BEFORE • السقالات وأعمال الواجهات الحجرية",
-                "en": "BEFORE • Scaffolding & Facade Works"
-            },
-            "image": "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3276_714x976.jpeg"
-        },
-        "after": {
-            "label": {
-                "ar": "AFTER • العمارات المكتملة الفاخرة بارتفاع 5 أدوار",
-                "en": "AFTER • Completed 5-Story Mansions"
-            },
-            "image": "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg"
-        },
-        "description": {
-            "ar": "تطور المشروع من مراحل السقالات وأعمال الواجهات الخارجية الميدانية إلى تسليم صرح سكني فاخر متكامل مع مسبح داخلي وصالات استقبال رخامية.",
-            "en": "Evolution from on-site facade scaffolding and civil works to delivering a premier residential compound with indoor pool and luxury amenities."
-        }
     }
 }
 };
