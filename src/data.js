@@ -16,7 +16,7 @@ export const portfolioData = {
       ar: "دمج الرؤية المعمارية الإبداعية مع حوكمة التطوير العقاري وإدارة المشاريع الكبرى وتسليم المفتاح في المملكة العربية السعودية.",
       en: "Synthesizing high-concept architectural design with rigorous real estate development governance, master-planning, and turnkey EPC execution across Saudi Arabia."
     },
-    experienceYears: "38+",
+    experienceYears: "25+",
     establishedYear: "1986",
     location: {
       ar: "الرياض، المملكة العربية السعودية",
@@ -24,7 +24,7 @@ export const portfolioData = {
     },
     stats: [
       {
-        value: "38+",
+        value: "25+",
         unit: { ar: "عاماً", en: "Years" },
         label: { ar: "خبرة في التطوير والمعمار", en: "Architecture & Development" },
         sub: { ar: "في السوق السعودي منذ 1986م", en: "KSA Market Leadership" }
@@ -49,10 +49,10 @@ export const portfolioData = {
       }
     ],
     about: {
-      ar: `معماري ومدير تطوير عقاري تنفيذي بخبرة تتجاوز 38 عاماً في صياغة وتطوير المشهد العمراني بالمملكة العربية السعودية. يرتكز نهجه المهني على التكامل بين فلسفة التصميم المعماري المعاصر، وتخطيط الفراغات الحضرية، وبين الإدارة الصارمة لدورة حياة التطوير العقاري ومشاريع تسليم المفتاح (EPC Turnkey).
+      ar: `معماري ومدير تطوير عقاري تنفيذي بخبرة تتجاوز 25 عاماً في صياغة وتطوير المشهد العمراني بالمملكة العربية السعودية. يرتكز نهجه المهني على التكامل بين فلسفة التصميم المعماري المعاصر، وتخطيط الفراغات الحضرية، وبين الإدارة الصارمة لدورة حياة التطوير العقاري ومشاريع تسليم المفتاح (EPC Turnkey).
 
 قاد وأشرف على حزمة من كبرى المشاريع الوطنية الاستراتيجية، تضمنت مجمعات كليات وسكن جامعة الأميرة نورة، والمراكز الأمنية لمشروع خادم الحرمين الشريفين (KAP-1)، وخزانات بريمان الاستراتيجية بجدة بسعة 170 مليون لتر، وبرج سبيماكو بالرياض، ومشاريع كبرى مدن الترفيه العائلية والمراكز التجارية المعاصرة.`,
-      en: `Principal Architect and Senior Real Estate Development Director with over 38 years of distinguished practice in shaping Saudi Arabia's built environment. His design and management ethos unites contemporary spatial philosophy and contextual aesthetics with end-to-end real estate development governance, value engineering, and fast-track EPC turnkey delivery.
+      en: `Principal Architect and Senior Real Estate Development Director with over 25 years of distinguished practice in shaping Saudi Arabia's built environment. His design and management ethos unites contemporary spatial philosophy and contextual aesthetics with end-to-end real estate development governance, value engineering, and fast-track EPC turnkey delivery.
 
 Throughout his career, he has directed landmark national undertakings spanning higher-education campus master-planning at Princess Nora University, high-security command complexes for the King Abdullah Security Project (KAP-1), the 170-Million-Liter Jeddah Strategic Water Reservoir, SPEMACO High-Rise Tower, and premier commercial/leisure attractions for Al Othaim Group.`
     },
