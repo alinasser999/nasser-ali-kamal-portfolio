@@ -4253,6 +4253,15 @@ html[dir="rtl"] .marquee-track {
   body {
     padding-bottom: calc(72px + env(safe-area-inset-bottom));
   }
+
+  .floating-quick-bar {
+    bottom: calc(76px + env(safe-area-inset-bottom));
+    inset-inline-end: 1rem;
+  }
+
+  .floating-quick-bar .btn-float-wa {
+    display: none !important;
+  }
 }
 
 /* ==========================================================================
