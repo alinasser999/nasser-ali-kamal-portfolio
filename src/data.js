@@ -1655,15 +1655,15 @@ Throughout his career, he has directed landmark national undertakings spanning h
         },
         "before": {
             "label": {
-                "ar": "BEFORE • مرحلة صب اللبشة الخرسانية وحديد التسليح لأساسات 50 فيلا",
-                "en": "BEFORE • Concrete Raft & Rebar Foundation Execution for 50 Villas"
+                "ar": "BEFORE • صب اللبشة والأساسات المسلحة",
+                "en": "BEFORE • Raft Foundation Pours"
             },
             "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.jpeg"
         },
         "after": {
             "label": {
-                "ar": "AFTER • الفلل السكنية المكتملة والتشطيب النهائي الفاخر",
-                "en": "AFTER • Completed Luxury Villas Handover & Landscaping"
+                "ar": "AFTER • الفلل السكنية المكتملة",
+                "en": "AFTER • Completed Luxury Villas"
             },
             "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg"
         },
@@ -1674,26 +1674,26 @@ Throughout his career, he has directed landmark national undertakings spanning h
     },
     "reservoir": {
         "title": {
-            "ar": "خزان مياه بريمان الاستراتيجي بجدة (170M لتر)",
+            "ar": "خزان مياه بريمان الاستراتيجي بجدة (سعة 170M لتر)",
             "en": "Jeddah Briman Strategic Mega Reservoir (170M Liters)"
         },
         "before": {
             "label": {
-                "ar": "BEFORE • صب الأعمدة الخرسانية الضخمة ومضخات الخرسانة وسقف الخزان",
-                "en": "BEFORE • Casting Mega Concrete Columns & Structural Roof Slab"
+                "ar": "BEFORE • شبكات التسليح والشد المسبق",
+                "en": "BEFORE • Rebar & Tendons Grid"
             },
-            "image": "/assets/projects_extracted/briman_reservoir/page_16_img_xref2606_670x666.jpeg"
+            "image": "/assets/projects/briman_reservoir_before.jpg"
         },
         "after": {
             "label": {
-                "ar": "AFTER • الصرح الاستراتيجي المكتمل ومحطة الضخ بسعة 170 مليون لتر",
-                "en": "AFTER • Completed 170-Million-Liter Strategic Water Infrastructure"
+                "ar": "AFTER • اكتمال صب الجدران الخرسانية والأسطح",
+                "en": "AFTER • Cast Retaining Walls & Deck"
             },
-            "image": "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.jpeg"
+            "image": "/assets/projects/briman_reservoir_after.jpg"
         },
         "description": {
-            "ar": "تجسيد حقيقي لمراحل التنفيذ الميدانية لأضخم مشروع أمن مائي بالمملكة؛ من صب الأعمدة الشاهقة والشدات الخرسانية إلى تشغيل الخزان العملاق.",
-            "en": "Direct field documentation of Saudi Arabia's largest water security asset: from massive column casting to the operating mega reservoir."
+            "ar": "توثيق ميداني مباشر لمراحل تنفيذ خزان بريمان الاستراتيجي بجدة بسعة 170 مليون لتر؛ من تركيب شبكات حديد التسليح وكابلات الشد الانحنائية إلى اكتمال صب الجدران الخرسانية العملاقة والأعمال العلوية.",
+            "en": "Direct field documentation of the 170M-Liter Briman Strategic Reservoir: from circular rebar tendon assembly to fully cast massive perimeter retaining walls and top operational deck."
         }
     },
     "spemaco": {
@@ -1703,15 +1703,15 @@ Throughout his career, he has directed landmark national undertakings spanning h
         },
         "before": {
             "label": {
-                "ar": "BEFORE • صب قواعد غرف المحولات الكهربائية وغرف المضخات الإنشائية",
-                "en": "BEFORE • Substructure High-Voltage Vaults & Pump Room Foundations"
+                "ar": "BEFORE • صب قواعد محولات ومضخات الطاقة",
+                "en": "BEFORE • Substructure High-Voltage Vaults"
             },
             "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.jpeg"
         },
         "after": {
             "label": {
-                "ar": "AFTER • البرج الإداري الشاهق المكتمل بواجهاته الزجاجية الأيقونية",
-                "en": "AFTER • Completed Glass Curtain-Wall Commercial Headquarters"
+                "ar": "AFTER • البرج الإداري الشاهق المكتمل",
+                "en": "AFTER • Completed Glass Tower"
             },
             "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg"
         },
@@ -1727,15 +1727,15 @@ Throughout his career, he has directed landmark national undertakings spanning h
         },
         "before": {
             "label": {
-                "ar": "BEFORE • الأعمال الميدانية ورافعات تشطيب الواجهات الحجرية",
-                "en": "BEFORE • Active Field Construction & Scaffolding Facade Works"
+                "ar": "BEFORE • السقالات وأعمال الواجهات الحجرية",
+                "en": "BEFORE • Scaffolding & Facade Works"
             },
             "image": "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3276_714x976.jpeg"
         },
         "after": {
             "label": {
-                "ar": "AFTER • العمارات المكتملة الفاخرة بارتفاع 5 أدوار ولاندسكيب 1,500م²",
-                "en": "AFTER • Completed 5-Story Residential Estate & 1,500m² Grounds"
+                "ar": "AFTER • العمارات المكتملة الفاخرة بارتفاع 5 أدوار",
+                "en": "AFTER • Completed 5-Story Mansions"
             },
             "image": "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg"
         },
