@@ -626,12 +626,12 @@ function renderProjects() {
             <i data-lucide="camera"></i>
             <span>${totalPhotos} ${currentLang === 'ar' ? 'لوحات' : 'Plates'}</span>
           </span>
-          <img src="${proj.image}" alt="${proj.title[currentLang]}" class="folio-thumb" id="cardImg_${proj.id}" loading="lazy">
+          <img src="${proj.image}" alt="${proj.title[currentLang]}" class="folio-thumb" id="cardImg_${proj.id}" loading="lazy" decoding="async" width="600" height="400">
           ${totalPhotos > 1 ? `
             <div class="folio-quick-strip">
               ${miniThumbs.map((thumb, tIdx) => `
                 <div class="folio-quick-dot ${tIdx === 0 ? 'active' : ''}" data-target-img="cardImg_${proj.id}" data-src="${thumb}" title="${currentLang === 'ar' ? `معاينة لقطة ${tIdx + 1}` : `Preview ${tIdx + 1}`}">
-                  <img src="${thumb}" alt="thumb">
+                  <img src="${thumb}" alt="thumb" loading="lazy" decoding="async" width="48" height="48">
                 </div>
               `).join('')}
             </div>
@@ -1043,7 +1043,7 @@ function renderClients() {
   if (track1 && track2 && portfolioData.marqueeLogos) {
     const marqueeHtml = portfolioData.marqueeLogos.map(item => `
       <div class="marquee-logo-card" title="${item.name}">
-        <img src="${item.src}" alt="${item.name}" class="marquee-logo-img" loading="lazy">
+        <img src="${item.src}" alt="${item.name}" class="marquee-logo-img" loading="lazy" decoding="async" width="140" height="50">
       </div>
     `).join('');
 
@@ -1059,7 +1059,7 @@ function renderClients() {
     <div class="client-proof-item">
       <div class="client-item-top">
         <div class="client-item-icon">
-          ${client.logo ? `<img src="${client.logo}" alt="${client.name[currentLang]}" style="max-width: 100%; max-height: 100%; object-fit: contain;">` : `<i data-lucide="${client.icon || 'building-2'}"></i>`}
+          ${client.logo ? `<img src="${client.logo}" alt="${client.name[currentLang]}" style="max-width: 100%; max-height: 100%; object-fit: contain;" loading="lazy" decoding="async" width="48" height="48">` : `<i data-lucide="${client.icon || 'building-2'}"></i>`}
         </div>
         <span class="client-tier-badge font-mono">${client.tier[currentLang]}</span>
       </div>

@@ -106,13 +106,37 @@ body.cad-blueprint-mode {
   --ink-muted: #8B949E;
   --ink-subtle: #484F58;
 
-  --border-hairline: 1px solid rgba(0, 240, 255, 0.22);
-  --border-medium: 1px solid rgba(0, 240, 255, 0.35);
-  --border-drafting: 1px dashed rgba(0, 240, 255, 0.4);
-
   --shadow-editorial: 0 10px 35px rgba(0, 240, 255, 0.15);
   --shadow-modal: 0 25px 60px rgba(0, 0, 0, 0.6);
 }
+
+/* ==========================================================================
+   Rendering & Layout Containment Performance Optimizations
+   ========================================================================== */
+
+.competencies-section,
+.projects-section,
+.transformation-section,
+.credentials-section,
+.clients-section,
+.contact-section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 650px;
+}
+
+.project-folio-card,
+.monograph-photo-card,
+.stat-box,
+.credential-seal-card {
+  contain: layout style;
+  transform: translateZ(0);
+}
+
+.hero-archive-composite-img {
+  will-change: transform;
+}
+
 
 body.cad-blueprint-mode .btn-primary,
 body.cad-blueprint-mode .btn-see-all-full {
