@@ -137,6 +137,8 @@ const translations = {
     sec_trans_desc: "اسحب المؤشر التفاعلي لاستكشاف التحول الإنشائي والمعماري لمشاريعنا الكبرى من مراحل الأساسات وصب الخرسانات إلى مرحلة التسليم والتشغيل النهائي.",
     trans_tab_pnu: "إسكان 50 فيلا بجامعة الأميرة نورة",
     trans_tab_res: "خزان بريمان الاستراتيجي (170M لتر)",
+    trans_tab_spemaco: "برج سبيماكو (طريق الملك فهد)",
+    trans_tab_eldeyar: "عمارات الديار السكنية الفاخرة",
     badge_after: "AFTER • الإنجاز النهائي",
     badge_before: "BEFORE • صب الخرسانات والأساسات",
     compare_hint: "⟵ اسحب المؤشر الذهبي يميناً ويساراً للمقارنة بين مرحلة التنفيذ والتسليم ⟶",
@@ -288,7 +290,9 @@ const translations = {
     sec_trans_title: "Interactive Engineering Evolution: From Foundations to Luxury Delivery",
     sec_trans_desc: "Drag the interactive comparator to explore the structural and architectural transformation of our landmark projects from deep excavation and concrete casting to final handover.",
     trans_tab_pnu: "PNU 50 Luxury Faculty Villas",
-    trans_tab_res: "Briman Mega Water Reservoir (170M L)",
+    trans_tab_res: "Briman Mega Reservoir (170M L)",
+    trans_tab_spemaco: "SPEMACO High-Rise Tower",
+    trans_tab_eldeyar: "El-Deyar Luxury Mansions",
     badge_after: "AFTER • Turnkey Completion",
     badge_before: "BEFORE • Concrete & Rebar Foundations",
     compare_hint: "⟵ Drag golden slider handle left and right to inspect transformation ⟶",
@@ -1406,7 +1410,7 @@ function setupBeforeAfterSlider() {
 
   function setSliderPosition(percentage) {
     const clamped = Math.max(0, Math.min(100, percentage));
-    overlay.style.width = `${clamped}%`;
+    overlay.style.clipPath = `inset(0 ${100 - clamped}% 0 0)`;
     handle.style.left = `${clamped}%`;
   }
 
@@ -1446,24 +1450,44 @@ function setupBeforeAfterSlider() {
     isDragging = false;
   });
 
-  // Tabs for switching between PNU and Reservoir
+  // Tabs for switching between transformation pairs
+  function updateComparison(key) {
+    const data = portfolioData.transformationPairs[key];
+    if (!data) return;
+
+    beforeImg.style.opacity = '0.25';
+    afterImg.style.opacity = '0.25';
+    
+    setTimeout(() => {
+      beforeImg.src = data.before.image;
+      afterImg.src = data.after.image;
+      beforeImg.style.opacity = '1';
+      afterImg.style.opacity = '1';
+
+      const beforeBadge = document.getElementById('beforeBadge');
+      const afterBadge = document.getElementById('afterBadge');
+      const narrative = document.getElementById('compareNarrative');
+
+      if (beforeBadge && data.before.label) {
+        beforeBadge.textContent = data.before.label[currentLang] || data.before.label.ar;
+      }
+      if (afterBadge && data.after.label) {
+        afterBadge.textContent = data.after.label[currentLang] || data.after.label.ar;
+      }
+      if (narrative && data.description) {
+        narrative.textContent = data.description[currentLang] || data.description.ar;
+      }
+
+      setSliderPosition(50);
+    }, 130);
+  }
+
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       tabBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentCompareKey = btn.getAttribute('data-compare');
-      const data = portfolioData.transformationPairs[currentCompareKey];
-      if (data) {
-        beforeImg.style.opacity = '0.3';
-        afterImg.style.opacity = '0.3';
-        setTimeout(() => {
-          beforeImg.src = data.before.image;
-          afterImg.src = data.after.image;
-          beforeImg.style.opacity = '1';
-          afterImg.style.opacity = '1';
-          setSliderPosition(50);
-        }, 150);
-      }
+      updateComparison(currentCompareKey);
     });
   });
 }

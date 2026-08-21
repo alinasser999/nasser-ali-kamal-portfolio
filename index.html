@@ -365,19 +365,29 @@
             <i data-lucide="waves"></i>
             <span data-i18n="trans_tab_res">خزان بريمان الاستراتيجي (170M لتر)</span>
           </button>
+          <button class="trans-tab-btn" data-compare="spemaco">
+            <i data-lucide="building-2"></i>
+            <span data-i18n="trans_tab_spemaco">برج سبيماكو (طريق الملك فهد)</span>
+          </button>
+          <button class="trans-tab-btn" data-compare="eldeyar">
+            <i data-lucide="building"></i>
+            <span data-i18n="trans_tab_eldeyar">عمارات الديار السكنية الفاخرة</span>
+          </button>
         </div>
 
         <!-- Interactive Drag Slider Comparator -->
         <div class="interactive-slider-wrapper" id="beforeAfterComparator" data-reveal="scale">
           <div class="compare-container" id="compareBox">
             <!-- After Image (Base) -->
-            <img src="/assets/projects/pnu_housing_villas.png" alt="After Completion" class="compare-img compare-after-img" id="afterImage">
-            <span class="compare-badge badge-after font-mono" data-i18n="badge_after">AFTER • الإنجاز النهائي</span>
+            <img src="/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg" alt="After Completion" class="compare-img compare-after-img" id="afterImage">
+
+            <!-- Badges pinned to corners -->
+            <span class="compare-badge badge-before font-mono" id="beforeBadge" data-i18n="badge_before">BEFORE • مرحلة صب اللبشة والأساسات</span>
+            <span class="compare-badge badge-after font-mono" id="afterBadge" data-i18n="badge_after">AFTER • الفلل السكنية المكتملة</span>
 
             <!-- Before Image (Overlay clipped) -->
-            <div class="compare-overlay" id="compareOverlay" style="width: 50%;">
-              <img src="/assets/projects/concrete_pump_rebar.png" alt="Before Construction" class="compare-img compare-before-img" id="beforeImage">
-              <span class="compare-badge badge-before font-mono" data-i18n="badge_before">BEFORE • صب الخرسانات والأساسات</span>
+            <div class="compare-overlay" id="compareOverlay">
+              <img src="/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.jpeg" alt="Before Construction" class="compare-img compare-before-img" id="beforeImage">
             </div>
 
             <!-- Draggable Golden Handle -->
@@ -390,6 +400,11 @@
           </div>
           <div class="compare-hint font-mono text-center mt-3" data-i18n="compare_hint">
             ⟵ اسحب المؤشر الذهبي يميناً ويساراً للمقارنة بين مرحلة التنفيذ والتسليم ⟶
+          </div>
+          
+          <!-- Dynamic Project Transformation Narrative -->
+          <div class="compare-narrative font-mono text-center mt-3" id="compareNarrative" style="max-width: 780px; margin-inline: auto; font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.6;">
+            تحول الموقع من أعمال تسليح اللبشة الخرسانية الكثيفة لأساسات 50 مبنى سكني إلى مجمع فلل راقٍ مكتمل المواصفات لأعضاء هيئة التدريس بالحرم الجامعي.
           </div>
         </div>
       </div>

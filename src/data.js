@@ -1644,41 +1644,101 @@ Throughout his career, he has directed landmark national undertakings spanning h
   ],
 
   transformationPairs: {
-    pnu: {
-      title: {
-        ar: "مشروع إسكان 50 فيلا فاخرة بجامعة الأميرة نورة (PN05)",
-        en: "PNU 50 Luxury Faculty Villas Housing (PN05)"
-      },
-      before: {
-        label: { ar: "مرحلة صب الخرسانات وأساسات حديد التسليح", en: "Concrete Pouring & Rebar Foundations" },
-        image: "/assets/projects/concrete_pump_rebar.png"
-      },
-      after: {
-        label: { ar: "الفلل المكتملة والتشطيب النهائي الفاخر", en: "Completed Luxury Villas & Landscaping" },
-        image: "/assets/projects/pnu_housing_villas.png"
-      },
-      description: {
-        ar: "تحول الموقع من أعمال الحفر والأساسات الخرسانية الكثيفة وشبكات البنية التحتية إلى مجمع سكني صرحي متكامل لأعضاء هيئة التدريس بجامعة الأميرة نورة.",
-        en: "Total transformation from deep excavation and structural reinforcement to a fully finished, turnkey luxury residential compound."
-      }
+    "pnu": {
+        "title": {
+            "ar": "مشروع إسكان 50 فيلا فاخرة بجامعة الأميرة نورة (PN05)",
+            "en": "PNU 50 Luxury Faculty Villas Housing (PN05)"
+        },
+        "before": {
+            "label": {
+                "ar": "BEFORE • مرحلة صب اللبشة الخرسانية وحديد التسليح لأساسات 50 فيلا",
+                "en": "BEFORE • Concrete Raft & Rebar Foundation Execution for 50 Villas"
+            },
+            "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref777_680x589.jpeg"
+        },
+        "after": {
+            "label": {
+                "ar": "AFTER • الفلل السكنية المكتملة والتشطيب النهائي الفاخر",
+                "en": "AFTER • Completed Luxury Villas Handover & Landscaping"
+            },
+            "image": "/assets/projects_extracted/pnu_villas/page_09_img_xref775_796x698.jpeg"
+        },
+        "description": {
+            "ar": "تحول الموقع من أعمال تسليح اللبشة الخرسانية الكثيفة لأساسات 50 مبنى سكني إلى مجمع فلل راقٍ مكتمل المواصفات لأعضاء هيئة التدريس بالحرم الجامعي.",
+            "en": "Transformation from heavy reinforced raft foundation casting for 50 residential buildings to a fully commissioned luxury faculty villa compound."
+        }
     },
-    reservoir: {
-      title: {
-        ar: "مشروع خزان مياه بريمان الاستراتيجي بجدة (170M لتر)",
-        en: "Briman Strategic Mega Water Reservoir (170M Liters)"
-      },
-      before: {
-        label: { ar: "حفر الأساسات وجدران العزل الأسطوانية", en: "Excavation & Cylindrical Retaining Slabs" },
-        image: "/assets/projects/jeddah_water_reservoir_2.png"
-      },
-      after: {
-        label: { ar: "الخزان الاستراتيجي ومحطات الضخ المنجزة", en: "Completed Strategic Reservoir & Pumps" },
-        image: "/assets/projects/jeddah_water_reservoir_1.png"
-      },
-      description: {
-        ar: "من مرحلة تسوية وتجهيز الموقع وتسليح القواعد الأسطوانية الضخمة إلى تشغيل أحد أكبر خزانات الأمن المائي في الشرق الأوسط بسعة 170,000,000 لتر.",
-        en: "Evolution from heavy ground stabilization and rebar grids to operating one of the Middle East's largest strategic water security assets."
-      }
+    "reservoir": {
+        "title": {
+            "ar": "خزان مياه بريمان الاستراتيجي بجدة (170M لتر)",
+            "en": "Jeddah Briman Strategic Mega Reservoir (170M Liters)"
+        },
+        "before": {
+            "label": {
+                "ar": "BEFORE • صب الأعمدة الخرسانية الضخمة ومضخات الخرسانة وسقف الخزان",
+                "en": "BEFORE • Casting Mega Concrete Columns & Structural Roof Slab"
+            },
+            "image": "/assets/projects_extracted/briman_reservoir/page_16_img_xref2606_670x666.jpeg"
+        },
+        "after": {
+            "label": {
+                "ar": "AFTER • الصرح الاستراتيجي المكتمل ومحطة الضخ بسعة 170 مليون لتر",
+                "en": "AFTER • Completed 170-Million-Liter Strategic Water Infrastructure"
+            },
+            "image": "/assets/projects_extracted/briman_reservoir/page_15_img_xref2263_991x494.jpeg"
+        },
+        "description": {
+            "ar": "تجسيد حقيقي لمراحل التنفيذ الميدانية لأضخم مشروع أمن مائي بالمملكة؛ من صب الأعمدة الشاهقة والشدات الخرسانية إلى تشغيل الخزان العملاق.",
+            "en": "Direct field documentation of Saudi Arabia's largest water security asset: from massive column casting to the operating mega reservoir."
+        }
+    },
+    "spemaco": {
+        "title": {
+            "ar": "برج سبيماكو الدوائية بالرياض (طريق الملك فهد)",
+            "en": "SPEMACO Pharmaceutical High-Rise Headquarters Tower"
+        },
+        "before": {
+            "label": {
+                "ar": "BEFORE • صب قواعد غرف المحولات الكهربائية وغرف المضخات الإنشائية",
+                "en": "BEFORE • Substructure High-Voltage Vaults & Pump Room Foundations"
+            },
+            "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1690_579x486.jpeg"
+        },
+        "after": {
+            "label": {
+                "ar": "AFTER • البرج الإداري الشاهق المكتمل بواجهاته الزجاجية الأيقونية",
+                "en": "AFTER • Completed Glass Curtain-Wall Commercial Headquarters"
+            },
+            "image": "/assets/projects_extracted/spemaco_tower/page_12_img_xref1689_828x1115.jpeg"
+        },
+        "description": {
+            "ar": "من مرحلة الأعمال الخرسانية التخصصية في البنية التحتية السفلية وقواعد غرف الطاقة إلى البرج المكتبي الأيقوني على شريان الأعمال بالعاصمة الرياض.",
+            "en": "From specialized substructure power vaults and heavy mechanical plant casting to an iconic corporate high-rise on King Fahd Road."
+        }
+    },
+    "eldeyar": {
+        "title": {
+            "ar": "عمارات الديار السكنية الفاخرة (جنوب الرياض)",
+            "en": "El-Deyar Luxury Residential Mansions"
+        },
+        "before": {
+            "label": {
+                "ar": "BEFORE • الأعمال الميدانية ورافعات تشطيب الواجهات الحجرية",
+                "en": "BEFORE • Active Field Construction & Scaffolding Facade Works"
+            },
+            "image": "/assets/projects_extracted/eldeyar_residence/page_20_img_xref3276_714x976.jpeg"
+        },
+        "after": {
+            "label": {
+                "ar": "AFTER • العمارات المكتملة الفاخرة بارتفاع 5 أدوار ولاندسكيب 1,500م²",
+                "en": "AFTER • Completed 5-Story Residential Estate & 1,500m² Grounds"
+            },
+            "image": "/assets/projects_extracted/eldeyar_residence/page_17_img_xref2734_761x979.jpeg"
+        },
+        "description": {
+            "ar": "تطور المشروع من مراحل السقالات وأعمال الواجهات الخارجية الميدانية إلى تسليم صرح سكني فاخر متكامل مع مسبح داخلي وصالات استقبال رخامية.",
+            "en": "Evolution from on-site facade scaffolding and civil works to delivering a premier residential compound with indoor pool and luxury amenities."
+        }
     }
-  }
+}
 };
