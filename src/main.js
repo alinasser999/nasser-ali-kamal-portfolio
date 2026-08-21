@@ -953,6 +953,20 @@ function setupScrollTracker() {
 let clientsStatsAnimated = false;
 
 function setupScrollReveals() {
+  // Directional reveal targets
+  const directionalTargets = document.querySelectorAll('[data-reveal]');
+  directionalTargets.forEach(el => {
+    const dir = el.getAttribute('data-reveal');
+    switch (dir) {
+      case 'left': el.classList.add('reveal-left'); break;
+      case 'right': el.classList.add('reveal-right'); break;
+      case 'scale': el.classList.add('reveal-scale'); break;
+      case 'blur': el.classList.add('reveal-blur'); break;
+      default: el.classList.add('reveal'); break;
+    }
+  });
+
+  // Standard reveal targets
   const revealTargets = document.querySelectorAll('.editorial-header, .about-editorial-grid, .competencies-grid, .projects-grid, .credentials-grid, .clients-proof-grid, .contact-card, .clients-trust-strip');
   
   const observer = new IntersectionObserver((entries) => {
@@ -973,22 +987,82 @@ function setupScrollReveals() {
     });
   }, {
     threshold: 0.08,
-    rootMargin: '0px 0px -20px 0px'
+    rootMargin: '0px 0px -40px 0px'
   });
 
   revealTargets.forEach(el => {
-    if (el.id === 'competenciesGrid' || el.id === 'projectsGrid' || el.id === 'credentialsGrid' || el.id === 'clientsGrid') {
-      el.classList.add('reveal-stagger');
-    } else {
-      el.classList.add('reveal');
+    // Only add reveal if it doesn't already have a directional class
+    if (!el.classList.contains('reveal-left') && !el.classList.contains('reveal-right') && !el.classList.contains('reveal-scale') && !el.classList.contains('reveal-blur')) {
+      if (el.id === 'competenciesGrid' || el.id === 'projectsGrid' || el.id === 'credentialsGrid' || el.id === 'clientsGrid') {
+        el.classList.add('reveal-stagger');
+      } else {
+        el.classList.add('reveal');
+      }
     }
     observer.observe(el);
   });
+
+  // Also observe directional targets
+  directionalTargets.forEach(el => observer.observe(el));
 
   const statsMatrix = document.getElementById('statsMatrix');
   if (statsMatrix) {
     observer.observe(statsMatrix);
   }
+}
+
+// Hero Cinematic Entrance Sequence
+function setupHeroEntrance() {
+  const heroGrid = document.querySelector('.hero-grid-layout');
+  if (!heroGrid) return;
+
+  // Add the entrance class to hide children initially
+  heroGrid.classList.add('hero-entrance');
+
+  // Trigger the animation sequence after a brief delay for page paint
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      heroGrid.classList.add('hero-animated');
+    }, 100);
+  });
+}
+
+// Parallax Depth Effect for Hero Image
+function setupParallax() {
+  const heroBoard = document.querySelector('.hero-archive-board-wrap');
+  if (!heroBoard) return;
+
+  // Only on desktop
+  const mql = window.matchMedia('(min-width: 1024px)');
+  if (!mql.matches) return;
+
+  // Check reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const heroSection = document.getElementById('hero');
+        if (!heroSection) { ticking = false; return; }
+
+        const heroRect = heroSection.getBoundingClientRect();
+        const heroBottom = heroRect.bottom;
+
+        // Only apply parallax while hero is visible
+        if (heroBottom > 0 && scrollY < heroSection.offsetHeight + heroSection.offsetTop) {
+          const parallaxOffset = scrollY * 0.12;
+          heroBoard.style.transform = `translateY(-${parallaxOffset}px)`;
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
 // Eased Number Counter Animation for Hero Metrics Ribbon
@@ -1344,6 +1418,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupScrollProgress();
   setupBlueprintMode();
   setupArchiveModal();
+  setupHeroEntrance();
+  setupParallax();
 
   // Initial Hero Laser Scan Wow Moment & Number Counting
   const scanner = document.querySelector('.laser-scanner');
