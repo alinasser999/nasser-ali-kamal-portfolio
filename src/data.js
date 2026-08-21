@@ -16,18 +16,14 @@ export const portfolioData = {
       ar: "دمج الرؤية المعمارية الإبداعية مع حوكمة التطوير العقاري وإدارة المشاريع الكبرى وتسليم المفتاح في المملكة العربية السعودية.",
       en: "Synthesizing high-concept architectural design with rigorous real estate development governance, master-planning, and turnkey EPC execution across Saudi Arabia."
     },
-    experienceYears: "25+",
-    establishedYear: "1986",
-    location: {
-      ar: "الرياض، المملكة العربية السعودية",
-      en: "Riyadh, Kingdom of Saudi Arabia"
-    },
+    experienceYears: "26+",
+    establishedYear: "2000",
     stats: [
       {
-        value: "25+",
+        value: "26+",
         unit: { ar: "عاماً", en: "Years" },
         label: { ar: "خبرة في التطوير والمعمار", en: "Architecture & Development" },
-        sub: { ar: "في السوق السعودي منذ 1986م", en: "KSA Market Leadership" }
+        sub: { ar: "مسيرة هندسية رائدة منذ 2000م", en: "Engineering Leadership Since 2000" }
       },
       {
         value: "170M",
