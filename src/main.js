@@ -1040,8 +1040,24 @@ function renderClients() {
   const track1 = document.getElementById('marqueeTrack1');
   const track2 = document.getElementById('marqueeTrack2');
 
-  if (track1 && track2 && portfolioData.marqueeLogos) {
-    const marqueeHtml = portfolioData.marqueeLogos.map(item => `
+  const marqueeLogos = [
+    { name: "وزارة التعليم / جامعة الأميرة نورة", src: "/assets/clients/logos_hd/education.webp" },
+    { name: "وزارة الصحة / الشركة الوطنية للمياه", src: "/assets/clients/logos_hd/health.webp" },
+    { name: "شركة سبيماكو الدوائية", src: "/assets/clients/logos_hd/spimaco.webp" },
+    { name: "مجموعة العثيم القابضة / سفوري لاند", src: "/assets/clients/logos_hd/othaim.webp" },
+    { name: "شركة الفنار للصناعة والمقاولات", src: "/assets/clients/logos_hd/alfanar.webp" },
+    { name: "شركة الديار للتطوير العقاري", src: "/assets/clients/logos_hd/deyaar.webp" },
+    { name: "أمانة منطقة الرياض", src: "/assets/clients/logos_hd/riyadh_municipality.webp" },
+    { name: "شركة متون للتطوير العقاري", src: "/assets/clients/logos_hd/motoon.webp" },
+    { name: "شركة الدواء للخدمات الطبية", src: "/assets/clients/logos_hd/aldawaa.webp" },
+    { name: "مجموعة الفاضل", src: "/assets/clients/logos_hd/al_fadhel.webp" },
+    { name: "مجموعة ديرما", src: "/assets/clients/logos_hd/derma.webp" },
+    { name: "The View", src: "/assets/clients/logos_hd/theview.webp" },
+    { name: "شركة توت للمقاولات العامة", src: "/assets/clients/logos_hd/toot_contracting.webp" }
+  ];
+
+  if (track1 && track2) {
+    const marqueeHtml = marqueeLogos.map(item => `
       <div class="marquee-logo-card" title="${item.name}">
         <img src="${item.src}" alt="${item.name}" class="marquee-logo-img" loading="lazy" decoding="async" width="140" height="50">
       </div>
@@ -1051,35 +1067,35 @@ function renderClients() {
     track2.innerHTML = marqueeHtml;
   }
 
-  // 2. Render Tier-1 Strategic Clients Grid
+  // 2. Render Tier-1 Strategic Clients Grid if container exists
   const container = document.getElementById('clientsGrid');
-  if (!container) return;
-
-  container.innerHTML = portfolioData.clients.map(client => `
-    <div class="client-proof-item">
-      <div class="client-item-top">
-        <div class="client-item-icon">
-          ${client.logo ? `<img src="${client.logo}" alt="${client.name[currentLang]}" style="max-width: 100%; max-height: 100%; object-fit: contain;" loading="lazy" decoding="async" width="48" height="48">` : `<i data-lucide="${client.icon || 'building-2'}"></i>`}
+  if (container) {
+    container.innerHTML = portfolioData.clients.map(client => `
+      <div class="client-proof-item">
+        <div class="client-item-top">
+          <div class="client-item-icon">
+            ${client.logo ? `<img src="${client.logo}" alt="${client.name[currentLang]}" style="max-width: 100%; max-height: 100%; object-fit: contain;" loading="lazy" decoding="async" width="48" height="48">` : `<i data-lucide="${client.icon || 'building-2'}"></i>`}
+          </div>
+          <span class="client-tier-badge font-mono">${client.tier[currentLang]}</span>
         </div>
-        <span class="client-tier-badge font-mono">${client.tier[currentLang]}</span>
-      </div>
 
-      <h4 class="client-name-title">${client.name[currentLang]}</h4>
-      <div class="client-sector-tag">${client.sector[currentLang]}</div>
+        <h4 class="client-name-title">${client.name[currentLang]}</h4>
+        <div class="client-sector-tag">${client.sector[currentLang]}</div>
 
-      <div class="client-proof-linkage">
-        <span class="linkage-label font-mono">${currentLang === 'ar' ? 'سجل الإنجاز والمشروع المنفذ:' : 'DELIVERED PROJECT & SCOPE:'}</span>
-        <span class="linkage-project">${client.project[currentLang]}</span>
-        <span class="linkage-scope font-mono">
-          <i data-lucide="check-circle-2" style="width: 12px; height: 12px; color: var(--accent-ochre);"></i>
-          ${client.scope[currentLang]}
-        </span>
+        <div class="client-proof-linkage">
+          <span class="linkage-label font-mono">${currentLang === 'ar' ? 'سجل الإنجاز والمشروع المنفذ:' : 'DELIVERED PROJECT & SCOPE:'}</span>
+          <span class="linkage-project">${client.project[currentLang]}</span>
+          <span class="linkage-scope font-mono">
+            <i data-lucide="check-circle-2" style="width: 12px; height: 12px; color: var(--accent-ochre);"></i>
+            ${client.scope[currentLang]}
+          </span>
+        </div>
       </div>
-    </div>
-  `).join('');
+    `).join('');
+  }
 
   // 3. Setup click zoom on official client boards
-  document.querySelectorAll('.client-proof-cards .proof-card').forEach(card => {
+  document.querySelectorAll('.client-proof-cards .proof-card, .proof-cards-grid .proof-card').forEach(card => {
     card.addEventListener('click', () => {
       const img = card.getAttribute('data-img');
       const title = card.getAttribute('data-title');
