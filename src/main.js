@@ -51,31 +51,38 @@ import {
   Clock,
   Home,
   Waves,
-  ChevronsLeftRight
+  ChevronsLeftRight,
+  Globe,
+  Users
 } from 'lucide';
 
 // Translations Dictionary for UI static text
 const translations = {
   ar: {
-    page_title: "م. ناصر علي كمال | مدير تطوير عقاري ومعماري رئيسي",
-    top_status: "متاح لإدارة وتطوير المشاريع الكبرى وتسليم المفتاح EPC",
-    brand_name: "م. ناصر علي كمال",
-    brand_sub: "مدير تطوير عقاري ومعماري",
-    nav_about: "الرؤية والخبرة",
+    page_title: "شركة TOOT للتطوير والمقاولات | الموقع الرسمي",
+    top_status: "شركة رائدة في التطوير العقاري والمقاولات العامة وتسليم المفتاح EPC",
+    brand_name: "TOOT",
+    brand_sub: "شركة TOOT للتطوير والمقاولات",
+    nav_vision: "الرؤية والقيم",
+    nav_about: "الرؤية والقيم",
     nav_competencies: "التخصصات",
-    nav_projects: "المشاريع المطورة",
+    nav_projects: "المشاريع",
+    nav_dev: "التطوير العقاري",
+    nav_contracting: "المقاولات",
+    nav_pm: "إدارة المشاريع",
+    nav_sustainability: "الاستدامة",
     nav_transformation: "التحول الهندسي",
     nav_gallery: "التوثيق الميداني",
-    nav_clients: "العملاء والشركاء",
+    nav_clients: "الشركاء والعملاء",
     nav_credentials: "الاعتمادات",
-    nav_contact: "طلب استشارة",
+    nav_contact: "تواصل معنا",
     btn_print: "تصدير الدوسيه PDF",
     btn_cad: "CAD Mode",
     quick_about: "الرؤية",
     quick_projects: "المشاريع",
     quick_gallery: "التوثيق",
     quick_clients: "الشركاء",
-    quick_contact: "استشارة",
+    quick_contact: "تواصل معنا",
     swipe_hint: "اسحب أفقياً لاستعراض المشاريع",
     swipe_gallery_hint: "اسحب لمشاهدة لقطات التنفيذ الميداني",
     btn_see_all_short: "عرض فهرس المشاريع بالكامل",
@@ -83,12 +90,21 @@ const translations = {
     archive_badge: "ARCHITECTURAL DOSSIER CATALOG",
     archive_title: "فهرس المشاريع الشامل (12 صرحاً ومجمعاً)",
     archive_search_placeholder: "ابحث باسم المشروع، الكود، أو الجهة (مثال: جامعة نورة، بريمان، KAP)...",
+    hero_pill_tag: "TOOT / COMPANY PORTFOLIO",
+    hero_location: "المملكة العربية السعودية",
+    hero_headline_1: "من الرؤية",
+    hero_headline_2: "إلى واقعٍ يُبنى",
+    hero_subtitle: "فريق متكامل يقود التطوير العقاري والمقاولات وإدارة المشاريع من الفكرة إلى التسليم.",
+    hero_btn_projects: "استعرض مشاريعنا",
+    hero_btn_contact: "تواصل معنا",
+    proof_team: "فريق متكامل",
+    proof_delivery: "تنفيذ متكامل",
+    proof_experience: "خبرة في المشاريع الكبرى",
     hero_folio_tag: "ARCHITECTURAL FOLIO / 2000 — 2026",
-    hero_greeting: "المعماري ومدير التطوير",
-    hero_name: "ناصر علي كمال",
-    hero_name_full: "م. ناصر علي كمال",
-    hero_subtitle: "دمج الرؤية المعمارية الإبداعية مع حوكمة المشاريع الكبرى، البنية التحتية، ومشاريع تسليم المفتاح EPC.",
-    hero_trust_badge: "خبرة هندسية معتمدة +26 عاماً",
+    hero_greeting: "شركة التطوير والمقاولات",
+    hero_name: "TOOT",
+    hero_name_full: "شركة TOOT للتطوير والمقاولات",
+    hero_trust_badge: "سجل إنجازات معتمد +26 عاماً",
     stat_exp: "سنة خبرة مهنية متواصلة",
     stat_projects: "مشروع منجز ومسلم",
     stat_infra: "ريال حجم المشاريع المشرف عليها",
@@ -104,19 +120,17 @@ const translations = {
     tag_dev: "Real Estate Development",
     tag_turnkey: "Turnkey EPC Delivery",
     tag_code: "Saudi Building Code SBC",
-    hero_btn_projects: "استعراض سجل المشاريع",
-    hero_btn_contact: "طلب استشارة أو اجتماع",
     hero_statement: "خبرة تقود المشروع من الرؤية إلى التسليم",
-    hero_description_exact: "مدير تطوير عقاري ومعماري بخبرة تتجاوز 26 عامًا في قيادة المشاريع الكبرى من التصميم والتخطيط إلى التنفيذ والتسليم المعتمد.",
-    hero_btn_projects_exact: "استعرض المشاريع",
-    hero_btn_contact_exact: "اطلب استشارة",
-    proof_exp: "+26 عامًا من الخبرة",
-    proof_epc: "EPC وتسليم مفتاح",
-    legend_title: "المعماري ومدير التطوير",
-    caption_name: "م. ناصر علي كمال",
-    caption_role: "مدير تطوير عقاري ومهندس معماري",
-    caption_site_role: "مدير تطوير وإشراف ميداني EPC",
-    sec_about_sub: "الرؤية والخبرة المعمارية",
+    hero_description_exact: "فريق متكامل يقود التطوير العقاري والمقاولات وإدارة المشاريع من الفكرة إلى التسليم.",
+    hero_btn_projects_exact: "استعرض مشاريعنا",
+    hero_btn_contact_exact: "تواصل معنا",
+    proof_exp: "فريق متكامل",
+    proof_epc: "تنفيذ متكامل",
+    legend_title: "فريق العمل والتطوير",
+    caption_name: "فريق شركة TOOT",
+    caption_role: "التطوير العقاري والمقاولات العامة",
+    caption_site_role: "إدارة التطوير والإشراف الميداني EPC",
+    sec_about_sub: "الرؤية والقيم المؤسسية",
     sec_about_title: "فلسفة التطوير والتصميم الشامل",
     pillar1_title: "التصميم المعماري وتخطيط الماستر بلان",
     pillar1_desc: "دراسة الفراغات، الكتل المعمارية، وابتكار واجهات معاصرة مستدامة.",
@@ -124,16 +138,16 @@ const translations = {
     pillar2_desc: "إعداد دراسات الجدوى، حوكمة الميزانيات، التوريدات، وإدارة المقاولين.",
     pillar3_title: "تسليم المفتاح والالتزام بالجودة والسلامة",
     pillar3_desc: "مطابقة اشتراطات كود البناء السعودي (SBC) والدفاع المدني والإشراف الصارم.",
-    team_caption_1: "المهندس ناصر علي كمال مع قيادات وفريق العمل في حفل تسليم وافتتاح المشاريع",
+    team_caption_1: "فريق قيادات ومهندسي شركة TOOT في حفل تسليم وافتتاح المشاريع",
     team_caption_2: "الجولات الميدانية والإشراف الهندسي المباشر على جودة التنفيذ بالموقع",
-    timeline_tag: "CAREER ERA SCRUBBER • 2000 — 2026",
-    timeline_title: "مسار الريادة والتطور الهندسي عبر 26 عاماً (2000 — 2026)",
+    timeline_tag: "COMPANY TRACK RECORD • 2000 — 2026",
+    timeline_title: "مسار الريادة والتطور المؤسسي عبر 26 عاماً (2000 — 2026)",
     era1_title: "التأسيس والتصميم الأصيل",
     era2_title: "المشاريع السيادية والجامعية",
     era3_title: "البنية التحتية والأبراج",
     era4_title: "تسليم المفتاح EPC ورؤية 2030",
     sec_comp_sub: "القدرات والخبرات التخصصية",
-    sec_comp_title: "مجالات التميز في التطوير والمعمار",
+    sec_comp_title: "مجالات التميز في التطوير والمقاولات",
     sec_proj_sub: "سابقة الأعمال والمنجزات",
     sec_proj_title: "أبرز المشاريع الاستراتيجية المطورة",
     sec_proj_desc: "توثيق تفصيلي للمشاريع الوطنية الكبرى، أعمال البنية التحتية، الأبراج، والمجمعات السكنية والترفيهية.",
@@ -167,7 +181,7 @@ const translations = {
     clients_proof_2: "الوزارات والجهات الحكومية وشركاء النجاح السياديين",
     sec_contact_sub: "التواصل المباشر",
     sec_contact_title: "جاهزون لبحث المشاريع والاستشارات الإنشائية والمعمارية",
-    sec_contact_desc: "للتواصل مع المعماري ومدير التطوير ناصر علي كمال بخصوص إدارة التطوير العقاري، الاستشارات المعمارية، والإشراف والتنفيذ العام للمشاريع في المملكة العربية السعودية.",
+    sec_contact_desc: "للتواصل مع إدارة شركة TOOT للتطوير والمقاولات بخصوص التطوير العقاري، الاستشارات المعمارية، والإشراف والتنفيذ العام للمشاريع في المملكة العربية السعودية.",
     contact_phone_label: "الجوال المباشر / واتساب",
     contact_landline_label: "الهاتف الثابت",
     contact_email_label: "البريد الإلكتروني الرسمي",
@@ -176,7 +190,7 @@ const translations = {
     btn_whatsapp: "مراسلة مباشرة عبر واتساب",
     builder_tag: "INTERACTIVE CONSULTATION BUILDER",
     builder_title: "بناء طلب الاستشارة والمشروع التفاعلي",
-    builder_desc: "حدد نطاق ونوع مشروعك للحصول على استشارة هندسية فورية مباشرة مع م. ناصر علي كمال:",
+    builder_desc: "حدد نطاق ونوع مشروعك للحصول على استشارة هندسية فورية مباشرة مع فريق إدارة المشاريع في شركة TOOT:",
     step_sector: "01. SECTOR / نوع المشروع",
     step_scope: "02. SCOPE / نطاق العمل",
     chip_infra: "🏗️ بنية تحتية وخزانات",
@@ -201,8 +215,8 @@ const translations = {
     opt_other: "أخرى",
     form_msg: "تفاصيل المشروع أو الاستشارة",
     form_submit: "إرسال الاستفسار الآن",
-    footer_sub: "السيرة المهنية وملف سابقة الأعمال المعمارية والتطويرية | الرياض، المملكة العربية السعودية",
-    footer_rights: "جميع الحقوق محفوظة - م. ناصر علي كمال",
+    footer_sub: "شركة رائدة في التطوير العقاري والمقاولات العامة وتسليم المفتاح (EPC) | الرياض، المملكة العربية السعودية",
+    footer_rights: "جميع الحقوق محفوظة - شركة TOOT للتطوير والمقاولات",
     dock_whatsapp: "واتساب مباشر",
     dock_call: "اتصال فوري",
     dock_catalog: "دليل المشاريع",
@@ -210,25 +224,30 @@ const translations = {
     modal_technical_title: "النطاق الهندسي والتطويري:"
   },
   en: {
-    page_title: "Arch. Nasser Ali Kamal | Real Estate Development Director & Principal Architect",
-    top_status: "Available for Mega Development Management & Turnkey EPC Execution",
-    brand_name: "Arch. Nasser Ali Kamal",
-    brand_sub: "Development Manager & Architect",
-    nav_about: "Vision & Experience",
+    page_title: "TOOT Development & Contracting | Official Company Portfolio",
+    top_status: "Leading Real Estate Development, General Contracting & Turnkey EPC",
+    brand_name: "TOOT",
+    brand_sub: "TOOT Development & Contracting Co.",
+    nav_vision: "Vision & Values",
+    nav_about: "Vision & Values",
     nav_competencies: "Specializations",
-    nav_projects: "Key Projects",
+    nav_projects: "Projects",
+    nav_dev: "Real Estate Development",
+    nav_contracting: "Contracting",
+    nav_pm: "Project Management",
+    nav_sustainability: "Sustainability",
     nav_transformation: "Engineering Evolution",
     nav_gallery: "Site Ledger",
     nav_clients: "Clients & Partners",
     nav_credentials: "Credentials",
-    nav_contact: "Consultation",
+    nav_contact: "Contact Us",
     btn_print: "Export Dossier PDF",
     btn_cad: "CAD Mode",
     quick_about: "Vision",
     quick_projects: "Projects",
     quick_gallery: "Site Ledger",
     quick_clients: "Clients",
-    quick_contact: "Consult",
+    quick_contact: "Contact Us",
     swipe_hint: "Swipe horizontally to explore projects",
     swipe_gallery_hint: "Swipe to view on-site execution photos",
     btn_see_all_short: "View Complete Projects Index",
@@ -236,12 +255,21 @@ const translations = {
     archive_badge: "ARCHITECTURAL DOSSIER CATALOG",
     archive_title: "Complete Landmark Projects Index (12 Facilities)",
     archive_search_placeholder: "Search by project name, code, or client (e.g. Princess Nora, Briman, KAP)...",
+    hero_pill_tag: "TOOT / COMPANY PORTFOLIO",
+    hero_location: "Kingdom of Saudi Arabia",
+    hero_headline_1: "From Vision",
+    hero_headline_2: "To Built Reality",
+    hero_subtitle: "An integrated multidisciplinary team leading real estate development, general contracting, and project management from concept to delivery.",
+    hero_btn_projects: "Explore Our Projects",
+    hero_btn_contact: "Contact Us",
+    proof_team: "Integrated Team",
+    proof_delivery: "Turnkey Execution",
+    proof_experience: "Mega Project Track Record",
     hero_folio_tag: "ARCHITECTURAL FOLIO / 2000 — 2026",
-    hero_greeting: "Architect & Development Director",
-    hero_name: "Nasser Ali Kamal",
-    hero_name_full: "Arch. Nasser Ali Kamal",
-    hero_subtitle: "Harmonizing visionary architectural design with mega-project development governance, strategic infrastructure, and turnkey EPC execution.",
-    hero_trust_badge: "Accredited Practice +26 Years",
+    hero_greeting: "Development & Contracting Company",
+    hero_name: "TOOT",
+    hero_name_full: "TOOT Development & Contracting",
+    hero_trust_badge: "Accredited Track Record +26 Years",
     stat_exp: "Years Proven Track Record",
     stat_projects: "Delivered Landmark Projects",
     stat_infra: "SAR Portfolio Managed & Supervised",
@@ -257,18 +285,16 @@ const translations = {
     tag_dev: "Real Estate Development",
     tag_turnkey: "Turnkey EPC Delivery",
     tag_code: "Saudi Building Code SBC",
-    hero_btn_projects: "Explore Project Folio",
-    hero_btn_contact: "Request Consultation",
     hero_statement: "Expertise Leading Projects from Vision to Delivery",
-    hero_description_exact: "Senior Real Estate Development Director & Principal Architect with over 26 years of experience leading mega projects from design and master planning to turnkey execution and delivery.",
-    hero_btn_projects_exact: "Explore Projects",
-    hero_btn_contact_exact: "Request Consultation",
-    proof_exp: "+26 Years of Experience",
-    proof_epc: "EPC & Turnkey Delivery",
-    legend_title: "Architect & Development Director",
-    caption_name: "Arch. Nasser Ali Kamal",
-    caption_role: "Development Manager & Architect",
-    caption_site_role: "EPC Development & Site Director",
+    hero_description_exact: "An integrated multidisciplinary team leading real estate development, general contracting, and project management from concept to delivery.",
+    hero_btn_projects_exact: "Explore Our Projects",
+    hero_btn_contact_exact: "Contact Us",
+    proof_exp: "Integrated Team",
+    proof_epc: "Turnkey Execution",
+    legend_title: "Leadership & Team",
+    caption_name: "TOOT Company Team",
+    caption_role: "Development & General Contracting",
+    caption_site_role: "EPC Turnkey Execution & Site Direction",
     sec_about_sub: "Vision & Practice",
     sec_about_title: "Comprehensive Development & Architectural Philosophy",
     pillar1_title: "Architectural Design & Master Planning",
@@ -277,7 +303,7 @@ const translations = {
     pillar2_desc: "Feasibility studies, budget governance, procurement, and contractor orchestration.",
     pillar3_title: "Turnkey Commissioning & Quality Assurance",
     pillar3_desc: "Strict compliance with Saudi Building Code (SBC) and Civil Defense fire-life safety mandates.",
-    team_caption_1: "Arch. Nasser Ali Kamal with executive leadership and engineering teams celebrating milestone facility handovers",
+    team_caption_1: "TOOT executive leadership and engineering teams celebrating milestone facility handovers",
     team_caption_2: "Direct on-site engineering supervision and technical quality control audits at active work sites",
     timeline_tag: "CAREER ERA SCRUBBER • 2000 — 2026",
     timeline_title: "Leadership & Engineering Evolution Across 26 Years (2000 — 2026)",
@@ -320,7 +346,7 @@ const translations = {
     clients_proof_2: "Government Ministries & Sovereign Authorities",
     sec_contact_sub: "Get In Touch",
     sec_contact_title: "Ready to Discuss Real Estate Development & Architectural Consultations",
-    sec_contact_desc: "Available for real estate development management, architectural consultations, and turnkey project direction across Saudi Arabia.",
+    sec_contact_desc: "Available for real estate development management, general contracting, and turnkey EPC project direction across Saudi Arabia.",
     contact_phone_label: "Direct Mobile / WhatsApp",
     contact_landline_label: "Landline Office",
     contact_email_label: "Official Email",
@@ -329,7 +355,7 @@ const translations = {
     btn_whatsapp: "Chat on WhatsApp Directly",
     builder_tag: "INTERACTIVE CONSULTATION BUILDER",
     builder_title: "Interactive Project Scope & Consultation Builder",
-    builder_desc: "Select your project type and scope to generate an instant customized consultation request directly for Arch. Nasser Ali Kamal:",
+    builder_desc: "Select your project type and scope to generate an instant customized consultation request directly to TOOT Project Management Team:",
     step_sector: "01. SECTOR / Project Type",
     step_scope: "02. SCOPE / Required Services",
     chip_infra: "🏗️ Infrastructure & Reservoirs",
@@ -354,8 +380,8 @@ const translations = {
     opt_other: "Other Inquiries",
     form_msg: "Project Details or Consultation Request",
     form_submit: "Submit Request Now",
-    footer_sub: "Senior Development Manager & Architect Dossier | Riyadh, Kingdom of Saudi Arabia",
-    footer_rights: "All Rights Reserved - Arch. Nasser Ali Kamal",
+    footer_sub: "Leading Real Estate Development, General Contracting & Turnkey EPC | Riyadh, Kingdom of Saudi Arabia",
+    footer_rights: "All Rights Reserved - TOOT Development & Contracting Co.",
     dock_whatsapp: "WhatsApp",
     dock_call: "Direct Call",
     dock_catalog: "Projects Catalog",
@@ -892,7 +918,7 @@ function openProjectModal(projectId) {
       <div class="modal-cta-box">
         <div>
           <strong style="color: var(--ink-primary); font-size: 0.92rem; display: block;">${currentLang === 'ar' ? 'هل تود بحث استشارة أو تطوير نطاق عمل مماثل؟' : 'Interested in discussing a similar project scope?'}</strong>
-          <span style="font-size: 0.8rem; color: var(--ink-muted);">${currentLang === 'ar' ? 'تواصل مباشرة مع المهندس ناصر علي كمال' : 'Connect directly with Arch. Nasser Ali Kamal'}</span>
+          <span style="font-size: 0.8rem; color: var(--ink-muted);">${currentLang === 'ar' ? 'تواصل مباشرة مع إدارة مشاريع شركة TOOT' : 'Connect directly with TOOT Project Management'}</span>
         </div>
         <a href="https://wa.me/966545000073?text=${encodeURIComponent(currentLang === 'ar' ? `السلام عليكم، أود بحث استشارة وتطوير بخصوص مشروع مماثل لـ (${project.title.ar})` : `Hello, I would like to inquire regarding a project scope similar to (${project.title.en})`)}" target="_blank" rel="noopener noreferrer" class="modal-cta-btn">
           <i data-lucide="message-circle"></i>
@@ -1034,40 +1060,9 @@ function openDocModal(imageSrc, title) {
   document.body.style.overflow = 'hidden';
 }
 
-// Render Clients & Strategic Partners Grid and Horizontal Moving Marquee
+// Render Clients & Strategic Partners Grid
 function renderClients() {
-  // 1. Render Infinite Marquee Tracks
-  const track1 = document.getElementById('marqueeTrack1');
-  const track2 = document.getElementById('marqueeTrack2');
-
-  const marqueeLogos = [
-    { name: "وزارة التعليم / جامعة الأميرة نورة", src: "/assets/clients/logos_hd/education.webp" },
-    { name: "وزارة الصحة / الشركة الوطنية للمياه", src: "/assets/clients/logos_hd/health.webp" },
-    { name: "شركة سبيماكو الدوائية", src: "/assets/clients/logos_hd/spimaco.webp" },
-    { name: "مجموعة العثيم القابضة / سفوري لاند", src: "/assets/clients/logos_hd/othaim.webp" },
-    { name: "شركة الفنار للصناعة والمقاولات", src: "/assets/clients/logos_hd/alfanar.webp" },
-    { name: "شركة الديار للتطوير العقاري", src: "/assets/clients/logos_hd/deyaar.webp" },
-    { name: "أمانة منطقة الرياض", src: "/assets/clients/logos_hd/riyadh_municipality.webp" },
-    { name: "شركة متون للتطوير العقاري", src: "/assets/clients/logos_hd/motoon.webp" },
-    { name: "شركة الدواء للخدمات الطبية", src: "/assets/clients/logos_hd/aldawaa.webp" },
-    { name: "مجموعة الفاضل", src: "/assets/clients/logos_hd/al_fadhel.webp" },
-    { name: "مجموعة ديرما", src: "/assets/clients/logos_hd/derma.webp" },
-    { name: "The View", src: "/assets/clients/logos_hd/theview.webp" },
-    { name: "شركة توت للمقاولات العامة", src: "/assets/clients/logos_hd/toot_contracting.webp" }
-  ];
-
-  if (track1 && track2) {
-    const marqueeHtml = marqueeLogos.map(item => `
-      <div class="marquee-logo-card" title="${item.name}">
-        <img src="${item.src}" alt="${item.name}" class="marquee-logo-img" loading="lazy" decoding="async" width="140" height="50">
-      </div>
-    `).join('');
-
-    track1.innerHTML = marqueeHtml;
-    track2.innerHTML = marqueeHtml;
-  }
-
-  // 2. Render Tier-1 Strategic Clients Grid if container exists
+  // Render Tier-1 Strategic Clients Grid if container exists
   const container = document.getElementById('clientsGrid');
   if (container) {
     container.innerHTML = portfolioData.clients.map(client => `
@@ -1231,10 +1226,10 @@ function setupHeroEntrance() {
   });
 }
 
-// Parallax Depth Effect for Hero Image
+// Parallax Depth Effect for Architectural Presentation Board
 function setupParallax() {
-  const heroBoard = document.querySelector('.hero-archive-board-wrap');
-  if (!heroBoard) return;
+  const architecturalBoard = document.getElementById('architecturalBoard');
+  if (!architecturalBoard) return;
 
   // Only on desktop
   const mql = window.matchMedia('(min-width: 1024px)');
@@ -1243,30 +1238,26 @@ function setupParallax() {
   // Check reduced motion preference
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  let ticking = false;
+  const layers = architecturalBoard.querySelectorAll('.board-layer');
 
-  function onScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-        const heroSection = document.getElementById('hero');
-        if (!heroSection) { ticking = false; return; }
+  architecturalBoard.addEventListener('mousemove', (e) => {
+    const rect = architecturalBoard.getBoundingClientRect();
+    const xRel = (e.clientX - rect.left) / rect.width - 0.5;
+    const yRel = (e.clientY - rect.top) / rect.height - 0.5;
 
-        const heroRect = heroSection.getBoundingClientRect();
-        const heroBottom = heroRect.bottom;
+    layers.forEach(layer => {
+      const depth = parseFloat(layer.getAttribute('data-depth')) || 0.04;
+      const moveX = xRel * depth * 50;
+      const moveY = yRel * depth * 50;
+      layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+    });
+  });
 
-        // Only apply parallax while hero is visible
-        if (heroBottom > 0 && scrollY < heroSection.offsetHeight + heroSection.offsetTop) {
-          const parallaxOffset = scrollY * 0.12;
-          heroBoard.style.transform = `translateY(-${parallaxOffset}px)`;
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
+  architecturalBoard.addEventListener('mouseleave', () => {
+    layers.forEach(layer => {
+      layer.style.transform = `translate3d(0, 0, 0)`;
+    });
+  });
 }
 
 // Eased Number Counter Animation for Hero Metrics Ribbon
@@ -1531,9 +1522,9 @@ function setupScopeBuilder() {
 
     let msg = '';
     if (currentLang === 'en') {
-      msg = `Hello Arch. Nasser Ali Kamal,\nI would like to request an architectural & development consultation:\n- Project Sector: ${sectorText}\n- Scope Required: ${scopeText}\nLooking forward to scheduling an executive discussion.`;
+      msg = `Hello TOOT Development & Contracting Team,\nI would like to request an engineering & development consultation:\n- Project Sector: ${sectorText}\n- Scope Required: ${scopeText}\nLooking forward to scheduling an executive discussion.`;
     } else {
-      msg = `السلام عليكم ورحمة الله، سعادة المهندس ناصر علي كمال المحترم.\nأود الاستفسار وطلب استشارة هندسية متخصصة:\n- قطاع المشروع: ${sectorText}\n- نطاق العمل المطلوب: ${scopeText}\nنأمل التنسيق لعقد اجتماع عمل وبحث تفاصيل التطوير والإشراف.`;
+      msg = `السلام عليكم ورحمة الله، السادة شركة TOOT للتطوير والمقاولات المحترمين.\nأود الاستفسار وطلب استشارة هندسية وتطويرية متخصصة:\n- قطاع المشروع: ${sectorText}\n- نطاق العمل المطلوب: ${scopeText}\nنأمل التنسيق لعقد اجتماع عمل وبحث تفاصيل المشروع.`;
     }
     dynamicWhatsappBtn.href = `https://wa.me/966545000073?text=${encodeURIComponent(msg)}`;
   }

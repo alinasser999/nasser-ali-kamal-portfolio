@@ -1,20 +1,20 @@
 export const portfolioData = {
   profile: {
     name: {
-      ar: "م. ناصر علي كمال",
-      en: "Arch. Nasser Ali Kamal"
+      ar: "شركة TOOT للتطوير والمقاولات",
+      en: "TOOT Development & Contracting Co."
     },
     title: {
-      ar: "مدير تطوير عقاري ومهندس معماري تنفيذي",
-      en: "Senior Real Estate Development Manager & Principal Architect"
+      ar: "التطوير العقاري والمقاولات العامة وإدارة المشاريع",
+      en: "Real Estate Development, General Contracting & Project Management"
     },
     shortTitle: {
-      ar: "مدير تطوير عقاري ومعماري",
-      en: "Development Manager & Architect"
+      ar: "شركة TOOT للتطوير والمقاولات",
+      en: "TOOT Development & Contracting"
     },
     tagline: {
-      ar: "دمج الرؤية المعمارية الإبداعية مع حوكمة التطوير العقاري وإدارة المشاريع الكبرى وتسليم المفتاح في المملكة العربية السعودية.",
-      en: "Synthesizing high-concept architectural design with rigorous real estate development governance, master-planning, and turnkey EPC execution across Saudi Arabia."
+      ar: "فريق متكامل يقود التطوير العقاري والمقاولات وإدارة المشاريع من الفكرة إلى التسليم في المملكة العربية السعودية.",
+      en: "An integrated multidisciplinary team directing real estate development, general contracting, and turnkey EPC execution across Saudi Arabia."
     },
     experienceYears: "26+",
     establishedYear: "2000",
@@ -22,7 +22,7 @@ export const portfolioData = {
       {
         value: "26+",
         unit: { ar: "عاماً", en: "Years" },
-        label: { ar: "خبرة في التطوير والمعمار", en: "Architecture & Development" },
+        label: { ar: "خبرة في التطوير والمقاولات", en: "Development & Contracting Track Record" },
         sub: { ar: "مسيرة هندسية رائدة منذ 2000م", en: "Engineering Leadership Since 2000" }
       },
       {
@@ -45,12 +45,12 @@ export const portfolioData = {
       }
     ],
     about: {
-      ar: `معماري ومدير تطوير عقاري تنفيذي بخبرة تتجاوز 25 عاماً في صياغة وتطوير المشهد العمراني بالمملكة العربية السعودية. يرتكز نهجه المهني على التكامل بين فلسفة التصميم المعماري المعاصر، وتخطيط الفراغات الحضرية، وبين الإدارة الصارمة لدورة حياة التطوير العقاري ومشاريع تسليم المفتاح (EPC Turnkey).
+      ar: `شركة TOOT للتطوير والمقاولات هي منشأة وطنية رائدة متخصصة في قيادة وتطوير المشهد العمراني بالمملكة العربية السعودية بخبرة قياداتها وفريقها الهندسي المتكامل التي تتجاوز 25 عاماً. يرتكز نهجنا المؤسسي على الجمع بين فلسفة التصميم المعماري المعاصر، وتخطيط الفراغات الحضرية، وبين الإدارة الصارمة لدورة حياة التطوير العقاري ومشاريع تسليم المفتاح (EPC Turnkey).
 
-قاد وأشرف على حزمة من كبرى المشاريع الوطنية الاستراتيجية، تضمنت مجمعات كليات وسكن جامعة الأميرة نورة، والمراكز الأمنية لمشروع خادم الحرمين الشريفين (KAP-1)، وخزانات بريمان الاستراتيجية بجدة بسعة 170 مليون لتر، وبرج سبيماكو بالرياض، ومشاريع كبرى مدن الترفيه العائلية والمراكز التجارية المعاصرة.`,
-      en: `Principal Architect and Senior Real Estate Development Director with over 25 years of distinguished practice in shaping Saudi Arabia's built environment. His design and management ethos unites contemporary spatial philosophy and contextual aesthetics with end-to-end real estate development governance, value engineering, and fast-track EPC turnkey delivery.
+قاد فريقنا وأشرف على حزمة من كبرى المشاريع الوطنية الاستراتيجية، تضمنت مجمعات كليات وسكن جامعة الأميرة نورة، والمراكز الأمنية لمشروع خادم الحرمين الشريفين (KAP-1)، وخزانات بريمان الاستراتيجية بجدة بسعة 170 مليون لتر، وبرج سبيماكو بالرياض، ومشاريع كبرى مدن الترفيه العائلية والمراكز التجارية المعاصرة.`,
+      en: `TOOT Development & Contracting Co. is a premier national organization dedicated to shaping Saudi Arabia's built environment with over 25 years of cumulative leadership and engineering excellence. Our corporate ethos synthesizes contemporary spatial design and master-planning with end-to-end real estate development governance, value engineering, and fast-track EPC turnkey delivery.
 
-Throughout his career, he has directed landmark national undertakings spanning higher-education campus master-planning at Princess Nora University, high-security command complexes for the King Abdullah Security Project (KAP-1), the 170-Million-Liter Jeddah Strategic Water Reservoir, SPEMACO High-Rise Tower, and premier commercial/leisure attractions for Al Othaim Group.`
+Our multidisciplinary team has directed landmark national undertakings spanning higher-education campus master-planning at Princess Nora University, high-security command complexes for the King Abdullah Security Project (KAP-1), the 170-Million-Liter Jeddah Strategic Water Reservoir, SPEMACO High-Rise Tower, and premier commercial/leisure destinations.`
     },
     roles: {
       architect: {
@@ -378,8 +378,8 @@ Throughout his career, he has directed landmark national undertakings spanning h
             }
         ],
         "details": {
-            "ar": "شمل دور المهندس ناصر علي كمال الإشراف على دراسات الموقع، مراجعة المخططات التنفيذية، صب اللبشة الخرسانية المسلحة لأساسات 50 فيلا، والتحقق من اشتراطات العزل ومطابقة الكود السعودي حتى التسليم المعتمد.",
-            "en": "Arch. Nasser Ali Kamal orchestrated site planning, shop-drawing review, soil stabilization, and mass raft concrete casting for 50 campus faculty villas through verified handover."
+            "ar": "شمل دور فريق العمل الهندسي الإشراف على دراسات الموقع، مراجعة المخططات التنفيذية، صب اللبشة الخرسانية المسلحة لأساسات 50 فيلا، والتحقق من اشتراطات العزل ومطابقة الكود السعودي حتى التسليم المعتمد.",
+            "en": "TOOT Engineering Team orchestrated site planning, shop-drawing review, soil stabilization, and mass raft concrete casting for 50 campus faculty villas through verified handover."
         },
         "specs": [
             {
